@@ -1,0 +1,10 @@
+.main_container{
+  min-height: 100vh;
+  max-width: 500px;
+  margin: 0 auto;
+  position: relative;
+  background: var(--white);
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--box-shadow-page);
+}

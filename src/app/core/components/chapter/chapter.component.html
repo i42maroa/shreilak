@@ -1,0 +1,8 @@
+<div class="container">
+
+  <h2>{{chapter.title}}</h2>
+
+  @for (objective of chapter.objectives; track objective.title) {
+   <app-objetive-page [objective]="objective"></app-objetive-page>
+  }
+</div>

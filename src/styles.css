@@ -1,1 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
+:root{
+  --green: #b8dd2a;
+  --dark-green: #b8dd2a33;
+  --brown:#543c01;
+  --brown-gradient:#775602;
+  --white:#fefefe;
+  --white-gradient:#eee;
+  --smoth-brown: #cac0a6;
+  --smoth-brown-gradient: #c7bea6;
+  --smoth-brown-layout: #dfd8c4;
+  --white-page:#fafafa;
+  --white-page-gradient:#f8f8f8;
+}
