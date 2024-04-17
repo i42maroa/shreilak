@@ -11,4 +11,19 @@ import { ChapterComponent } from '../../core/components/chapter/chapter.componen
 })
 export class LandingComponent {
 
+  numPage:number = 6;
+
+toChapters(){
+  this.numPage = 0;
+}
+  show(){
+    this.numPage++;
+  }
+  unShow(){
+    this.numPage--;
+  }
+  onDragOver(event: DragEvent){
+      console.log(event)
+  }
+
 }

@@ -2,7 +2,7 @@ import { ChapterInterface } from "../interface/chapter.interface";
 
 export const FROZEN_CHAPTER:ChapterInterface = {
   title:"FROZEN",
-  history:["historiasassf as fasd "],
+  history:"historiasassf as fasd ",
   objectives:[
     {
       title:"Salvar a olaf",

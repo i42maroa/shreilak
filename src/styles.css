@@ -12,3 +12,7 @@
   --white-page:#fafafa;
   --white-page-gradient:#f8f8f8;
 }
+
+body{
+  background-color: grey;
+}

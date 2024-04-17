@@ -1,17 +1,56 @@
+<div class="container">
+
+  <div  class="handler_container">
 
 
-<p>Historieta</p>
+    <div class="page">
+      <h3>Pouvez-vous m'aider, s'il vous plaît?</h3>
+      <ul>
+        <li>
+          <a [routerLink]="['/chapter/0']">Frozen</a>
+        </li>
+        <li>
+          <a [routerLink]="['/chapter/1']">Caperucita</a>
+        </li>
+        <li>
+          <a [routerLink]="['/chapter/2']">ratatouille</a>
+        </li>
+      </ul>
+    </div>
 
-<ul>
-  <li>
-    <a [routerLink]="['/chapter/0']">Frozen</a>
-  </li>
-  <li>
-    <a [routerLink]="['/chapter/1']">Caperucita</a>
-  </li>
-  <li>
-    <a [routerLink]="['/chapter/2']">ratatouille</a>
-  </li>
-</ul>
+    @if (numPage > 1){
+    <div class="page">
+      <h3>Elle m'a transformée en ogresse !!</h3>
+      <p>Je besoin l'aide de mes élèves pour retrouver mon aspect normal!</p>
+    </div>
+  }
+    @if(numPage > 2){
+    <div class="page">
+      <h3>Maintenant, j'ai un problème... </h3>
+      <p>Una sorcière mèchante et envieuse a jeté un sortilège sur moir</p>
+      </div>
+    }
+      @if(numPage > 3){
+      <div class="page">
 
+        <p>Ma vie était très normale jusqu'à rècemment. Mais un jour tout a changé.</p>
+      </div>
+    }
+      @if(numPage > 4){
+      <div class="page">
+        <h2>Je vous raconte mon histoire...</h2>
+        <p>Je m'appelle Shreilak, j'habite dans un village très loin avec un grand château.</p>
+        </div>
+      }
+        @if(numPage > 5){
+        <div class="page">
+          S
+        </div>
+      }
+</div>
+</div>
+<button (click)="show()">+</button>
+<button (click)="unShow()">-</button>
 
+<button (click)="toChapters()">Capitulos</button>
+{{numPage}}

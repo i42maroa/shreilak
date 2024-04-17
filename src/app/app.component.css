@@ -3,8 +3,7 @@
   max-width: 500px;
   margin: 0 auto;
   position: relative;
-  background: var(--white);
+  background: var(--brown);
   display: flex;
   flex-direction: column;
-  box-shadow: var(--box-shadow-page);
 }

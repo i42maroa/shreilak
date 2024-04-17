@@ -3,6 +3,6 @@ import { ResourceInterface } from "./resource.interface";
 
 export interface ChapterInterface{
   title:string;
-  history:string[];
+  history:string;
   objectives:ObjectiveInteface[];
 }
