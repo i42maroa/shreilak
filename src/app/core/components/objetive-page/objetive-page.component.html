@@ -1,0 +1,15 @@
+<div class="container">
+
+  <div class="objective-title">
+    <span>
+      {{objective.title}}
+    </span>
+    <span>
+      {{objective.process}}
+    </span>
+  </div>
+
+  @for (resource of objective.resources; track resource.id) {
+   <app-resource-page [resource]="resource"></app-resource-page>
+  }
+</div>

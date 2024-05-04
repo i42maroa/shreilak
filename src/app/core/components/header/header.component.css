@@ -1,0 +1,47 @@
+.header_container{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.image{
+  height: 70px;
+}
+
+
+@media (max-width: 450px) {
+
+  .image{
+    height: 60px;
+  }
+}
+
+@media (max-width: 400px) {
+
+  .header_container{
+    margin-bottom: 10px;
+  }
+
+  .image{
+    height: 50px;
+  }
+}
+
+@media (max-width: 300px) {
+
+  .header_container{
+    margin-bottom: 5px;
+  }
+
+  .image{
+    height: 40px;
+  }
+}
+
+@media (max-width: 200px) {
+
+  .image{
+    height: 30px;
+  }
+}
+

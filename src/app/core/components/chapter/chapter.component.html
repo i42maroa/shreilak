@@ -1,0 +1,24 @@
+<div class="container">
+  <div  class="handler_container">
+    <h2>{{chapter.title}}</h2>
+    <div class="page">
+
+
+    <p>{{chapter.history}}</p>
+  </div>
+
+    @for (objective of chapter.objectives; track objective.title; let idx = $index) {
+      @if (numPage > idx){
+        <div class="page">
+         <app-objetive-page [objective]="objective"></app-objetive-page>
+        </div>
+      }
+    }
+  </div>
+</div>
+
+<button (click)="show()">+</button>
+<button (click)="unShow()">-</button>
+
+{{numPage}}
+
