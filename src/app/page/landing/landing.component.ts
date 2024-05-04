@@ -12,7 +12,7 @@ import { LandingPageComponent } from '../landing-page/landing-page.component';
 })
 export class LandingComponent {
 
-  numPage:number = 4;
+  numPage:number = 5;
 
 toChapters(){
   this.numPage = 0;
@@ -23,8 +23,7 @@ toChapters(){
   unShow(){
     this.numPage--;
   }
-  onDragOver(event: DragEvent){
-      console.log(event)
+  getPage(){
+    return this.numPage % 6;
   }
-
 }
