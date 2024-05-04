@@ -1,0 +1,71 @@
+.page{
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  position: relative;
+}
+
+.page span{
+  font-size: 22px;
+  font-style: italic;
+  line-height: 1.5;
+}
+
+
+.image{
+  position: absolute;
+  bottom:  0;
+  right: 0;
+  height: 300px;
+}
+
+@media (max-width: 450px) {
+
+  .image{
+    height: 250px;
+  }
+}
+
+
+@media (max-width: 400px) {
+
+  .page span{
+    font-size: 20px;
+    line-height: 1.2;
+  }
+  .image{
+    height: 230px;
+  }
+}
+
+@media (max-width: 350px) {
+  .page span{
+    font-size: 18px;
+  }
+  .image{
+    height: 200px;
+  }
+}
+
+
+@media (max-width: 300px) {
+
+  .page span{
+    font-size: 15px;
+    line-height: 1.1;
+  }
+  .image{
+    height: 150px;
+  }
+}
+
+@media (max-width: 250px) {
+
+  .page span{
+    font-size: 12px;
+  }
+  .image{
+    height: 100px;
+  }
+}
+

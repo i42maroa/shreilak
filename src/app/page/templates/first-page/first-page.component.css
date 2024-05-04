@@ -1,0 +1,9 @@
+.page{
+  display: flex;
+  height: 100%;
+}
+
+.page span{
+  margin: auto;
+  justify-content: center;
+}
