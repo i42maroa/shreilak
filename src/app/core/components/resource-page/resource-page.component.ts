@@ -10,5 +10,5 @@ import { ResourceInterface } from '../../../data/interface/resource.interface';
 })
 export class ResourcePageComponent {
 
-  @Input() resource!: ResourceInterface;
+  @Input() resource: ResourceInterface | undefined;
 }

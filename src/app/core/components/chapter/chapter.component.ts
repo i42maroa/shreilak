@@ -1,6 +1,8 @@
 import { Component, Input } from '@angular/core';
 import { ChapterInterface } from '../../../data/interface/chapter.interface';
 import { ObjetivePageComponent } from '../objetive-page/objetive-page.component';
+import { CharapterPageService } from '../../service/charapter/charapter-page.service';
+import { CHAPTERS } from '../../../data/chapters.data';
 
 @Component({
   selector: 'app-chapter',
@@ -11,22 +13,9 @@ import { ObjetivePageComponent } from '../objetive-page/objetive-page.component'
 })
 export class ChapterComponent {
 
-  @Input() chapter!: ChapterInterface;
+  chapter!: ChapterInterface;
 
-  numPage:number = 6;
-
-  toChapters(){
-    this.numPage = 0;
+  constructor(private service: CharapterPageService){
+    this.service.pageNumber$.subscribe(p =>this.chapter = CHAPTERS[p]);
   }
-    show(){
-      this.numPage++;
-    }
-    unShow(){
-      this.numPage--;
-    }
-    onDragOver(event: DragEvent){
-        console.log(event)
-    }
-
-
 }

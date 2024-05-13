@@ -1,0 +1,9 @@
+<div class="container">
+  <app-button [routerLink]="['/chapter/0']" [text]="'Capítulos'"></app-button>
+  @if(resourceId !== ""){
+    <app-resource-page [resource]="getRessource"></app-resource-page>
+  }
+</div>
+
+
+

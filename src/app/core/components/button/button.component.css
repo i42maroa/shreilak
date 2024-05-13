@@ -1,0 +1,19 @@
+.button_container{
+  background-color: transparent;
+  background-image: url("/assets/svg/single-navbar.svg") ;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  display: flex;
+  min-width: 200px;
+  cursor: pointer;
+}
+
+.text{
+  margin: auto;
+  padding: 1.5rem;
+  color: var(--green);
+  font-size: 18px;
+  font-family: var(--font-title);
+  text-align: center;
+}

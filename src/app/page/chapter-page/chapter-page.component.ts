@@ -1,34 +1,31 @@
 import { Component, Input } from '@angular/core';
-import { CHAPTERS } from '../../data/chapters.data';
 import { ChapterComponent } from '../../core/components/chapter/chapter.component';
 import { RouterLink } from '@angular/router';
+import { ButtonComponent } from '../../core/components/button/button.component';
+import { CharapterPageService } from '../../core/service/charapter/charapter-page.service';
 @Component({
   selector: 'app-chapter-page',
   standalone: true,
-  imports: [RouterLink,ChapterComponent],
+  imports: [RouterLink,ChapterComponent, ButtonComponent],
   templateUrl: './chapter-page.component.html',
   styleUrl: './chapter-page.component.css'
 })
 export class ChapterPageComponent {
 
-  chapterId = 0;
+  constructor(private service: CharapterPageService){}
+
 
   @Input('chapterId') set id(chapterId: number) {
-    this.chapterId = chapterId;
+    this.service.setPage(chapterId);
   };
 
 
-  get chapter(){
-    return  CHAPTERS[+this.chapterId];
-  }
 
-  behaviorChapter(){
-    const pos = this.chapterId - 1
-    return `/chapter/${pos}`;
+  previousChapter(){
+    this.service.decrementPage()
   }
 
   nextChapter(){
-    const pos = +this.chapterId + 1
-    return `/chapter/${pos}`;
+    this.service.incrementPage()
   }
 }

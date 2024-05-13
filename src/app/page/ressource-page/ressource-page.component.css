@@ -1,4 +1,5 @@
-.objective_title{
+.container{
+  margin: 0 1rem;
   display: flex;
   flex-direction: column;
 }

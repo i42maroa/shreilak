@@ -1,10 +1,15 @@
 
 <div class="container">
 
-  <app-landing-page [numPage]="getPage()"></app-landing-page>
+  <app-landing-page />
 
-  <button (click)="show()">+</button>
-  <button (click)="unShow()">-</button>
+  @if(isPreviousAvailable() | async){
+    <button (click)="unShow()">-</button>
+  }
+
+  @if(isNextAvailable() | async){
+    <button (click)="show()">+</button>
+  }
 
   <button (click)="toChapters()">Capitulos</button>
 

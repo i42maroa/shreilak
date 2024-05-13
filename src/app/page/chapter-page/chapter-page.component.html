@@ -1,6 +1,8 @@
 <div class="container">
-  <app-chapter [chapter]="chapter"></app-chapter>
+  <div class="button_container">
+    <app-button (click)="previousChapter()" ></app-button>
+    <app-button (click)="nextChapter()" ></app-button>
+  </div>
+  <app-chapter />
 
-  <button [routerLink]="[behaviorChapter()]">Anterior capitulo</button>
-  <button [routerLink]="[nextChapter()]">Siguiente capitulo</button>
 </div>

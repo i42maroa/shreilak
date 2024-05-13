@@ -1,23 +1,26 @@
 <div class="container">
 
   <div class="content_container">
-    @if(numPage === 0){
-      <app-sixth-page></app-sixth-page>
+    @if((numPage$ | async) == 0 ){
+      <app-first-page/>
     }
-    @if (numPage === 1){
-      <app-fifth-page></app-fifth-page>
+    @if ((numPage$ | async) == 1){
+      <app-second-page/>
     }
-    @if(numPage === 2){
-      <app-fourth-page></app-fourth-page>
+    @if((numPage$ | async)== 2){
+      <app-third-page/>
     }
-    @if(numPage === 3){
-      <app-third-page></app-third-page>
+    @if((numPage$ | async) == 3){
+      <app-fourth-page/>
     }
-    @if(numPage === 4){
-      <app-second-page></app-second-page>
+    @if((numPage$ | async) == 4){
+      <app-fifth-page/>
     }
-    @if(numPage === 5){
-      <app-first-page></app-first-page>
+    @if((numPage$ | async) == 5){
+      <app-sixth-page/>
+    }
+    @if((numPage$ | async) == 6){
+      <app-seventh-page/>
     }
   </div>
 </div>
