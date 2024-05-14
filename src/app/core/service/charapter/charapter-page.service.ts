@@ -4,6 +4,11 @@ import { BehaviorSubject } from 'rxjs';
 const MAX_PAGE = 3;
 const START_PAGE = 0;
 
+export interface buttonInterface{
+    title:string,
+    show:boolean
+}
+
 @Injectable({
   providedIn: 'root'
 })
@@ -15,7 +20,7 @@ export class CharapterPageService {
 
   constructor() {
     this.pageNumber$.subscribe(p => {
-      this.nextPageAvailable$.next(p < MAX_PAGE);
+      this.nextPageAvailable$.next(p < MAX_PAGE - 1);
       this.previousPageAvailable$.next(p > START_PAGE);
     })
   }

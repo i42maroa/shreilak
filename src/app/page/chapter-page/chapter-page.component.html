@@ -1,7 +1,15 @@
 <div class="container">
   <div class="button_container">
-    <app-button (click)="previousChapter()" ></app-button>
-    <app-button (click)="nextChapter()" ></app-button>
+    @if(!(isPreviousAvailable() | async)){
+      <app-button [routerLink]="['/history/6']" [text]="'CAPITULOS'" />
+    }
+    @if(isPreviousAvailable() | async){
+      <app-button (click)="previousChapter()" [text]="pagePreviousButtonTitle" />
+    }
+    @if(isNextAvailable() | async){
+      <app-button (click)="nextChapter()" [text]="pageNextButtonTitle"/>
+    }
+
   </div>
   <app-chapter />
 

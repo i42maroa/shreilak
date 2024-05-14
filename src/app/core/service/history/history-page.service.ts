@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 
-const MAX_PAGE = 6;
+const MAX_PAGE = 7;
 const START_PAGE = 0;
 const CHAPTER_LIST_PAGE = 6;
 
@@ -16,7 +16,7 @@ export class HistoryPageService {
 
   constructor() {
     this.pageNumber$.subscribe(p => {
-      this.nextPageAvailable$.next(p < MAX_PAGE);
+      this.nextPageAvailable$.next(p < MAX_PAGE - 1);
       this.previousPageAvailable$.next(p > START_PAGE);
     })
   }
