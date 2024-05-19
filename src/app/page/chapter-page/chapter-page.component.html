@@ -4,10 +4,10 @@
       <app-button [routerLink]="['/history/6']" [text]="'CAPITULOS'" />
     }
     @if(isPreviousAvailable() | async){
-      <app-button (click)="previousChapter()" [text]="pagePreviousButtonTitle" />
+      <app-button (click)="previousChapter()" [text]="titlePrevious$ | async" />
     }
     @if(isNextAvailable() | async){
-      <app-button (click)="nextChapter()" [text]="pageNextButtonTitle"/>
+      <app-button (click)="nextChapter()" [text]="titleNext$ | async"/>
     }
 
   </div>

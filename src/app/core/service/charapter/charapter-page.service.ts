@@ -26,20 +26,22 @@ export class CharapterPageService {
   }
 
   setPage(numPage:number){
-    const page = (numPage > START_PAGE && numPage < MAX_PAGE )? numPage : START_PAGE;
-    this.pageNumber$.next(page)
+    if(numPage > START_PAGE && numPage < MAX_PAGE ){
+      this.pageNumber$.next(numPage)
+    }
   }
 
   incrementPage(){
-    const newPage = this.pageNumber$.value < MAX_PAGE ? this.pageNumber$.value +1 : MAX_PAGE;
-    this.pageNumber$.next(newPage);
+    if (this.nextPageAvailable$.value){
+      this.pageNumber$.next( +this.pageNumber$.value +1);
+    }
   }
 
   decrementPage(){
-    const newPage = this.pageNumber$.value > START_PAGE ? this.pageNumber$.value -1 : START_PAGE;
-    this.pageNumber$.next(newPage);
+    if (this.previousPageAvailable$.value){
+    this.pageNumber$.next( +this.pageNumber$.value -1);
+    }
   }
-
 
   get getPageNumber(){
     return this.pageNumber$;

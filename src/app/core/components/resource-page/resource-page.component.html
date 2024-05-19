@@ -1,20 +1,23 @@
 
 @if(resource){
 <div class="container">
-
   <h2>{{resource.name}}</h2>
   <span>{{resource.description}}</span>
   <span>{{resource.text}}</span>
 
   <div class="objective_container">
     @for (images of resource.images; track images.url) {
-      <img src="images.url" alt="images.alt">
+      <img class="image" src="{{images.url}}" alt="{{images.alt}}">
     }
   </div>
 
+  @if(resource.resources.length > 0){
+    <h3>Recursos necesarios</h3>
+  }
+
   <div class="ressource_buttons">
     @for (res of resource.resources; track res.url) {
-      <button>name</button>
+      <a href="{{res.url}}" target="_blank">{{res.name}}</a>
     }
   </div>
 </div>

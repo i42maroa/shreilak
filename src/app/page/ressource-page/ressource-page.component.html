@@ -1,7 +1,9 @@
 <div class="container">
-  <app-button [routerLink]="['/chapter/0']" [text]="'Capítulos'"></app-button>
-  @if(resourceId !== ""){
-    <app-resource-page [resource]="getRessource"></app-resource-page>
+  <app-button [routerLink]="[chapterPreviousPath]" [text]="titleButton"></app-button>
+  @if(ressource | async; as resource){
+    <app-resource-page [resource]="resource"></app-resource-page>
+  }@else{
+    <span>RESSOURCE NOT FOUND</span>
   }
 </div>
 

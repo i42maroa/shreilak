@@ -8,10 +8,19 @@ export interface ResourceInterface{
 }
 
 export interface Resources{
-  url:string
+  url:string,
+  name:string
 }
 
 export interface Images{
   url:string,
   alt:string
+}
+
+
+export const EMPTY_RESSOURCE:ResourceInterface={
+  id:'',
+  name:'',
+  images:[],
+  resources:[]
 }

@@ -3,19 +3,22 @@ import { ChapterInterface } from '../../../data/interface/chapter.interface';
 import { ObjetivePageComponent } from '../objetive-page/objetive-page.component';
 import { CharapterPageService } from '../../service/charapter/charapter-page.service';
 import { CHAPTERS } from '../../../data/chapters.data';
+import { BehaviorSubject } from 'rxjs';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-chapter',
   standalone: true,
-  imports: [ObjetivePageComponent],
+  imports: [ObjetivePageComponent, CommonModule],
   templateUrl: './chapter.component.html',
   styleUrl: './chapter.component.css'
 })
 export class ChapterComponent {
 
-  chapter!: ChapterInterface;
+  chapter$ = new BehaviorSubject<ChapterInterface|undefined>(undefined);
 
   constructor(private service: CharapterPageService){
-    this.service.pageNumber$.subscribe(p =>this.chapter = CHAPTERS[p]);
+    this.service.pageNumber$.subscribe(p =>this.chapter$.next(CHAPTERS[p]));
   }
+
 }

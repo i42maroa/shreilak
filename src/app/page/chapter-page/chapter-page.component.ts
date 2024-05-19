@@ -4,6 +4,7 @@ import { RouterLink } from '@angular/router';
 import { ButtonComponent } from '../../core/components/button/button.component';
 import { CharapterPageService } from '../../core/service/charapter/charapter-page.service';
 import { CommonModule } from '@angular/common';
+import { BehaviorSubject } from 'rxjs';
 import { CHAPTERS } from '../../data/chapters.data';
 @Component({
   selector: 'app-chapter-page',
@@ -14,7 +15,20 @@ import { CHAPTERS } from '../../data/chapters.data';
 })
 export class ChapterPageComponent {
 
-  constructor(private servicePage: CharapterPageService){}
+  titlePrevious$= new BehaviorSubject<string>("");
+  titleNext$= new BehaviorSubject<string>("");
+
+  constructor(private servicePage: CharapterPageService){
+    this.servicePage.getPageNumber.subscribe(page =>{
+      if (this.servicePage.getIsPreviousPageAvailable.value){
+        const title = CHAPTERS[+page - 1].title;
+        this.titlePrevious$.next(title);
+      }
+      if (this.servicePage.getIsNextPageAvailable.value){
+        const title = CHAPTERS[+page + 1].title;
+        this.titleNext$.next(title);
+      }})
+  }
 
 
   @Input('chapterId') set id(chapterId: number) {
@@ -37,16 +51,4 @@ export class ChapterPageComponent {
   isNextAvailable(){
     return this.servicePage.getIsNextPageAvailable
   }
-
-  get pagePreviousButtonTitle(): string{
-    return CHAPTERS[this.servicePage.getPageNumber.value - 1].title;
-  }
-
-  get pageNextButtonTitle(): string{
-    return CHAPTERS[this.servicePage.getPageNumber.value + 1].title;
-  }
-
-
-
-
 }
