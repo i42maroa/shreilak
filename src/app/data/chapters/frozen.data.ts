@@ -1,6 +1,7 @@
 import { ChapterInterface } from "../interface/chapter.interface";
 import { PICK_UP_GARBAGE } from "../ressources/pickUpGarabage.data";
 import { SAVE_OLAF } from "../ressources/saveOlaf.data";
+import { THREE_R } from "../ressources/three-r.data";
 
 export const FROZEN_CHAPTER:ChapterInterface = {
   title:"FROZEN",
@@ -11,7 +12,8 @@ export const FROZEN_CHAPTER:ChapterInterface = {
       title:"Limpiar el bosque",
       process: "Para salvar a olaf tendremos que ayudar haciendo esto y lo otro",
       resources: [
-        PICK_UP_GARBAGE
+        THREE_R,
+        PICK_UP_GARBAGE,
       ]
     },
     {

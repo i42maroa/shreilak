@@ -9,6 +9,10 @@
   cursor: pointer;
 }
 
+.button_container:hover{
+  transform: scale(1.1);
+}
+
 .text{
   margin: auto;
   padding: 1.5rem;

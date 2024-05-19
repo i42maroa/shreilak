@@ -39,4 +39,7 @@ export class LandingComponent {
     return this.servicePage.getIsNextPageAvailable
   }
 
+  getPageNumber(){
+    return this.servicePage.getPageNumber
+  }
 }
