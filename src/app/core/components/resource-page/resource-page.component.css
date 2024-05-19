@@ -16,6 +16,12 @@
   flex-direction: column;
 }
 
+.ressource{
+  display: flex;
+  margin: 10px 0;
+}
+
+
 
 @media (max-width: 400px) {
   .image{

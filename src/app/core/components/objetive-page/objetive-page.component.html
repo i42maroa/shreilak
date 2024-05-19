@@ -7,8 +7,8 @@
   <ul class="resource_container">
     @for (resource of objective.resources; track resource.id) {
       <li>
-        <a [routerLink]="['/ressource/'+ resource.id]">
-         {{resource.name}}</a>
+        <a class="ressource" [routerLink]="['/ressource/'+ resource.id]">
+        -  {{resource.name}}</a>
       </li>
      }
   </ul>
