@@ -1,0 +1,14 @@
+.objective_title{
+  display: flex;
+  flex-direction: column;
+}
+
+.resource_container{
+  padding: 0;
+  list-style: none;
+}
+
+.ressource{
+  display: flex;
+  margin: 10px 0;
+}

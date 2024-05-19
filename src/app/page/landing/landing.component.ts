@@ -1,29 +1,45 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { ChapterComponent } from '../../core/components/chapter/chapter.component';
 import { LandingPageComponent } from '../landing-page/landing-page.component';
+import { HistoryPageService } from '../../core/service/history/history-page.service';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-landing',
   standalone: true,
-  imports: [RouterLink, ChapterComponent, LandingPageComponent],
+  imports: [RouterLink, ChapterComponent, LandingPageComponent, CommonModule],
   templateUrl: './landing.component.html',
   styleUrl: './landing.component.css'
 })
 export class LandingComponent {
 
-  numPage:number = 5;
+  @Input('pageId') set id(pageId: number) {
+    this.servicePage.setPage(pageId)
+  };
 
-toChapters(){
-  this.numPage = 0;
-}
+   constructor(
+    private servicePage: HistoryPageService){}
+
+  toChapters(){
+    this.servicePage.toListCharacters()
+  }
   show(){
-    this.numPage++;
+    this.servicePage.incrementPage()
   }
   unShow(){
-    this.numPage--;
+    this.servicePage.decrementPage()
   }
-  getPage(){
-    return this.numPage % 6;
+
+  isPreviousAvailable(){
+    return this.servicePage.getIsPreviousPageAvailable
+  }
+
+  isNextAvailable(){
+    return this.servicePage.getIsNextPageAvailable
+  }
+
+  getPageNumber(){
+    return this.servicePage.getPageNumber
   }
 }

@@ -1,20 +1,15 @@
 .container{
   display: flex;
   flex-direction: column;
-  height: 300px;
-}
-
-
-.handler-container{
-  display: flex;
-  position: relative;
-  width: 100%;
-  height: 200px;
-}
-
-.page{
-  position: absolute;
-  width: 100%;
-  height: 200px;
   background-color: var(--white-page);
+  padding: 1rem;
+}
+
+.translate{
+  color: grey;
+}
+
+
+@media (max-width: 300px) {
+
 }

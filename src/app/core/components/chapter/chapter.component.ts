@@ -1,32 +1,24 @@
 import { Component, Input } from '@angular/core';
 import { ChapterInterface } from '../../../data/interface/chapter.interface';
 import { ObjetivePageComponent } from '../objetive-page/objetive-page.component';
+import { CharapterPageService } from '../../service/charapter/charapter-page.service';
+import { CHAPTERS } from '../../../data/chapters.data';
+import { BehaviorSubject } from 'rxjs';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-chapter',
   standalone: true,
-  imports: [ObjetivePageComponent],
+  imports: [ObjetivePageComponent, CommonModule],
   templateUrl: './chapter.component.html',
   styleUrl: './chapter.component.css'
 })
 export class ChapterComponent {
 
-  @Input() chapter!: ChapterInterface;
+  chapter$ = new BehaviorSubject<ChapterInterface|undefined>(undefined);
 
-  numPage:number = 6;
-
-  toChapters(){
-    this.numPage = 0;
+  constructor(private service: CharapterPageService){
+    this.service.pageNumber$.subscribe(p =>this.chapter$.next(CHAPTERS[p]));
   }
-    show(){
-      this.numPage++;
-    }
-    unShow(){
-      this.numPage--;
-    }
-    onDragOver(event: DragEvent){
-        console.log(event)
-    }
-
 
 }

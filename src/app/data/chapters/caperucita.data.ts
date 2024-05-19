@@ -3,6 +3,7 @@ import { ChapterInterface } from "../interface/chapter.interface";
 export const CAPERUCITA_CHAPTER:ChapterInterface = {
   title:"CAPERUCITA",
   history:"historiasassf as fasd ",
+  translatedHistory:"asa",
   objectives:[
     {
       title:"Salvar a olaf",

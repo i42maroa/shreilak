@@ -1,24 +1,19 @@
-<div class="container">
-  <div  class="handler_container">
+@if(chapter$ | async; as chapter){
+  <div class="container">
     <h2>{{chapter.title}}</h2>
-    <div class="page">
 
+    <div class="text_container">
+      <p>{{chapter.history}}</p>
+      <p class="translate">{{chapter.translatedHistory}}</p>
+    </div>
 
-    <p>{{chapter.history}}</p>
-  </div>
-
+    <div class="objective_container">
     @for (objective of chapter.objectives; track objective.title; let idx = $index) {
-      @if (numPage > idx){
-        <div class="page">
-         <app-objetive-page [objective]="objective"></app-objetive-page>
-        </div>
-      }
+        <app-objetive-page [objective]="objective"></app-objetive-page>
     }
+    </div>
   </div>
-</div>
+}
 
-<button (click)="show()">+</button>
-<button (click)="unShow()">-</button>
 
-{{numPage}}
 

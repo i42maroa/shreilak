@@ -4,7 +4,7 @@ import { RouterLink } from '@angular/router';
 @Component({
   selector: 'app-sixth-page',
   standalone: true,
-  imports: [RouterLink],
+  imports: [],
   templateUrl: './sixth-page.component.html',
   styleUrl: './sixth-page.component.css'
 })

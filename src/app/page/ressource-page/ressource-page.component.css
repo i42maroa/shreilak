@@ -11,10 +11,10 @@
   margin: 1rem 0;
 }
 
-
-.left{
-  position: left;
+.button_change_chapter{
+  margin: auto;
 }
+
 
 @media (max-width: 300px) {
   .container{
@@ -28,5 +28,4 @@
   .button_change_chapter{
     margin: 5px auto;
   }
-
 }
