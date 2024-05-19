@@ -8,4 +8,24 @@
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  margin: 1rem 0;
+}
+
+.button_change_chapter{
+  margin: auto;
+}
+
+@media (max-width: 300px) {
+  .container{
+    margin: 0 0.5rem;
+  }
+
+  .button_container{
+    margin: 10px 0;
+  }
+
+  .button_change_chapter{
+    margin: 5px auto;
+  }
+
 }

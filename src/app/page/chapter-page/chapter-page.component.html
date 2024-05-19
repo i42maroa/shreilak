@@ -1,16 +1,14 @@
 <div class="container">
   <div class="button_container">
     @if(!(isPreviousAvailable() | async)){
-      <app-button [routerLink]="['/history/6']" [text]="'CAPITULOS'" />
+      <app-button class="button_change_chapter" [routerLink]="['/history/6']" [text]="'CAPITULOS'" />
     }
     @if(isPreviousAvailable() | async){
-      <app-button (click)="previousChapter()" [text]="titlePrevious$ | async" />
+      <app-button class="button_change_chapter" (click)="previousChapter()" [text]="titlePrevious$ | async" />
     }
     @if(isNextAvailable() | async){
-      <app-button (click)="nextChapter()" [text]="titleNext$ | async"/>
+      <app-button class="button_change_chapter" (click)="nextChapter()" [text]="titleNext$ | async"/>
     }
-
   </div>
   <app-chapter />
-
 </div>

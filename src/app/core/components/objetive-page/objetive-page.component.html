@@ -1,16 +1,15 @@
 <div class="container">
   <div class="objective_title">
-    <h3>
-      {{objective.title}}
-    </h3>
-    <span>
-      {{objective.process}}
-    </span>
+    <h3>{{objective.title}}</h3>
+    <p>{{objective.process}}</p>
   </div>
 
   <ul class="resource_container">
     @for (resource of objective.resources; track resource.id) {
-      <li> <a [routerLink]="['/ressource/'+ resource.id]">{{resource.name}}</a></li>
+      <li>
+        <a [routerLink]="['/ressource/'+ resource.id]">
+         {{resource.name}}</a>
+      </li>
      }
   </ul>
 </div>

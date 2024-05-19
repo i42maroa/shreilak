@@ -8,3 +8,8 @@
 .translate{
   color: grey;
 }
+
+
+@media (max-width: 300px) {
+
+}

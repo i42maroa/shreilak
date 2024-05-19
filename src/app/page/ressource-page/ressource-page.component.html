@@ -1,5 +1,7 @@
 <div class="container">
-  <app-button [routerLink]="[chapterPreviousPath]" [text]="titleButton"></app-button>
+  <div class="button_container">
+    <app-button class="button_change_chapter" [routerLink]="[chapterPreviousPath]" [text]="titleButton"></app-button>
+  </div>
   @if(ressource | async; as resource){
     <app-resource-page [resource]="resource"></app-resource-page>
   }@else{

@@ -2,8 +2,8 @@
 @if(resource){
 <div class="container">
   <h2>{{resource.name}}</h2>
-  <span>{{resource.description}}</span>
-  <span>{{resource.text}}</span>
+  <p>{{resource.description}}</p>
+  <p>{{resource.text}}</p>
 
   <div class="objective_container">
     @for (images of resource.images; track images.url) {
