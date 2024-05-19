@@ -1,4 +1,8 @@
-
+<div class="button_container">
+  @if(( getPageNumber() | async )!=0 && ( getPageNumber() | async )!=6 ){
+    <app-button class="button_chapters" (click)="toChapters()" [text]="'Capítulos'"></app-button>
+  }
+</div>
 <div class="container">
   <app-landing-page />
   <div class="button_container">
@@ -10,9 +14,7 @@
       }
   </div>
 </div>
-@if((getPageNumber() | async) != 6){
-  <button class="button_chapters" (click)="toChapters()">Capítulos</button>
-}
+
 
 
 

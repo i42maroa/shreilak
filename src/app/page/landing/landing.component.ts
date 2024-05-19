@@ -4,11 +4,12 @@ import { ChapterComponent } from '../../core/components/chapter/chapter.componen
 import { LandingPageComponent } from '../landing-page/landing-page.component';
 import { HistoryPageService } from '../../core/service/history/history-page.service';
 import { CommonModule } from '@angular/common';
+import { ButtonComponent } from '../../core/components/button/button.component';
 
 @Component({
   selector: 'app-landing',
   standalone: true,
-  imports: [RouterLink, ChapterComponent, LandingPageComponent, CommonModule],
+  imports: [RouterLink, ButtonComponent, ChapterComponent, LandingPageComponent, CommonModule],
   templateUrl: './landing.component.html',
   styleUrl: './landing.component.css'
 })
