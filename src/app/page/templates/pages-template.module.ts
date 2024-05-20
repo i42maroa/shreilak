@@ -6,7 +6,6 @@ import { ThirdPageComponent } from './third-page/third-page.component';
 import { FourthPageComponent } from './fourth-page/fourth-page.component';
 import { FifthPageComponent } from './fifth-page/fifth-page.component';
 import { SixthPageComponent } from './sixth-page/sixth-page.component';
-import { SeventhPageComponent } from './seventh-page/seventh-page.component';
 
 
 @NgModule({
@@ -16,8 +15,7 @@ import { SeventhPageComponent } from './seventh-page/seventh-page.component';
     ThirdPageComponent,
     FourthPageComponent,
     FifthPageComponent,
-    SixthPageComponent,
-  SeventhPageComponent],
+    SixthPageComponent],
   imports: [
     CommonModule,
     FirstPageComponent,
@@ -25,8 +23,7 @@ import { SeventhPageComponent } from './seventh-page/seventh-page.component';
     ThirdPageComponent,
     FourthPageComponent,
     FifthPageComponent,
-    SixthPageComponent,
-    SeventhPageComponent
+    SixthPageComponent
   ]
 })
 export class PagesTemplateModule { }

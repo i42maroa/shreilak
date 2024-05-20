@@ -1,46 +1,27 @@
-import { Component, Input } from '@angular/core';
+import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { ChapterComponent } from '../../core/components/chapter/chapter.component';
-import { LandingPageComponent } from '../landing-page/landing-page.component';
 import { HistoryPageService } from '../../core/service/history/history-page.service';
 import { CommonModule } from '@angular/common';
 import { ButtonComponent } from '../../core/components/button/button.component';
+import { LandingPageComponent } from '../../core/components/landing-page/landing-page.component';
+import { SwiperComponent } from '../../core/components/swiper/swiper.component';
+
 
 @Component({
   selector: 'app-landing',
   standalone: true,
-  imports: [RouterLink, ButtonComponent, ChapterComponent, LandingPageComponent, CommonModule],
+  imports: [RouterLink, ButtonComponent, ChapterComponent, LandingPageComponent, CommonModule, SwiperComponent],
   templateUrl: './landing.component.html',
   styleUrl: './landing.component.css'
 })
 export class LandingComponent {
-
-  @Input('pageId') set id(pageId: number) {
-    this.servicePage.setPage(pageId)
-  };
 
    constructor(
     private servicePage: HistoryPageService){}
 
   toChapters(){
     this.servicePage.toListCharacters()
-  }
-  show(){
-    this.servicePage.incrementPage()
-  }
-  unShow(){
-    this.servicePage.decrementPage()
-  }
-
-  isPreviousAvailable(){
-    return this.servicePage.getIsPreviousPageAvailable
-  }
-
-  isNextAvailable(){
-    return this.servicePage.getIsNextPageAvailable
-  }
-
-  getPageNumber(){
-    return this.servicePage.getPageNumber
+    return '/chapter';
   }
 }

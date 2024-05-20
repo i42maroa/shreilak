@@ -2,7 +2,16 @@
   display: flex;
   height: 100%;
   flex-direction: column;
+  background-color: var(--page);
+  border-radius: 2px;
+}
+
+.wrapper{
+  margin: 2rem 1rem;
+  padding: 0.5rem 1rem;
+  height: 100%;
   position: relative;
+  outline: 2px solid var( --page-line);
 }
 
 .title_container{
