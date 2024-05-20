@@ -1,38 +1,14 @@
-.container{
-  display: flex;
-  flex-direction: column;
-  position: relative;
-}
 
 .button_container{
   width: 100%;
   height: 80px;
   display: flex;
 }
-.right{
-  right: 0;
-}
-
-.button_change_page{
-  position: absolute;
-  margin: 5px;
-  width: 30px;
-  height: 30px;
-  background-color: var(--brown);
-  border: 2px solid var(--green);
-  color: var(--green);
-  border-radius: 3px;
-  font-size: 18px;
-  cursor: pointer;
-  top: 0;
-}
-
-.button_change_page:hover{
-  transform: scale(1.1);
-}
-
 .button_chapters{
   display: flex;
   margin: auto;
 }
 
+.swiper_container{
+  margin: 1rem;
+}

@@ -12,4 +12,11 @@ import { RouterLink } from '@angular/router';
 })
 export class ObjetivePageComponent {
   @Input() objective!: ObjectiveInteface;
+  @Input() index!:number;
+
+  show = false;
+
+  showDetail(){
+    this.show = true;
+  }
 }
