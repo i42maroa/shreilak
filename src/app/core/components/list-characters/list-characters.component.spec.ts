@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SeventhPageComponent } from './seventh-page.component';
+import { ListCharactersComponent } from './list-characters.component';
 
-describe('SeventhPageComponent', () => {
-  let component: SeventhPageComponent;
-  let fixture: ComponentFixture<SeventhPageComponent>;
+describe('ListCharactersComponent', () => {
+  let component: ListCharactersComponent;
+  let fixture: ComponentFixture<ListCharactersComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [SeventhPageComponent]
+      imports: [ListCharactersComponent]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(SeventhPageComponent);
+    fixture = TestBed.createComponent(ListCharactersComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

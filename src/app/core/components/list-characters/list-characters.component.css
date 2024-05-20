@@ -1,8 +1,8 @@
-.page{
+.container{
   display: flex;
   height: 100%;
   flex-direction: column;
-  position: relative;
+  background-color: var(--page);
 }
 
 .title_container{
@@ -23,7 +23,7 @@
 
 .list_container{
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr ;
   list-style: none;
   margin: 30px auto;
   padding: 0;

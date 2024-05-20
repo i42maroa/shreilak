@@ -1,15 +1,23 @@
 .container{
   background-color: transparent;
-  background-image: url("/assets/svg/page.svg") ;
+  /* background-image: url("/assets/svg/page.svg") ; */
   background-repeat: no-repeat;
   background-position: center;
   background-size: auto;
   height: 600px;
   width: 100%;
   display: flex;
+  position: relative;
+}
+
+.image{
+  display: flex;
+  margin: auto;
 }
 
 .content_container{
+  position: absolute;
+  display: flex;
   width: 100%;
   margin: 20px 70px 40px 70px;
 }
@@ -22,7 +30,6 @@
     margin: 15px 60px 30px 60px;
   }
 }
-
 
 @media (max-width: 400px) {
   .container{
