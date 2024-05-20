@@ -1,58 +1,58 @@
 .button_container{
-  background-color: transparent;
-  background-image: url("/assets/svg/single-navbar.svg") ;
-  background-repeat: no-repeat;
-  background-position: center;
+  background: transparent;
   border: none;
   display: flex;
+  flex-direction: column;
   cursor: pointer;
-  width: 200px;
-  height: 50px;
+  position: relative;
 }
 
 .button_container:hover{
   transform: scale(1.1);
 }
 
-.text{
-  display: flex;
-  margin: auto;
-  color: var(--green);
-  font-size: 16px;
-  font-family: var(--font-title);
-  text-align: center;
+.image{
+  height: 70px;
 }
 
-@media (max-width: 450px) {
 
-  .button_container{
-    width: 180px;
-    height: 40px;
+.text{
+  position: absolute;
+  color: var(--green);
+  font-size: 20px;
+  font-family: var(--font-title);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+@media (max-width: 450px) {
+  .image{
+    height: 60px;
   }
   .text{
-    font-size: 12px;
+    font-size: 19px;
   }
 }
 
 @media (max-width: 350px) {
 
-  .button_container{
-    width: 150px;
-    height: 30px;
+  .image{
+    height: 55px;
   }
   .text{
-    font-size: 10px;
+    font-size: 18px;
   }
 }
 
 @media (max-width: 300px) {
 
-  .button_container{
-    width: 110px;
-    height: 30px;
+  .image{
+    height: 50px;
   }
   .text{
-    font-size: 8px;
+    font-size: 16px;
   }
 }
 
