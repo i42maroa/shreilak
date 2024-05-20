@@ -1,18 +1,31 @@
 <div class="container">
-
-  <div class="title_container">
-    <h2 >Je besoin l'aide de mes élèves pour retrouver mon aspect normal!</h2>
-    <span class="translate">Necesito la ayuda de mis alumnos para recuperar mi aspecto normal</span>
-    </div>
-  <ul class="list_container">
-    <li [routerLink]="['/chapter/0']">
-      <span>Frozen</span>
-    </li>
-    <li  [routerLink]="['/chapter/1']">
-      <span>Caperucita</span>
-    </li>
-    <li [routerLink]="['/chapter/2']">
-      <span>Ratatouille</span>
-    </li>
-  </ul>
+  <div class="wrapper">
+    <div class="title_container">
+      <h2 >Je besoin l'aide de mes élèves pour retrouver mon aspect normal!</h2>
+      <span class="translate">Necesito la ayuda de mis alumnos para recuperar mi aspecto normal</span>
+      </div>
+    <ul class="list_container">
+      <li [routerLink]="['/chapter/0']">
+        <span class="chapter_title frozen">Frozen</span>
+        <ul class="list_objectives">
+          <li>1. Limpiar el bosque</li>
+          <li>2. Salvar a olaf</li>
+        </ul>
+      </li>
+      <li  [routerLink]="['/chapter/1']">
+        <span class="chapter_title caperucita">Caperucita</span>
+        <ul class="list_objectives">
+          <li>1. Limpiar el bosque</li>
+          <li>2. Salvar a olaf</li>
+        </ul>
+      </li>
+      <li [routerLink]="['/chapter/2']">
+        <span class="chapter_title ratatouille">Ratatouille</span>
+        <ul class="list_objectives">
+          <li>1. Limpiar el bosque</li>
+          <li>2. Salvar a olaf</li>
+        </ul>
+      </li>
+    </ul>
+  </div>
 </div>
