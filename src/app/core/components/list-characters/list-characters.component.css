@@ -3,13 +3,21 @@
   height: 100%;
   flex-direction: column;
   background-color: var(--page);
+  border-radius: 2px;
+}
+
+.wrapper{
+  margin: 2rem 1rem;
+  padding: 0.5rem 1rem;
+  height: 100%;
+  position: relative;
+  outline: 2px solid var( --page-line);
 }
 
 .title_container{
   display: flex;
   flex-direction: column;
-  margin: 0;
-  margin: 30px 0 0 0;
+  margin: 10px 0;
 }
 
 .translate{
@@ -20,83 +28,43 @@
   margin-top: 10px;
 }
 
-
 .list_container{
-  display: grid;
-  grid-template-columns: 1fr ;
-  list-style: none;
-  margin: 30px auto;
-  padding: 0;
-
-}
-.list_container li{
-  margin: 10px;
-  border-radius: 3px;
-  cursor: pointer;
-  border: 2px solid var(--brown);
-}
-
-.list_container li span{
   display: flex;
-  margin:  10px;
-  text-decoration: none;
-  font-size: 20px;
-  font-family: var(--font-title);
-  color: var(--brown);
+  flex-direction: column;
+  padding: 0;
+}
+
+.list_container li{
+  margin: 0.5rem 0;
 }
 
 
-@media (max-width: 450px) {
-  .translate{
-    font-size: 18px;
-  }
-
-  .list_container li span{
-    margin: 8px;
-    font-size: 15px;
-  }
+.chapter_title{
+    display: flex;
+    font-size: 20px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    font-weight: 800;
 }
 
-
-@media (max-width: 400px) {
-
-  .translate{
-    font-size: 16px;
-  }
-
+.frozen{
+  background-color:var(--brown);
+  border: 2px solid var(--frozen-color);
+  color: var(--page);
 }
 
-@media (max-width: 350px) {
-
-  .translate{
-    font-size: 14px;
-    margin-top: 5px;
-  }
-  .title_container{
-    margin: 20px 0 0 0;
-  }
-  .list_container li span{
-    font-size: 12px;
-  }
+.caperucita{
+  background-color:var(--brown);
+  border: 2px solid var(--caperucita);
+  color: var(--page);
 }
 
-
-@media (max-width: 300px) {
-  .translate{
-    font-size: 12px;
-    line-height: 1.2;
-  }
-
-  .list_container li span{
-    margin: 5px;
-  }
-
+.ratatouille{
+  background-color:var(--brown);
+  border: 2px solid var(--white);
+  color: var(--page);
 }
 
-@media (max-width: 250px) {
+.list_objectives{
 
-  .translate{
-    font-size: 10px;
-  }
 }
-

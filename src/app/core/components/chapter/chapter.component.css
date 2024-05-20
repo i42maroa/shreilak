@@ -1,13 +1,28 @@
 .container{
   display: flex;
   flex-direction: column;
-  background-color: var(--white-page);
+  background-color: var(--page);
+  border-radius: 2px;
+  height: 500px;
+}
+
+.wrapper{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  margin: 1rem;
   padding: 1rem;
+  outline: 2px solid var(--frozen-color);
+}
+
+.title{
+  color: var(--frozen-color);;
 }
 
 .translate{
   color: grey;
 }
+
 
 
 @media (max-width: 300px) {

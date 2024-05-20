@@ -1,6 +1,21 @@
+.container{
+   background-color: var(--page);
+
+}
+
 .objective_title{
+  margin: 1rem 0;
+  padding: 0 1rem;
   display: flex;
-  flex-direction: column;
+  cursor: pointer;
+  justify-content: space-between;
+}
+
+.icon{
+  fill: var(--brown);
+  display: flex;
+  width: 20px;
+  position: right;
 }
 
 .resource_container{
@@ -11,4 +26,10 @@
 .ressource{
   display: flex;
   margin: 10px 0;
+}
+
+.objetive_content{
+  display: flex;
+  flex-direction: column;
+  margin: 0 1rem 1rem 1rem;
 }

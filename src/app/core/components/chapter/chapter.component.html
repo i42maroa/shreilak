@@ -1,18 +1,20 @@
 @if(chapter$ | async; as chapter){
   <div class="container">
-    <h2>{{chapter.title}}</h2>
+    <div class="wrapper">
+      <h2 class="title">{{chapter.title}}</h2>
 
-    <div class="text_container">
-      <p>{{chapter.history}}</p>
-      <p class="translate">{{chapter.translatedHistory}}</p>
-    </div>
-
-    <div class="objective_container">
-    @for (objective of chapter.objectives; track objective.title; let idx = $index) {
-        <app-objetive-page [objective]="objective"></app-objetive-page>
-    }
-    </div>
+      <div class="text_container">
+        <p>{{chapter.history}}</p>
+        <p class="translate">{{chapter.translatedHistory}}</p>
+      </div>
+   </div>
   </div>
+
+  @for (objective of chapter.objectives; track objective.title; let idx = $index) {
+  <div class="objective_container">
+    <app-objetive-page [objective]="objective" [index]="idx"></app-objetive-page>
+  </div>
+  }
 }
 
 

@@ -36,6 +36,9 @@
   --page:#e8dba6;
   --page-line:#c95;
 
+  --frozen-color:#06A0DC;
+  --caperucita: #DC3128;
+
   --font-title: Domine-bold;
   --font-base: Domine-regular;
   --font-size: 1rem;
@@ -70,6 +73,10 @@ h3{
 p{
   font-size: 18px;
   line-height: 1.5;
+}
+
+ul{
+  list-style: none;
 }
 
 a{
