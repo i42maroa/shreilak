@@ -2,6 +2,7 @@ export interface ResourceInterface{
   id:string;
   name:string,
   description?:string,
+  descriptionTranslated?:string,
   text?:string,
   images:Images[],
   resources:Resources[]
