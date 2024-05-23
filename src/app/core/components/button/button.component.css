@@ -5,52 +5,34 @@
   flex-direction: column;
   cursor: pointer;
   position: relative;
+  margin: 0.2rem;
+  margin-bottom: 0.5rem;
 }
 
 .button_container:hover{
   transform: scale(1.1);
 }
 
-.image{
-  height: 70px;
-}
-
-
 .text{
-  position: absolute;
   color: var(--green);
   font-size: 20px;
   font-family: var(--font-title);
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
 
 
-@media (max-width: 450px) {
-  .image{
-    height: 60px;
-  }
+@media (max-width: 450px){
   .text{
     font-size: 19px;
   }
 }
 
 @media (max-width: 350px) {
-
-  .image{
-    height: 55px;
-  }
   .text{
     font-size: 18px;
   }
 }
 
 @media (max-width: 300px) {
-
-  .image{
-    height: 50px;
-  }
   .text{
     font-size: 16px;
   }
