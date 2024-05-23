@@ -3,13 +3,17 @@
 <div class="container">
   <h2>{{resource.name}}</h2>
   <p>{{resource.description}}</p>
-  <p>{{resource.text}}</p>
+  <p class="translated">{{resource.descriptionTranslated}}</p>
 
   <div class="objective_container">
     @for (images of resource.images; track images.url) {
       <img class="image" src="{{images.url}}" alt="{{images.alt}}">
     }
   </div>
+  <!-- <hr> -->
+  <p>{{resource.text}}</p>
+
+
 
   @if(resource.resources.length > 0){
     <h3>Recursos</h3>

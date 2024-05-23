@@ -7,23 +7,23 @@
     <ul class="list_container">
       <li [routerLink]="['/chapter/0']">
         <span class="chapter_title frozen">Frozen</span>
-        <ul class="list_objectives">
-          <li>1. Limpiar el bosque</li>
-          <li>2. Salvar a olaf</li>
-        </ul>
+        @for(objective of chapters[0].objectives; track objective.title; let idx = $index){
+          <ul class="list_objectives">
+            <li>{{idx +1}} -{{objective.title}}</li>
+          </ul>
+        }
+
       </li>
       <li  [routerLink]="['/chapter/1']">
         <span class="chapter_title caperucita">Caperucita</span>
         <ul class="list_objectives">
-          <li>1. Limpiar el bosque</li>
-          <li>2. Salvar a olaf</li>
+          <li>1. tbd</li>
         </ul>
       </li>
       <li [routerLink]="['/chapter/2']">
         <span class="chapter_title ratatouille">Ratatouille</span>
         <ul class="list_objectives">
-          <li>1. Limpiar el bosque</li>
-          <li>2. Salvar a olaf</li>
+          <li>1. tbd</li>
         </ul>
       </li>
     </ul>
