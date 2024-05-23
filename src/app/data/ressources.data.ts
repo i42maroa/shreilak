@@ -1,13 +1,21 @@
 import { ResourceInterface } from "./interface/resource.interface";
-import { PICK_UP_GARBAGE } from "./ressources/pickUpGarabage.data";
-import { SAVE_OLAF } from "./ressources/saveOlaf.data";
-import { THREE_R } from "./ressources/three-r.data";
+import { CLEAR_WOOD_CELEBRATION } from "./ressources/frozen/celebration.data";
+import { FROZEN_FINAL_TASK } from "./ressources/frozen/frozen_final_task.data";
+import { MEAL_CELEBRATION } from "./ressources/frozen/meal-celebration.data";
+import { PICK_UP_GARBAGE } from "./ressources/frozen/pickUpGarabage.data";
+import { REUSED_ORNAMENTS } from "./ressources/frozen/reused_ornaments.data";
+import { SAVE_OLAF } from "./ressources/frozen/saveOlaf.data";
+import { THREE_R } from "./ressources/frozen/three-r.data";
 
 export const MAP_RESSOURCES:Map<String, ResourceInterface> = new Map(
 [
   [PICK_UP_GARBAGE.id, PICK_UP_GARBAGE],
   [THREE_R.id, THREE_R],
-  [SAVE_OLAF.id, SAVE_OLAF]
+  [SAVE_OLAF.id, SAVE_OLAF],
+  [CLEAR_WOOD_CELEBRATION.id, CLEAR_WOOD_CELEBRATION],
+  [MEAL_CELEBRATION.id, MEAL_CELEBRATION],
+  [REUSED_ORNAMENTS.id, REUSED_ORNAMENTS],
+  [FROZEN_FINAL_TASK.id, FROZEN_FINAL_TASK]
 ]
 );
 

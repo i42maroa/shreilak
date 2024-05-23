@@ -1,15 +1,20 @@
 .header_container{
   display: flex;
   justify-content: center;
-  margin-bottom: 20px;
+  background-image: url('/assets/svg/single-navbar.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100px;
 }
 
 .image{
   height: 70px;
+  margin: auto;
 }
 
-.image:hover{
-  transform: scale(1.1);
+.header_container:hover{
+  transform: scale(1.01);
 }
 
 
@@ -23,7 +28,7 @@
 @media (max-width: 400px) {
 
   .header_container{
-    margin-bottom: 10px;
+    height: 80px;
   }
 
   .image{
@@ -34,7 +39,7 @@
 @media (max-width: 300px) {
 
   .header_container{
-    margin-bottom: 5px;
+    height: 70px;
   }
 
   .image{
@@ -43,6 +48,9 @@
 }
 
 @media (max-width: 200px) {
+  .header_container{
+    height: 60px;
+  }
 
   .image{
     height: 30px;
