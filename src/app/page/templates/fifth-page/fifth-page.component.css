@@ -6,8 +6,8 @@
 }
 
 .wrapper{
-  margin: 2rem 1rem;
-  padding: 1rem;
+  margin: 1.5rem 1rem;
+  padding: 0.5rem 1rem;
   height: 100%;
   position: relative;
   outline: 2px solid var( --page-line);
@@ -16,7 +16,7 @@
 .title_container{
   display: flex;
   flex-direction: column;
-  margin: 30px 0;
+  margin: 20px 0;
 }
 
 .translate{
@@ -66,7 +66,7 @@
     margin-top: 5px;
   }
   .title_container{
-    margin: 20px 0;
+    margin: 10px 0;
   }
 }
 
