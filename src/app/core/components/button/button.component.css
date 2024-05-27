@@ -2,11 +2,15 @@
   background: transparent;
   border: none;
   display: flex;
-  flex-direction: column;
   cursor: pointer;
   position: relative;
-  margin: 0.2rem;
-  margin-bottom: 0.5rem;
+}
+
+.icon{
+  height: 16px;
+  width: 16px;
+  fill: var(--green);
+  margin: auto 10px;
 }
 
 .button_container:hover{
