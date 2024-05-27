@@ -40,22 +40,27 @@
     padding: 0.5rem 1rem;
     cursor: pointer;
     font-weight: 800;
+    justify-content: space-between;
 }
 
 .frozen{
   background-color:var(--frozen-color);
-  /* border: 2px solid var(--frozen-color); */
   color: var(--white);
 }
 
 .caperucita{
   background-color:var(--caperucita);
-  /* border: 2px solid var(--caperucita); */
   color: var(--white);
 }
 
 .ratatouille{
   background-color:var(--brown);
-  /* border: 2px solid var(--brown); */
   color: var(--white);
+}
+
+.icon{
+  margin: auto 0 auto 0;
+  width: 18px;
+  height: 18px;
+  fill: var(--white);
 }
