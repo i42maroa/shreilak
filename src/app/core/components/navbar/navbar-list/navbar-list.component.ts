@@ -14,6 +14,10 @@ export class NavbarListComponent {
 
   constructor(private navbarOptions: NavbarService){}
 
+  closeNavbar(){
+    this.navbarOptions.setShowNavbar(false);
+  }
+
   get navbarOptionList(){
     return this.navbarOptions.navbarOptions$
   }

@@ -19,7 +19,7 @@ export class NavbarService {
           },
           {
             url:"/chapter",
-            title:"Capitulos"
+            title:"Capítulos"
           },
           {
             url:'/about',

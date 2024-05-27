@@ -1,15 +1,22 @@
-
-.button_container{
-  display: flex;
-  margin: 1rem auto;
-}
-.button_chapters{
-  display: flex;
-  margin: auto;
-}
-
 .swiper_container{
   margin: 1rem;
+}
+
+.title{
+  align-items: baseline;
+  display: flex;
+  flex-grow: 1;
+  gap: .5rem;
+  margin: 0 0 1.5rem 0;
+}
+
+.title:after{
+  content: "";
+  background-color: var(--page-line);
+  border: none;
+  display: block;
+  flex-grow: 1;
+  height: 2px;
 }
 
 

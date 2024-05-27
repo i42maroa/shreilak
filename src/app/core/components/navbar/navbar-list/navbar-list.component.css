@@ -15,10 +15,28 @@
 }
 
 .option{
+  display: flex;
+  flex-direction: column;
   cursor: pointer;
-  border: 2px solid var(--brown);
-  padding: 1rem;
-  margin: 0.5rem;
+  margin: 0 auto;
+  text-align: center;
+  color: var(--green);
+  font-weight: 800;
+  position: relative;
+}
+
+.image{
+  width: 300px;
+}
+
+.text{
+  text-align: center;
+  margin: auto;
+  font-size: 24px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .icon{
@@ -26,3 +44,22 @@
   width: 24px;
   fill: var(--brown);
 }
+
+@media (max-width: 400px) {
+  .image{
+    width: 250px;
+  }
+  .text{
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 300px) {
+  .image{
+    width: 200px;
+  }
+  .text{
+    font-size: 18px;
+  }
+}
+

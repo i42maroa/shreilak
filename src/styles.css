@@ -49,10 +49,6 @@
   --swiper-pagination-color: var(--brown);
 }
 
-div#swiper-button-next{
-  display: none;
-}
-
 
 html,
 body {
@@ -62,6 +58,7 @@ body {
   font-size: var(--font-size);
   font-size: 18px;
   color: var(--brown);
+  background-color: #f0f0f0;
 }
 
 h2{

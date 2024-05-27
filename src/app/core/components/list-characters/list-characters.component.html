@@ -1,12 +1,13 @@
 <div class="container">
-  <div class="wrapper">
-    <div class="title_container">
-      <h2 >Je besoin l'aide de mes élèves pour retrouver mon aspect normal!</h2>
-      <span class="translate">Necesito la ayuda de mis alumnos para recuperar mi aspecto normal</span>
-      </div>
+
+  <h2 class="title">Capítulos</h2>
+
     <ul class="list_container">
       <li [routerLink]="['/chapter/0']">
-        <span class="chapter_title frozen">Frozen</span>
+        <span class="chapter_title frozen">Frozen
+          <svg class="icon" viewBox="0 0 16 16" ><path fill-rule="evenodd" d="M1 8a.5.5 0 01.5-.5h11.793l-3.147-3.146a.5.5 0 01.708-.708l4 4a.5.5 0 010 .708l-4 4a.5.5 0 01-.708-.708L13.293 8.5H1.5A.5.5 0 011 8z" stroke="none"></path></svg>
+
+        </span>
         @for(objective of chapters[0].objectives; track objective.title; let idx = $index){
           <ul class="list_objectives">
             <li>{{idx +1}} -{{objective.title}}</li>
@@ -14,18 +15,18 @@
         }
 
       </li>
-      <li  [routerLink]="['/chapter/1']">
+      <li  >
         <span class="chapter_title caperucita">Caperucita</span>
         <ul class="list_objectives">
           <li>1. tbd</li>
         </ul>
       </li>
-      <li [routerLink]="['/chapter/2']">
+      <li >
         <span class="chapter_title ratatouille">Ratatouille</span>
         <ul class="list_objectives">
           <li>1. tbd</li>
         </ul>
       </li>
     </ul>
-  </div>
+
 </div>

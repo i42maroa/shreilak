@@ -4,7 +4,6 @@ import { ChapterComponent } from '../../core/components/chapter/chapter.componen
 import { CommonModule } from '@angular/common';
 import { ButtonComponent } from '../../core/components/button/button.component';
 import { SwiperComponent } from '../../core/components/swiper/swiper.component';
-import { NavbarService } from '../../core/service/navbar/navbar.service';
 
 
 @Component({
@@ -15,9 +14,5 @@ import { NavbarService } from '../../core/service/navbar/navbar.service';
   styleUrl: './landing.component.css'
 })
 export class LandingComponent {
-
-  constructor(private navbarService:NavbarService){
-    this.navbarService.setShowNavbar(false);
-  }
 
 }

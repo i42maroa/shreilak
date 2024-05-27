@@ -3,7 +3,9 @@
   max-width: 500px;
   margin: 0 auto;
   position: relative;
-  background: var(--brown);
+  background: var(--white);
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  border: 2px solid var(--page-line);
 }

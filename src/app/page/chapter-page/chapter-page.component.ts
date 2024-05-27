@@ -6,7 +6,7 @@ import { CharapterPageService } from '../../core/service/charapter/charapter-pag
 import { CommonModule } from '@angular/common';
 import { BehaviorSubject } from 'rxjs';
 import { CHAPTERS } from '../../data/chapters.data';
-import { NavbarService } from '../../core/service/navbar/navbar.service';
+
 @Component({
   selector: 'app-chapter-page',
   standalone: true,
@@ -19,9 +19,7 @@ export class ChapterPageComponent {
   titlePrevious$= new BehaviorSubject<string>("");
   titleNext$= new BehaviorSubject<string>("");
 
-  constructor(private servicePage: CharapterPageService, private navbarService:NavbarService){
-
-    this.navbarService.setShowNavbar(false);
+  constructor(private servicePage: CharapterPageService){
 
     this.servicePage.getPageNumber.subscribe(page =>{
       if (this.servicePage.getIsPreviousPageAvailable.value){
