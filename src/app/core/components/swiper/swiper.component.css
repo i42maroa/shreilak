@@ -1,5 +1,5 @@
 .container{
-  height: 700px;
+  height: 600px;
   width: 100%;
   border: 2px solid var(--page-line);
 }
@@ -12,12 +12,12 @@ swiper-container{
 
 @media (max-width: 400px) {
   .container{
-    height: 600px;
+    height: 500px;
   }
 }
 
 @media (max-width: 300px) {
   .container{
-    height: 500px;
+    height: 400px;
   }
 }
