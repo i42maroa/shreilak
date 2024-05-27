@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { NavbarService } from '../../core/service/navbar/navbar.service';
 import { RouterLink } from '@angular/router';
 
 @Component({
@@ -10,9 +9,4 @@ import { RouterLink } from '@angular/router';
   styleUrl: './about-page.component.css'
 })
 export class AboutPageComponent {
-
-  constructor(private navbarService:NavbarService){
-    this.navbarService.setShowNavbar(false);
-  }
-
 }
