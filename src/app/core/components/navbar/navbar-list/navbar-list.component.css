@@ -21,7 +21,8 @@
   margin: 0.5rem;
 }
 
-
-
-.text{
+.icon{
+  height: 24px;
+  width: 24px;
+  fill: var(--brown);
 }

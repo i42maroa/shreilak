@@ -9,13 +9,14 @@
   justify-content: space-between;
   position: relative;
   height: 100%;
+  margin: 0 1rem;
 }
 
 .icon{
   height: 28px;
   width: 28px;
   fill: var(--green);
-  margin: auto 15px;
+  margin: auto 0;
 }
 
 .image{
@@ -28,3 +29,4 @@
   width: 100%;
   height: 100svh;
 }
+

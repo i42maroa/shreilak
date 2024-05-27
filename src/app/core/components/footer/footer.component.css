@@ -1,0 +1,27 @@
+.container{
+  margin: 1rem;
+}
+
+.icon{
+  height: 24px;
+  width: 24px;
+  fill: var(--page);
+}
+
+hr{
+  height: 2px;
+  background-color: var(--page);
+  border: none;
+  width: 100%;
+}
+
+.social_medial_container{
+  display: flex;
+  margin: 0.5rem 0;
+}
+
+.social_medial_container span{
+  font-weight: 800;
+  margin: auto 1rem;
+  color: var(--page);
+}
