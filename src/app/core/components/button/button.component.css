@@ -4,13 +4,22 @@
   display: flex;
   cursor: pointer;
   position: relative;
+  padding: 0;
+  margin: 0;
+}
+
+.button_container span{
+  color: var(--brown);
+  padding: 1px;
+  border-bottom: 1px solid var(--green);
 }
 
 .icon{
   height: 16px;
   width: 16px;
-  fill: var(--green);
-  margin: auto 10px;
+  fill: var(--brown);
+  margin: auto 5px auto 0;
+  transform: rotate(180deg);
 }
 
 .button_container:hover{
@@ -19,26 +28,15 @@
 
 .text{
   color: var(--green);
-  font-size: 20px;
+  font-size: 16px;
   font-family: var(--font-title);
 }
 
 
-@media (max-width: 450px){
-  .text{
-    font-size: 19px;
-  }
-}
-
-@media (max-width: 350px) {
-  .text{
-    font-size: 18px;
-  }
-}
 
 @media (max-width: 300px) {
   .text{
-    font-size: 16px;
+    font-size: 14px;
   }
 }
 

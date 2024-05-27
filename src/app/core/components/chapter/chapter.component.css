@@ -1,9 +1,8 @@
 .container{
   display: flex;
   flex-direction: column;
-  background-color: var(--page);
   border-radius: 2px;
-  height: 500px;
+  margin-bottom: 2rem;
 }
 
 .wrapper{
@@ -16,7 +15,7 @@
 }
 
 .title{
-  color: var(--frozen-color);;
+  color: var(--frozen-color);
 }
 
 .translate{
@@ -25,6 +24,8 @@
 
 
 
-@media (max-width: 300px) {
-
+@media (max-width: 400px) {
+  .wrapper{
+    margin: 0;
+  }
 }
