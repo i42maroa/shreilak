@@ -11,3 +11,10 @@
 .swiper_container{
   margin: 1rem;
 }
+
+
+@media (max-width: 300px) {
+  .swiper_container{
+    margin: 0.5rem;
+  }
+}
