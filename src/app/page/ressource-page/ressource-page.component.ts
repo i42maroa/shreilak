@@ -33,7 +33,8 @@ export class RessourcePageComponent {
     }
 
     get titleButton(){
-      const numPage = this.chapterService.getPageNumber.value
-      return CHAPTERS[numPage].title
+     // const numPage = this.chapterService.getPageNumber.value
+     // return CHAPTERS[numPage].title
+     return 'Volver'
     }
 }

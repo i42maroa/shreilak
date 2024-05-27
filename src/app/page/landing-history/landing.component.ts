@@ -4,6 +4,7 @@ import { ChapterComponent } from '../../core/components/chapter/chapter.componen
 import { CommonModule } from '@angular/common';
 import { ButtonComponent } from '../../core/components/button/button.component';
 import { SwiperComponent } from '../../core/components/swiper/swiper.component';
+import { NavbarService } from '../../core/service/navbar/navbar.service';
 
 
 @Component({
@@ -15,7 +16,8 @@ import { SwiperComponent } from '../../core/components/swiper/swiper.component';
 })
 export class LandingComponent {
 
-  toChapters(){
-    return '/chapter';
+  constructor(private navbarService:NavbarService){
+    this.navbarService.setShowNavbar(false);
   }
+
 }

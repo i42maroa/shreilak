@@ -1,16 +1,17 @@
 .header_container{
   display: flex;
   justify-content: center;
-  background-image: url('/assets/svg/single-navbar.svg');
+  /* background-image: url('/assets/svg/single-navbar.svg');
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
-  height: 100px;
+  background-position: center; */
+  /* height: 100px; */
+  height: 100%;
+  width: fit-content;
 }
 
 .image{
-  height: 70px;
-  margin: auto;
+  height: 50px;
 }
 
 .header_container:hover{
@@ -18,42 +19,16 @@
 }
 
 
-@media (max-width: 450px) {
-
-  .image{
-    height: 60px;
-  }
-}
 
 @media (max-width: 400px) {
-
-  .header_container{
-    height: 80px;
-  }
-
   .image{
-    height: 50px;
+    height: 45px;
   }
 }
 
 @media (max-width: 300px) {
-
-  .header_container{
-    height: 70px;
-  }
-
   .image{
     height: 40px;
-  }
-}
-
-@media (max-width: 200px) {
-  .header_container{
-    height: 60px;
-  }
-
-  .image{
-    height: 30px;
   }
 }
 

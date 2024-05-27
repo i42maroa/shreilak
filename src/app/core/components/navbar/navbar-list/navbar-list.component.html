@@ -1,0 +1,9 @@
+<div class="container">
+  <div class="options_container">
+    @for(option of navbarOptionList | async; track option.title){
+      <div class="option" [routerLink]="option.url">
+        <span class="text">{{option.title}}</span>
+      </div>
+    }
+  </div>
+</div>
