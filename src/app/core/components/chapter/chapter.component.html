@@ -1,5 +1,5 @@
 @if(chapter$ | async; as chapter){
-  <div class="container">
+  <section id="history" class="container">
     <div class="wrapper">
       <h2 class="title">{{chapter.title}}</h2>
 
@@ -8,14 +8,11 @@
         <p class="translate">{{chapter.translatedHistory}}</p>
       </div>
    </div>
-  </div>
+  </section>
 
   @for (objective of chapter.objectives; track objective.title; let idx = $index) {
-  <div class="objective_container">
+  <section id="{{idx + 1}}" class="objective_container">
     <app-objetive-page [objective]="objective" [index]="idx"></app-objetive-page>
-  </div>
+  </section>
   }
 }
-
-
-
