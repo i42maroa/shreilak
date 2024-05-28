@@ -14,8 +14,8 @@ export const MEAL_CELEBRATION:ResourceInterface = {
   ],
   resources:[
     {
-      url:"https://drive.google.com/file/d/1mtnVk9A8JIOUWmQ5QsJ8MwaeAg9pLtxG/view?usp=drive_link",
-      name: "Tronco de navidad"
+      url:"https://drive.google.com/file/d/19-8ynsYVBCbpDg_YjUCXaIPtTS__6HhQ/view?usp=drive_link",
+      name: "Gastronomía"
     },
   ]
 }

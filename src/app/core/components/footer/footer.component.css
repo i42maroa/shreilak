@@ -1,7 +1,7 @@
 .container{
   background-color: var(--brown);
   height: 100%;
-  padding-bottom: 1rem;
+  padding-bottom: 0.5rem;
 }
 
 .icon{

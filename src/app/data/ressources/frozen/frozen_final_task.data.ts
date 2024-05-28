@@ -11,8 +11,8 @@ export const FROZEN_FINAL_TASK:ResourceInterface = {
   ],
   resources:[
     {
-      url:"/",
-      name: "Aprendamos la canción"
+      url:"https://drive.google.com/file/d/1NQqEEnaLuoIH0KABm-eR4J1aAC3jSyu-/view?usp=drive_link",
+      name: "Expresiones mágicas"
     }
   ]
 }

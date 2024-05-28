@@ -6,6 +6,7 @@ import { PICK_UP_GARBAGE } from "../ressources/frozen/pickUpGarabage.data";
 import { REUSED_ORNAMENTS } from "../ressources/frozen/reused_ornaments.data";
 import { SAVE_OLAF } from "../ressources/frozen/saveOlaf.data";
 import { THREE_R } from "../ressources/frozen/three-r.data";
+import { TRADITION_TREE } from "../ressources/frozen/tradition_tree.data";
 
 export const FROZEN_CHAPTER:ChapterInterface = {
   title:"FROZEN",
@@ -35,7 +36,8 @@ export const FROZEN_CHAPTER:ChapterInterface = {
       process: "Nos hemos encontrado a Elsa llorando en su habitación del castillo. Todos los adornos de navidad de su castillo se han derretido, y adornar el castillo en navidad era algo que le trae recuerdos de cuando era pequeña.",
       processTranslated: "Nos hemos encontrado a Elsa llorando en su habitación del castillo. Todos los adornos de navidad de su castillo se han derretido, y adornar el castillo en navidad era algo que le trae recuerdos de cuando era pequeña.",
       resources: [
-        REUSED_ORNAMENTS
+        REUSED_ORNAMENTS,
+        TRADITION_TREE
       ]
     },
     {
