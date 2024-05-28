@@ -14,11 +14,11 @@ export const CLEAR_WOOD_CELEBRATION:ResourceInterface = {
   ],
   resources:[
     {
-      url:"/",
+      url:"https://drive.google.com/file/d/1GFyYRsc8vLo9ajiNycrZrbGnKNXS8pnQ/view?usp=drive_link",
       name: "Aprendamos la canción"
     },
     {
-      url:"/",
+      url:"https://es.lyricstraining.com/fr/play/sarah/all-i-want-for-christmas-is-you-cover/HrcQjK5Nir#b7w!Sheila_dm96",
       name:"¡Vamos a cantar!"
     }
   ]

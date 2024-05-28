@@ -6,6 +6,7 @@ import { PICK_UP_GARBAGE } from "./ressources/frozen/pickUpGarabage.data";
 import { REUSED_ORNAMENTS } from "./ressources/frozen/reused_ornaments.data";
 import { SAVE_OLAF } from "./ressources/frozen/saveOlaf.data";
 import { THREE_R } from "./ressources/frozen/three-r.data";
+import { TRADITION_TREE } from "./ressources/frozen/tradition_tree.data";
 
 export const MAP_RESSOURCES:Map<String, ResourceInterface> = new Map(
 [
@@ -15,7 +16,8 @@ export const MAP_RESSOURCES:Map<String, ResourceInterface> = new Map(
   [CLEAR_WOOD_CELEBRATION.id, CLEAR_WOOD_CELEBRATION],
   [MEAL_CELEBRATION.id, MEAL_CELEBRATION],
   [REUSED_ORNAMENTS.id, REUSED_ORNAMENTS],
-  [FROZEN_FINAL_TASK.id, FROZEN_FINAL_TASK]
+  [FROZEN_FINAL_TASK.id, FROZEN_FINAL_TASK],
+  [TRADITION_TREE.id, TRADITION_TREE]
 ]
 );
 
