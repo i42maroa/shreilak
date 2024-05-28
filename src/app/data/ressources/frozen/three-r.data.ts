@@ -15,8 +15,8 @@ export const THREE_R:ResourceInterface = {
   ],
   resources:[
     {
-      url:"https://drive.google.com/file/d/1yxtGRfSTaFirVr8rYn9o28VL5RGF8rM5/view?usp=drive_link",
-      name: "Ficha"
+      url:"https://drive.google.com/file/d/1VTQPdMfqoWXcmqz-1IpjqeD6UsVayQ_m/view?usp=drive_link",
+      name: "Manual medio ambiente"
     }
   ]
 }
