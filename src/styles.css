@@ -13,12 +13,12 @@
 }
 
 
-@font-face {
+/* @font-face {
   font-family: "Inter";
   src: url("/assets/fonts/inter/Inter.ttf");
   font-weight: 300;
 }
-
+ */
 
 :root{
   --green: #b8dd2a;
