@@ -18,7 +18,7 @@
 .first-wrapper{
   display: flex;
   flex-direction: column;
-  margin: 2rem;
+  margin: 2rem 1.5rem;
   width: 100%;
   border: 3px solid var(--page-line);
   background-color: var(--brown);
@@ -43,11 +43,6 @@
   border-radius: 10px;
 }
 
-.title_image{
-  height: 50px;
-  margin: auto;
-}
-
 .logo_container{
   width: fit-content;
   margin: auto;
@@ -63,40 +58,64 @@
   margin: auto;
 }
 
+.title_image{
+  height: 50px;
+  margin: auto 0.5rem;
+}
+
 .mosaic{
   display: flex;
   background-color: var(--brown);
   outline: 3px solid var(--page-line);
   height: 70px;
   border-radius: 10px;
-  margin: 2rem;
+  margin: 2rem auto;
   justify-content: center;
 }
 
 @media (max-width: 400px) {
   .first-wrapper{
-    margin: 2.5rem 2rem;
-    border: 2px solid var(--page-line);
-  }
-  .second-wrapper{
-    margin: 0.75rem;
-    border: 2px solid var(--page-line);
-  }
-  .image{
-    height: 100px;
-  }
-}
-
-@media (max-width: 300px) {
-  .first-wrapper{
-    margin: 1.5rem;
+    margin: 2rem 1.3rem;
     border: 2px solid var(--page-line);
   }
   .second-wrapper{
     margin: 0.5rem;
     border: 2px solid var(--page-line);
   }
+
+  .logo_container{
+    padding: 1rem 0.8rem 0.8rem 0.9rem;
+    border-radius: 50%;
+  }
+
   .image{
     height: 80px;
+  }
+  .mosaic{
+    height: 50px;
+    outline: 2px solid var(--page-line);
+  }
+  .title_image{
+    height: 35px;
+  }
+}
+
+@media (max-width: 300px) {
+  .first-wrapper{
+    margin: 1.3rem 1rem;
+    border: 2px solid var(--page-line);
+  }
+  .second-wrapper{
+    margin: 0.3rem;
+    border: 2px solid var(--page-line);
+  }
+  .image{
+    height: 60px;
+  }
+  .title_image{
+    height: 25px;
+  }
+  .mosaic{
+    height: 40px;
   }
 }
