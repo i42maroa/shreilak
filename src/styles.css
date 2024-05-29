@@ -45,8 +45,8 @@
 
   --text-book-size: 24rem;
 
-  --swiper-navigation-color: var(--brown);
-  --swiper-pagination-color: var(--brown);
+  --swiper-navigation-color: var(--page-line);
+  --swiper-pagination-color: var(--green);
 }
 
 
