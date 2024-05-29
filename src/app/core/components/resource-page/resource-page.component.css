@@ -4,6 +4,10 @@
   padding: 1rem;
 }
 
+#description{
+  padding-top: 1rem;
+}
+
 .title{
   align-items: baseline;
   display: flex;
@@ -23,7 +27,7 @@
 
 .image{
   display: flex;
-  width: 350px;
+  width: 320px;
   margin: 1rem auto;
 }
 
@@ -61,10 +65,12 @@ hr{
   width: 16px;
   height: 16px;
   fill: var(--brown);
+
+  animation: move-right 1s ease-out  infinite alternate;
 }
 
 .ressource_title{
-  margin-top: 1rem;
+  margin-top: 2rem;
 }
 
 @media (max-width: 400px) {
@@ -82,5 +88,16 @@ hr{
   .image{
     width: 150px;
      margin: 1rem auto;
+  }
+}
+
+
+
+@keyframes move-right {
+  0%{
+      transform: translate(0);
+  }
+  100%{
+      transform: translateX(-5px);
   }
 }
