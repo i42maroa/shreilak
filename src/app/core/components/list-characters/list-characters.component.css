@@ -3,6 +3,7 @@
   height: 100%;
   flex-direction: column;
   border-radius: 2px;
+  min-height: calc(100svh - 50px);
 }
 
 .title{
@@ -11,6 +12,7 @@
   flex-grow: 1;
   gap: .5rem;
   margin: 0;
+  margin-bottom: 1rem;
 }
 
 .title:after{
