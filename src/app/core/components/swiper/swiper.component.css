@@ -8,6 +8,10 @@ swiper-container{
   width: 100%;
 }
 
+swiper-slide{
+  margin: 0 2px;
+}
+
 
 @media (max-width: 400px) {
   .container{
