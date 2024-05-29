@@ -50,13 +50,30 @@
 .ressource span{
   color: var(--brown);
   padding: 1px;
+}
+
+.ressource span:after{
+  content: '';
+  display: flex;
+  width: 100%;
+  height: 1px;
+  background-color: var(--green);
   border-bottom: 2px solid var(--green);
+
+  animation: showLine linear both;
+  animation-timeline: view();
+  animation-range: 20% 25%;
 }
 
 .icon{
   margin: auto 10px auto 0;
+
   width: 16px;
   height: 16px;
+
+  animation: appear linear both;
+  animation-timeline: view();
+  animation-range: 15% 20%;
 }
 
 .objetive_content{
@@ -82,5 +99,25 @@
 
   .resource_container{
     margin-top: 0;
+  }
+}
+
+@keyframes appear {
+  0%{
+      opacity: 0;
+      transform: translate(-20px, -20px);
+  }
+  100%{
+    transform: translate(0, 0);
+  }
+}
+
+
+@keyframes showLine {
+  0%{
+      width: 0%;
+  }
+  100%{
+    width: 100%;
   }
 }

@@ -1,17 +1,19 @@
 .container{
   display: flex;
-  flex-direction: column;
   border-radius: 2px;
-  margin-bottom: 2rem;
+  margin: 1rem 0 4rem;
+  min-height: calc(70svh - 55px);
+  background-color: var(--page);
 }
 
 .wrapper{
   display: flex;
   flex-direction: column;
-  height: 100%;
   padding: 1rem;
+  margin: 1rem;
   outline: 2px solid var(--frozen-color);
 }
+
 
 .title{
   color: var(--frozen-color);
@@ -21,10 +23,17 @@
   color: grey;
 }
 
+.logo{
+  margin: 1rem 5rem;
+  opacity: 0.1;
+}
 
 
-@media (max-width: 400px) {
+@media (max-width: 300px) {
+  .logo{
+    margin: 1rem 3rem;
+  }
   .wrapper{
-    margin: 0;
+    outline: 1px solid var(--frozen-color);
   }
 }

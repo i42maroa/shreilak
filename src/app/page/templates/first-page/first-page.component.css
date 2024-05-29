@@ -2,19 +2,120 @@
   display: flex;
   height: 100%;
   width: 100%;
-  background-color: var(--page);
+  background-color: var(--brown);
+  border: 5px solid var(--page-line);
+  border-radius: 10px;
+  overflow: hidden;
 }
 
-.wrapper{
+.border{
+  height: 100%;
+  width: 10px;
+  outline: 5px solid var(--page-line);
+
+}
+
+.first-wrapper{
   display: flex;
-  margin: 1.5rem 1rem;
+  flex-direction: column;
+  margin: 2rem 1.5rem;
   width: 100%;
-  justify-content: center;
-  outline: 2px solid var( --page-line);
+  border: 3px solid var(--page-line);
+  background-color: var(--brown);
+  border-radius: 10px;
+}
+
+.second-wrapper{
+  display: flex;
+  flex-direction: column;
+  margin: 0.75rem;
+  height: 100%;
+  border: 3px solid var(--page-line);
+  border-radius: 10px;
+}
+
+.third-wrapper{
+  display: flex;
+  flex-direction: column;
+  background-color: var(--brown);
+  justify-content: space-between;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.logo_container{
+  width: fit-content;
+  margin: auto;
+  padding: 1.5rem 1.3rem 1.3rem 1.4rem;
+  border-radius: 50%;
+  outline: 5px solid var(--page-line);
+  background-color: var(--page);
 }
 
 .image{
   display: flex;
-  height: 100px;
+  height: 120px;
   margin: auto;
+}
+
+.title_image{
+  height: 50px;
+  margin: auto 0.5rem;
+}
+
+.mosaic{
+  display: flex;
+  background-color: var(--brown);
+  outline: 3px solid var(--page-line);
+  height: 70px;
+  border-radius: 10px;
+  margin: 2rem auto;
+  justify-content: center;
+}
+
+@media (max-width: 400px) {
+  .first-wrapper{
+    margin: 2rem 1.3rem;
+    border: 2px solid var(--page-line);
+  }
+  .second-wrapper{
+    margin: 0.5rem;
+    border: 2px solid var(--page-line);
+  }
+
+  .logo_container{
+    padding: 1rem 0.8rem 0.8rem 0.9rem;
+    border-radius: 50%;
+  }
+
+  .image{
+    height: 80px;
+  }
+  .mosaic{
+    height: 50px;
+    outline: 2px solid var(--page-line);
+  }
+  .title_image{
+    height: 35px;
+  }
+}
+
+@media (max-width: 300px) {
+  .first-wrapper{
+    margin: 1.3rem 1rem;
+    border: 2px solid var(--page-line);
+  }
+  .second-wrapper{
+    margin: 0.3rem;
+    border: 2px solid var(--page-line);
+  }
+  .image{
+    height: 60px;
+  }
+  .title_image{
+    height: 25px;
+  }
+  .mosaic{
+    height: 40px;
+  }
 }

@@ -1,9 +1,11 @@
 
 @if(resource){
 <div class="container">
-  <h2 class="title">{{resource.name}}</h2>
-  <p>{{resource.description}}</p>
-  <p class="translated">{{resource.descriptionTranslated}}</p>
+  <section id="description">
+    <h2 class="title">{{resource.name}}</h2>
+    <p>{{resource.description}}</p>
+  </section>
+  <!-- <p class="translated">{{resource.descriptionTranslated}}</p> -->
 
   <div class="objective_container">
     @for (images of resource.images; track images.url) {
