@@ -65,7 +65,9 @@
   width: 18px;
   height: 18px;
   fill: var(--white);
+}
 
+.open{
   animation: move-right 1s ease-out  infinite alternate;
 }
 

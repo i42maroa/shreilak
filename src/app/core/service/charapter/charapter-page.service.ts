@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 
-const MAX_PAGE = 3;
+const MAX_PAGE = 1;
 const START_PAGE = 0;
 
 export interface buttonInterface{

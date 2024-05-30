@@ -22,6 +22,6 @@ export class ObjetivePageComponent {
   }
 
   getRouter(resource:ResourceInterface){
-    return `/ressource/${resource.id}#description`;
+    return `/ressource/${resource.id}`;
   }
 }

@@ -1,12 +1,13 @@
 <div class="container">
-  <div class="button_container">
-    <app-button class="button_change_chapter" [routerLink]="[chapterPreviousPath]" [text]="titleButton"></app-button>
-  </div>
   @if(ressource | async; as resource){
     <app-resource-page [resource]="resource"></app-resource-page>
   }@else{
     <span>RESSOURCE NOT FOUND</span>
   }
+  <img class="logo" src="/assets/svg/letter-s.svg" alt="">
+  <div class="button_container">
+    <app-button class="button_change_chapter" [routerLink]="[chapterPreviousPath]" [text]="'Volver'"></app-button>
+  </div>
 </div>
 
 
