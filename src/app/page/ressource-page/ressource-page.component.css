@@ -8,6 +8,12 @@
   display: flex;
 }
 
+.logo{
+  margin: 1rem 5rem;
+  opacity: 0.1;
+}
+
+
 
 @media (max-width: 300px) {
   .container{

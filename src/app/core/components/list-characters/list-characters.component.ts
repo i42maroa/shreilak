@@ -12,5 +12,4 @@ import { CHAPTERS } from '../../../data/chapters.data';
 export class ListCharactersComponent {
 
   chapters = CHAPTERS;
-
 }

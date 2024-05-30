@@ -6,12 +6,39 @@
 
 .button_container{
   display: flex;
-  margin: 1rem auto;
+  justify-content: space-between;
 }
 
+.button{
+  display: flex;
+}
+
+.button span{
+  margin: auto;
+  font-weight: 800;
+  font-size: 12px;
+  border-bottom: 1px solid var(--green);
+}
 
 .left{
   position: left;
+}
+
+
+.icon{
+  width: 16px;
+  height: 16px;
+  fill: var(--green);
+
+}
+
+.previous{
+  margin: auto 5px auto 0;
+  animation: move-left 1s ease-out infinite alternate;
+}
+.next{
+  margin: auto 0 auto 10px;
+  animation: move-right 1s ease-out  infinite alternate;
 }
 
 @media (max-width: 300px) {
@@ -27,4 +54,23 @@
     margin: 5px auto;
   }
 
+}
+
+
+@keyframes move-left {
+  0%{
+      transform: translate(0);
+  }
+  100%{
+      transform: translateX(-5px);
+  }
+}
+
+@keyframes move-right {
+  0%{
+      transform: translate(0);
+  }
+  100%{
+      transform: translateX(5px);
+  }
 }
