@@ -3,91 +3,89 @@
   height: 100%;
   flex-direction: column;
   background-color: var(--page);
+  border-radius: 2px;
 }
 
 .wrapper{
-  margin: 1.5rem 1rem;
-  padding: 0.5rem 1rem;
+  margin: 1rem 1rem 1.5rem 1rem;
   height: 100%;
-  position: relative;
   outline: 2px solid var( --page-line);
+  justify-content: space-between;
+  display: flex;
+  flex-direction: column;
 }
 
 .title_container{
   display: flex;
   flex-direction: column;
-  margin: 20px 0;
+  margin: 1.5rem 0.5rem auto 1rem;
+  line-height: 2;
 }
 
-.translate{
-  font-size: 22px;
-  font-family: var(--font-base);
-  font-style: italic;
-  color: grey;
-  margin-top: 10px;
-}
+.title::first-letter{
+  color: var( --page-line);
+  background-color: var(--brown);
+  padding: 10px 15px 0 15px;
+  margin-right: 5px;
+  border: 2px solid var( --page-line);
+  font-size: 70px;
+  border-radius: 5px;
+  line-height: 1.2;
+ }
 
 .image{
-  position: absolute;
-  bottom:  0;
-  right: 0;
-  left: 0;
+  height: 300px;
+  width: fit-content;
   margin: auto;
-  height: 350px;
+  margin-bottom: 0;
 }
 
+.bold{
+  animation: shine 1.5s ease-in  infinite alternate;
+}
 
 
 @media (max-width: 450px) {
   .image{
-    height: 280px;
-  }
-  .translate{
-    font-size: 20px;
+    height: 250px;
   }
 }
 
 
 @media (max-width: 400px) {
   .image{
-    height: 250px;
+    height: 230px;
   }
-  .translate{
-    font-size: 18px;
-  }
+
+  .title::first-letter{
+    padding: 5px 10px 0 10px;
+    margin-right: 5px;
+    font-size: 60px;
+    line-height: 1.2;
+   }
 }
 
 @media (max-width: 350px) {
   .image{
-    height: 180px;
-  }
-  .translate{
-    font-size: 16px;
-    margin-top: 5px;
-  }
-  .title_container{
-    margin: 10px 0;
+    height: 210px;
   }
 }
 
-
 @media (max-width: 300px) {
   .image{
-    height: 150px;
-  }
-  .translate{
-    font-size: 14px;
-    line-height: 1.2;
+    height: 160px;
   }
 
+  .title::first-letter{
+    padding: 5px 10px 0 10px;
+    margin-right: 5px;
+    font-size: 50px;
+    line-height: 1.1;
+   }
 }
 
 @media (max-width: 250px) {
   .image{
-    height: 120px;
-  }
-  .translate{
-    font-size: 12px;
+    height: 140px;
   }
 }
-
