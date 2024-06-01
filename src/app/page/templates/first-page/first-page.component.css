@@ -48,11 +48,11 @@
   margin: auto;
   padding: 1.5rem 1.3rem 1.3rem 1.4rem;
   border-radius: 50%;
-  /* outline: 3px solid var(--page-line); */
   background-color: var(--brown-gradient);
 }
 
 .image{
+  min-width: 130px;
   display: flex;
   height: 120px;
   margin: auto;
@@ -89,6 +89,7 @@
   }
 
   .image{
+    min-width: 87px;
     height: 80px;
   }
   .mosaic{
@@ -110,12 +111,10 @@
     border: 2px solid var(--brown-gradient);
   }
   .image{
+    min-width: 62px;
     height: 60px;
   }
   .title_image{
     height: 25px;
-  }
-  .mosaic{
-    /* height: 40px; */
   }
 }
