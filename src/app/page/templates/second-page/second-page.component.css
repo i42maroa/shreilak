@@ -7,7 +7,7 @@
 }
 
 .wrapper{
-  margin: 1.5rem 1rem 1.5rem 1rem;
+  margin: 1rem 1rem 1.5rem 1rem;
   height: 100%;
   outline: 2px solid var( --page-line);
   justify-content: space-between;
@@ -18,16 +18,16 @@
 .title_container{
   display: flex;
   flex-direction: column;
-  margin: 1.5rem 0.5rem auto 1rem;
-  line-height: 2;
+  margin: auto 0.5rem auto 1rem;
+  line-height: 1.7;
 }
 
 .title::first-letter{
-  color: #DF6A4E;
+  color: var(--page-line);
   background-color: var(--brown);
   padding: 10px 15px 0 15px;
   margin-right: 5px;
-  border: 2px solid #425156;
+  border: 2px solid var(--page-line);
   font-size: 70px;
   border-radius: 5px;
   line-height: 1.2;
@@ -36,10 +36,6 @@
 .image{
   display: flex;
   height: 300px;
-}
-
-.bold{
-  /* animation: shine 1.5s ease-in  infinite alternate; */
 }
 
 
@@ -87,4 +83,3 @@
     height: 140px;
   }
 }
-

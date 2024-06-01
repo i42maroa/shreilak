@@ -23,11 +23,11 @@
 }
 
 .title::first-letter{
-  color: #566970;
+  color: var( --page-line);
   background-color: var(--brown);
   padding: 10px 15px 0 15px;
   margin-right: 5px;
-  border: 2px solid #425156;
+  border: 2px solid var( --page-line);
   font-size: 70px;
   border-radius: 5px;
   line-height: 1.2;
@@ -67,7 +67,7 @@
 
 @media (max-width: 350px) {
   .image{
-    height: 200px;
+    height: 210px;
   }
 }
 
