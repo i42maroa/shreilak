@@ -18,16 +18,16 @@
 .title_container{
   display: flex;
   flex-direction: column;
-  margin: auto 0.5rem auto 1rem;
+  margin: 1rem 0.5rem auto 1rem;
   line-height: 2;
 }
 
 .title::first-letter{
-  color: var(--page-line);
+  color: #DF6A4E;
   background-color: var(--brown);
   padding: 10px 15px 0 15px;
   margin-right: 5px;
-  border: 2px solid var(--page-line);
+  border: 2px solid #DF6A4E ;
   font-size: 70px;
   border-radius: 5px;
   line-height: 1.2;
@@ -39,7 +39,6 @@
 }
 
 .bold{
-
   animation: shine 1.5s ease-in  infinite alternate;
 }
 
