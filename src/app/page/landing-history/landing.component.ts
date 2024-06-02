@@ -4,12 +4,13 @@ import { ChapterComponent } from '../../core/components/chapter/chapter.componen
 import { CommonModule } from '@angular/common';
 import { ButtonComponent } from '../../core/components/button/button.component';
 import { SwiperComponent } from '../../core/components/swiper/swiper.component';
+import { LetterSComponentSvg } from '../../core/svg/letter-s/letter-s.component';
 
 
 @Component({
   selector: 'app-landing',
   standalone: true,
-  imports: [RouterLink, ButtonComponent, ChapterComponent, CommonModule, SwiperComponent],
+  imports: [RouterLink, ButtonComponent, ChapterComponent, CommonModule, SwiperComponent, LetterSComponentSvg],
   templateUrl: './landing.component.html',
   styleUrl: './landing.component.css'
 })

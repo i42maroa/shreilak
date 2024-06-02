@@ -5,12 +5,12 @@ import { ButtonComponent } from '../../core/components/button/button.component';
 import { RessourceService } from '../../core/service/ressource/ressource.service';
 import { CommonModule } from '@angular/common';
 import { CharapterPageService } from '../../core/service/charapter/charapter-page.service';
-import { CHAPTERS } from '../../data/chapters.data';
+import { LetterSComponentSvg } from '../../core/svg/letter-s/letter-s.component';
 
 @Component({
   selector: 'app-ressource-page',
   standalone: true,
-  imports: [RouterLink, ResourcePageComponent, ButtonComponent, CommonModule],
+  imports: [RouterLink, ResourcePageComponent, ButtonComponent, CommonModule, LetterSComponentSvg],
   templateUrl: './ressource-page.component.html',
   styleUrl: './ressource-page.component.css'
 })

@@ -3,7 +3,7 @@
     @for(option of navbarOptionList | async; track option.title){
       <div class="option" [routerLink]="option.url" (click)="closeNavbar()">
         <span class="text">{{option.title}}</span>
-        <img class="image" src="/assets/svg/single-navbar.svg" alt="">
+        <app-navbar-wood-svg class="image" />
       </div>
     }
   </div>
