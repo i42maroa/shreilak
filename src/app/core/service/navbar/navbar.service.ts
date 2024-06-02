@@ -20,10 +20,6 @@ export class NavbarService {
           {
             url:"/chapter",
             title:"Capítulos"
-          },
-          {
-            url:'/about',
-            title:'Sobre mí'
           }
         ]
     )

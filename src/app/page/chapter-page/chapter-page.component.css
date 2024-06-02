@@ -16,8 +16,8 @@
 .button span{
   margin: auto;
   font-weight: 800;
-  font-size: 12px;
-  border-bottom: 1px solid var(--green);
+  font-size: 16px;
+  /* border-bottom: 1px solid var(--green); */
 }
 
 .left{
@@ -41,6 +41,14 @@
   animation: move-right 1s ease-out  infinite alternate;
 }
 
+@media (max-width: 400px) {
+
+  .button span{
+    font-size: 14px;
+  }
+
+}
+
 @media (max-width: 300px) {
   .container{
     margin: 0 0.5rem;
@@ -52,6 +60,10 @@
 
   .button_change_chapter{
     margin: 5px auto;
+  }
+
+  .button span{
+    font-size: 12px;
   }
 
 }
