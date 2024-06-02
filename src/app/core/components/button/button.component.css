@@ -11,7 +11,7 @@
 .button_container span{
   color: var(--brown);
   padding: 1px;
-  border-bottom: 1px solid var(--green);
+  /* border-bottom: 1px solid var(--green); */
 }
 
 .icon{
@@ -28,15 +28,19 @@
 
 .text{
   color: var(--green);
-  font-size: 12px;
+  font-size: 16px;
   font-family: var(--font-title);
 }
 
-
+@media (max-width: 400px) {
+  .text{
+    font-size: 14px;
+  }
+}
 
 @media (max-width: 300px) {
   .text{
-    font-size: 14px;
+    font-size: 12px;
   }
 }
 

@@ -2,7 +2,7 @@
   display: flex;
   border-radius: 2px;
   margin: 1rem 0 4rem;
-  min-height: calc(70svh - 55px);
+  min-height: calc(50svh - 55px);
   background-color: var(--page);
 }
 
@@ -17,10 +17,7 @@
 
 .title{
   color: var(--frozen-color);
-}
-
-.translate{
-  color: grey;
+  margin: 1rem 0;
 }
 
 .logo{

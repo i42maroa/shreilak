@@ -12,8 +12,9 @@
   flex-grow: 1;
   gap: .5rem;
   margin: 0;
-  margin-bottom: 1rem;
+  margin-bottom: 0.75rem;
 }
+
 
 .title:after{
   content: "";
@@ -24,6 +25,9 @@
   height: 2px;
 }
 
+.text{
+  margin-bottom: 1rem;
+}
 
 .list_container{
   display: flex;
