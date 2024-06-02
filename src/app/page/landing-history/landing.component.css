@@ -67,6 +67,12 @@
   opacity: 0.1;
 }
 
+.loading{
+  background-color: var(--brown);
+  opacity: 0.6;
+  min-height: 50svh;
+}
+
 
 @media (max-width: 300px) {
   .container{
