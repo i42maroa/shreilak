@@ -30,7 +30,7 @@
 
 .swipe_container{
   display: flex;
-  margin: 1rem auto;
+  margin: 1rem 1rem 1rem auto;
 }
 
 .text{

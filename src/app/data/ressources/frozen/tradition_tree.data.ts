@@ -2,10 +2,10 @@ import { ResourceInterface } from "../../interface/resource.interface";
 
 export const TRADITION_TREE:ResourceInterface = {
   id: "8",
-  name:"Arbol de la tradición",
-  description:"Shreilak se ha animado al ver todos las decoraciones recicladas que hemos hecho, y quiere hacerle un arbol de navidad más mágico a Elsa.",
+  name:"Árbol de la tradición",
+  description:"Shreilak se ha animado al ver todas las decoraciones recicladas que hemos hecho, y quiere hacerle un árbol de navidad más mágico a Elsa.",
   descriptionTranslated:"Shreilak se ha animado al ver todos las decoraciones recicladas que hemos hecho, y quiere hacerle un arbol de navidad más mágico a Elsa.",
-  text:"Los alumnos deberán colorear y recortar las bolas del arbol de navidad. Una vez recortadas deberán de dibujar detras de cada bola algo relacionado con lo que trata la misma. Para terminar colorearan el arbol y colocarán todas las bolas en el. Es opcional y recomendable añadirle más detalles al arbol como purpurina o similar",
+  text:"Los alumnos deberán colorear y recortar las bolas del arbol de navidad. Una vez recortadas deberán de dibujar detras de cada bola algo relacionado con lo que trata la misma. Para terminar colorearan el árbol y colocarán todas las bolas en él. Es opcional y recomendable añadirle más detalles al árbol como purpurina o similar",
   images:[
     {
       alt:"tree",
