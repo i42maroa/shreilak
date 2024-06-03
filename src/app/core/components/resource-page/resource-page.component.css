@@ -57,6 +57,7 @@
   display: flex;
   margin: 10px 0;
   color: var(--brown);
+  cursor: pointer;
 }
 
 .ressource span{
