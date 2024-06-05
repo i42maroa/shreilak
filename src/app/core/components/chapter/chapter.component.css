@@ -26,8 +26,27 @@
   opacity: 0.1;
 }
 
+.chapter_image{
+  width:  350px;
+  margin: auto;
+}
+
+@media (max-width: 500px) {
+  .chapter_image{
+    max-width:  300px;
+  }
+}
+
+@media (max-width: 400px) {
+  .chapter_image{
+    max-width:  200px;
+  }
+}
 
 @media (max-width: 300px) {
+  .chapter_image{
+    max-width:  150px;
+  }
   .logo{
     margin: 1rem 3rem;
   }

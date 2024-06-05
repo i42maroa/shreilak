@@ -8,8 +8,8 @@ export const CLEAR_WOOD_CELEBRATION:ResourceInterface = {
   text:"Para comenzar, los alumnos leeran la carta de un cuento de Navidad de 'Sarah cover All I want for Christmas is you' siguiendo tres fases: una prelectorio, una lectura y una post-lectura. Para terminar, cantaremos la canción usando 'Lyrics training' ",
   images:[
     {
-      alt:"pick",
-      url:"assets/images/ressources/frozen/celebrate.png"
+      alt:"Elsa siging",
+      url:"assets/images/ressources/frozen/elsa-singing.png"
     }
   ],
   resources:[

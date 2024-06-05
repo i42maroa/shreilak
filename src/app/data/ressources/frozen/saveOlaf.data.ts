@@ -9,7 +9,7 @@ export const SAVE_OLAF:ResourceInterface = {
   images:[
     {
       alt:"save",
-      url:"https://asturias.clubtres60.com/wp-content/uploads/2015/01/olaff-triste-sad.png"
+      url:"assets/images/ressources/frozen/olaf-melted.png"
     }
   ],
   resources:[

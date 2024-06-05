@@ -8,6 +8,10 @@ export const REUSED_ORNAMENTS:ResourceInterface = {
   text:"Los alumnos harán un árbol de navidad y sus adornos con material reciclado (puede ser de cartón, botellas de plástico, etc..). Detrás de cada adorno, le añadiremos mensajes positivos para así motivar aún más la reutilización.",
   images:[
     {
+      alt:"paper trees",
+      url:"assets/images/ressources/frozen/paper-trees.jpg"
+    },
+    {
       alt:"pick",
       url:"assets/images/ressources/frozen/make-tree.jpg"
     }
