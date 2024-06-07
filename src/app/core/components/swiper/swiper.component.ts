@@ -4,6 +4,7 @@ import { PagesTemplateModule } from '../../../page/templates/pages-template.modu
 
 
 registerSwipperElements();
+
 @Component({
   selector: 'app-swiper',
   standalone: true,

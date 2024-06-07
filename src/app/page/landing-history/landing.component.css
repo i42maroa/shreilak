@@ -30,7 +30,7 @@
 
 .swipe_container{
   display: flex;
-  margin: 1rem 1rem 1rem auto;
+  margin: 1rem auto 1rem 1rem;
 }
 
 .text{
@@ -38,7 +38,7 @@
 }
 
 .icon{
-  margin: auto 5px auto 0px;
+  margin: auto 0px auto 5px;
   width: 20px;
   height: 20px;
   fill: var(--green);
@@ -89,6 +89,6 @@
       transform: translate(0);
   }
   100%{
-      transform: translateX(-20px);
+      transform: translateX(20px);
   }
 }
