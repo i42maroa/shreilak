@@ -1,8 +1,6 @@
 <div class="container">
   @if(ressource | async; as resource){
     <app-resource-page [resource]="resource"></app-resource-page>
-  }@else{
-    <span>RESSOURCE NOT FOUND</span>
   }
   <app-letter-s-svg  class="logo"></app-letter-s-svg>
   <div class="button_container">

@@ -17,7 +17,6 @@
   margin: auto;
   font-weight: 800;
   font-size: 16px;
-  /* border-bottom: 1px solid var(--green); */
 }
 
 .left{
@@ -29,7 +28,6 @@
   width: 16px;
   height: 16px;
   fill: var(--green);
-
 }
 
 .previous{
