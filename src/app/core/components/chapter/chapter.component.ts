@@ -5,13 +5,12 @@ import { CharapterPageService } from '../../service/charapter/charapter-page.ser
 import { CHAPTERS } from '../../../data/chapters.data';
 import { BehaviorSubject } from 'rxjs';
 import { CommonModule } from '@angular/common';
-import { LetterSSVGComponent } from '../../svg/letter-s/letter-s.component';
 import { RessourceService } from '../../service/ressource/ressource.service';
 
 @Component({
     selector: 'app-chapter',
     standalone: true,
-    imports: [ObjetivePageComponent, CommonModule, LetterSSVGComponent],
+    imports: [ObjetivePageComponent, CommonModule],
     templateUrl: './chapter.component.html',
     styleUrl: './chapter.component.css'
 })

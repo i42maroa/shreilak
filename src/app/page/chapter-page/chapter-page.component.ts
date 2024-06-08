@@ -6,11 +6,12 @@ import { CommonModule } from '@angular/common';
 import { CHAPTERS } from '../../data/chapters.data';
 import { ButtonsComponent } from '../../core/components/buttons/buttons.component';
 import { ButtonInterface } from '../../data/interface/button.interface';
+import { LetterSSVGComponent } from '../../core/svg/letter-s/letter-s.component';
 
 @Component({
     selector: 'app-chapter-page',
     standalone: true,
-    imports: [RouterLink,ChapterComponent, CommonModule, ButtonsComponent],
+    imports: [RouterLink,ChapterComponent, CommonModule, ButtonsComponent, LetterSSVGComponent],
     templateUrl: './chapter-page.component.html',
     styleUrl: './chapter-page.component.css'
 })

@@ -13,9 +13,7 @@
 
   @for (objective of chapter.objectives; track objective.title; let idx = $index) {
   <section id="{{idx + 1}}" class="objective_container">
-    <app-objetive-page [objective]="objective" [index]="idx"></app-objetive-page>
+    <app-objetive-page [objective]="objective" [index]="idx"/>
   </section>
   }
-
-  <app-letter-s-svg  class="logo"></app-letter-s-svg>
 }
