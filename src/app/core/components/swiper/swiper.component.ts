@@ -6,15 +6,15 @@ import { PagesTemplateModule } from '../../../page/templates/pages-template.modu
 registerSwipperElements();
 
 @Component({
-  selector: 'app-swiper',
-  standalone: true,
-  imports: [PagesTemplateModule],
-  templateUrl: './swiper.component.html',
-  styleUrl: './swiper.component.css',
-  schemas: [CUSTOM_ELEMENTS_SCHEMA],
+    selector: 'app-swiper',
+    standalone: true,
+    imports: [PagesTemplateModule],
+    templateUrl: './swiper.component.html',
+    styleUrl: './swiper.component.css',
+    schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class SwiperComponent {
-  constructor(){
-  }
+    constructor(){
+    }
 
 }

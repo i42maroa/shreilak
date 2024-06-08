@@ -9,21 +9,21 @@ import { SixthPageComponent } from './sixth-page/sixth-page.component';
 
 
 @NgModule({
-  exports: [
-    FirstPageComponent,
-    SecondPageComponent,
-    ThirdPageComponent,
-    FourthPageComponent,
-    FifthPageComponent,
-    SixthPageComponent],
-  imports: [
-    CommonModule,
-    FirstPageComponent,
-    SecondPageComponent,
-    ThirdPageComponent,
-    FourthPageComponent,
-    FifthPageComponent,
-    SixthPageComponent
-  ]
+    exports: [
+        FirstPageComponent,
+        SecondPageComponent,
+        ThirdPageComponent,
+        FourthPageComponent,
+        FifthPageComponent,
+        SixthPageComponent],
+    imports: [
+        CommonModule,
+        FirstPageComponent,
+        SecondPageComponent,
+        ThirdPageComponent,
+        FourthPageComponent,
+        FifthPageComponent,
+        SixthPageComponent
+    ]
 })
 export class PagesTemplateModule { }

@@ -10,48 +10,48 @@ export interface buttonInterface{
 }
 
 @Injectable({
-  providedIn: 'root'
+    providedIn: 'root'
 })
 export class CharapterPageService {
 
-  nextPageAvailable$ = new BehaviorSubject<boolean>(false);
-  previousPageAvailable$ = new BehaviorSubject<boolean>(false);
-  pageNumber$ = new BehaviorSubject<number>(0);
+    nextPageAvailable$ = new BehaviorSubject<boolean>(false);
+    previousPageAvailable$ = new BehaviorSubject<boolean>(false);
+    pageNumber$ = new BehaviorSubject<number>(0);
 
-  constructor() {
-    this.pageNumber$.subscribe(p => {
-      this.nextPageAvailable$.next(p < MAX_PAGE - 1);
-      this.previousPageAvailable$.next(p > START_PAGE);
-    })
-  }
-
-  setPage(numPage:number){
-    if(numPage > START_PAGE && numPage < MAX_PAGE ){
-      this.pageNumber$.next(numPage)
+    constructor() {
+        this.pageNumber$.subscribe(p => {
+            this.nextPageAvailable$.next(p < MAX_PAGE - 1);
+            this.previousPageAvailable$.next(p > START_PAGE);
+        })
     }
-  }
 
-  incrementPage(){
-    if (this.nextPageAvailable$.value){
-      this.pageNumber$.next( +this.pageNumber$.value +1);
+    setPage(numPage:number){
+        if(numPage > START_PAGE && numPage < MAX_PAGE ){
+            this.pageNumber$.next(numPage)
+        }
     }
-  }
 
-  decrementPage(){
-    if (this.previousPageAvailable$.value){
-    this.pageNumber$.next( +this.pageNumber$.value -1);
+    incrementPage(){
+        if (this.nextPageAvailable$.value){
+            this.pageNumber$.next( +this.pageNumber$.value +1);
+        }
     }
-  }
 
-  get getPageNumber(){
-    return this.pageNumber$;
-  }
+    decrementPage(){
+        if (this.previousPageAvailable$.value){
+            this.pageNumber$.next( +this.pageNumber$.value -1);
+        }
+    }
 
-  get getIsNextPageAvailable(){
-    return this.nextPageAvailable$;
-  }
+    get getPageNumber(){
+        return this.pageNumber$;
+    }
 
-  get getIsPreviousPageAvailable(){
-    return this.previousPageAvailable$;
-  }
+    get getIsNextPageAvailable(){
+        return this.nextPageAvailable$;
+    }
+
+    get getIsPreviousPageAvailable(){
+        return this.previousPageAvailable$;
+    }
 }

@@ -6,20 +6,6 @@
 
 }
 
-/* @font-face {
-  font-family: "Domine-bold";
-  src: url("/assets/fonts/domine/Domine-Bold.ttf");
-  font-weight: 900;
-} */
-
-
-/* @font-face {
-  font-family: "Inter";
-  src: url("/assets/fonts/inter/Inter.ttf");
-  font-weight: 300;
-}
- */
-
 :root{
   --green: #b8dd2a;
   --dark-green: #b8dd2a33;

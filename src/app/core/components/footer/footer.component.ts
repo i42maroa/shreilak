@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
-import { InstagramComponentSvg } from '../../svg/instagram/instagram.component';
-import { AntonioLogoComponentSvg } from '../../svg/antonio-logo/antonio-logo.component';
+import { InstagramSVGComponent } from '../../svg/instagram/instagram.component';
+import { AntonioLogoSVGComponent } from '../../svg/antonio-logo/antonio-logo.component';
 
 @Component({
-  selector: 'app-footer',
-  standalone: true,
-  imports: [InstagramComponentSvg, AntonioLogoComponentSvg],
-  templateUrl: './footer.component.html',
-  styleUrl: './footer.component.css'
+    selector: 'app-footer',
+    standalone: true,
+    imports: [InstagramSVGComponent, AntonioLogoSVGComponent],
+    templateUrl: './footer.component.html',
+    styleUrl: './footer.component.css'
 })
 export class FooterComponent {
 

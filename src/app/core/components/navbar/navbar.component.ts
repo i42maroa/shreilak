@@ -5,22 +5,22 @@ import { NavbarService } from '../../service/navbar/navbar.service';
 import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'app-navbar',
-  standalone: true,
-  imports: [HeaderComponent, NavbarListComponent, CommonModule],
-  templateUrl: './navbar.component.html',
-  styleUrl: './navbar.component.css'
+    selector: 'app-navbar',
+    standalone: true,
+    imports: [HeaderComponent, NavbarListComponent, CommonModule],
+    templateUrl: './navbar.component.html',
+    styleUrl: './navbar.component.css'
 })
 export class NavbarComponent {
 
-  constructor(private showNavbar:NavbarService){}
+    constructor(private showNavbar:NavbarService){}
 
-  toggleShowList(){
-    this.showNavbar.setToggleShow();
-  }
+    toggleShowList(){
+        this.showNavbar.setToggleShow();
+    }
 
-  get show(){
-    return this.showNavbar.navbarShow$
-  }
+    get show(){
+        return this.showNavbar.navbarShow$
+    }
 
 }

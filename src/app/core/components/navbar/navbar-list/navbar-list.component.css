@@ -14,6 +14,8 @@
 }
 
 .option{
+  border: none;
+  background-color: transparent;
   display: flex;
   flex-direction: column;
   cursor: pointer;
@@ -33,6 +35,7 @@
   margin: auto;
   font-size: 24px;
   position: absolute;
+  font-family: var(--font-base);
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);

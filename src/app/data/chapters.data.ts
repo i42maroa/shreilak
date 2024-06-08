@@ -4,7 +4,7 @@ import { RATATOUILLE_CHAPTER } from "./chapters/ratatouille.data";
 import { ChapterInterface } from "./interface/chapter.interface";
 
 export const CHAPTERS:ChapterInterface[] =[
-  FROZEN_CHAPTER,
-  CAPERUCITA_CHAPTER,
-  RATATOUILLE_CHAPTER
+    FROZEN_CHAPTER,
+    CAPERUCITA_CHAPTER,
+    RATATOUILLE_CHAPTER
 ]

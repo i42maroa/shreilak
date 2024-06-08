@@ -8,50 +8,49 @@ import { ButtonsComponent } from '../../core/components/buttons/buttons.componen
 import { ButtonInterface } from '../../data/interface/button.interface';
 
 @Component({
-  selector: 'app-chapter-page',
-  standalone: true,
-  imports: [RouterLink,ChapterComponent, CommonModule, ButtonsComponent],
-  templateUrl: './chapter-page.component.html',
-  styleUrl: './chapter-page.component.css'
+    selector: 'app-chapter-page',
+    standalone: true,
+    imports: [RouterLink,ChapterComponent, CommonModule, ButtonsComponent],
+    templateUrl: './chapter-page.component.html',
+    styleUrl: './chapter-page.component.css'
 })
 export class ChapterPageComponent {
 
-  buttonChapterListConfig:ButtonInterface = {
-    animation:true,
-    url:'/chapter',
-    text: 'Capítulos',
-    type: 'GO_BACK'
-  }
-
-  buttonNextChapterConfig:ButtonInterface = {
-    animation:true,
-    url:'/chapter',
-    text: '',
-    type: 'GO_AHEAD'
-  }
-
-  constructor(private servicePage: CharapterPageService){
-    this.servicePage.getPageNumber.subscribe(page =>{
-      if (this.servicePage.getIsNextPageAvailable.value){
-        const nextChapterNumber = +page + 1;
-        const title = CHAPTERS[nextChapterNumber].title;
-        this.buttonNextChapterConfig.text = title;
-        this.buttonNextChapterConfig.url = `/chapter/${nextChapterNumber}`;
-      }
+    buttonChapterListConfig:ButtonInterface = {
+        animation:true,
+        url:'/chapter',
+        text: 'Capítulos',
+        type: 'GO_BACK'
     }
-    )
-  }
 
+    buttonNextChapterConfig:ButtonInterface = {
+        animation:true,
+        url:'/chapter',
+        text: '',
+        type: 'GO_AHEAD'
+    }
 
-  @Input('chapterId') set id(chapterId: number) {
-    this.servicePage.setPage(chapterId);
-  };
+    constructor(private servicePage: CharapterPageService){
+        this.servicePage.getPageNumber.subscribe(page =>{
+            if (this.servicePage.getIsNextPageAvailable.value){
+                const nextChapterNumber = +page + 1;
+                const title = CHAPTERS[nextChapterNumber].title;
+                this.buttonNextChapterConfig.text = title;
+                this.buttonNextChapterConfig.url = `/chapter/${nextChapterNumber}`;
+            }
+        }
+        )
+    }
 
-  nextChapter(){
-    this.servicePage.incrementPage()
-  }
+    @Input() set chapterId(chapterId: number) {
+        this.servicePage.setPage(chapterId);
+    }
 
-  isNextAvailable(){
-    return this.servicePage.getIsNextPageAvailable
-  }
+    nextChapter(){
+        this.servicePage.incrementPage()
+    }
+
+    isNextAvailable(){
+        return this.servicePage.getIsNextPageAvailable
+    }
 }

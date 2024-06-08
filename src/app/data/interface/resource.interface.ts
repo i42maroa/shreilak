@@ -1,27 +1,27 @@
 export interface ResourceInterface{
-  id:string;
-  name:string,
-  description?:string,
-  descriptionTranslated?:string,
-  text?:string,
-  images:Images[],
-  resources:Resources[]
+    id:string;
+    name:string,
+    description?:string,
+    descriptionTranslated?:string,
+    text?:string,
+    images:Images[],
+    resources:Resources[]
 }
 
 export interface Resources{
-  url:string,
-  name:string
+    url:string,
+    name:string
 }
 
 export interface Images{
-  url:string,
-  alt:string
+    url:string,
+    alt:string
 }
 
 
 export const EMPTY_RESSOURCE:ResourceInterface={
-  id:'',
-  name:'',
-  images:[],
-  resources:[]
+    id:'',
+    name:'',
+    images:[],
+    resources:[]
 }

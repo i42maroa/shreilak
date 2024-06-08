@@ -8,11 +8,11 @@ import { NotFoundPageComponent } from './page/not-found/not-found.component';
 
 export const routes: Routes = [
 
-  { path: '',   redirectTo: 'history', pathMatch: 'full' },
-  { path: 'history', component: LandingComponent },
-  { path: 'chapter', component: LandingChapterComponent },
-  { path: 'chapter/:chapterId', component: ChapterPageComponent },
-  { path: 'ressource/:resourceId', component: RessourcePageComponent },
-  { path: 'about', component: AboutPageComponent },
-  { path: '**', component: NotFoundPageComponent },
+    { path: '',   redirectTo: 'history', pathMatch: 'full' },
+    { path: 'history', component: LandingComponent },
+    { path: 'chapter', component: LandingChapterComponent },
+    { path: 'chapter/:chapterId', component: ChapterPageComponent },
+    { path: 'ressource/:resourceId', component: RessourcePageComponent },
+    { path: 'about', component: AboutPageComponent },
+    { path: '**', component: NotFoundPageComponent },
 ];
