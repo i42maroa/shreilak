@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { ResourcePageComponent } from '../../core/components/resource-page/resource-page.component';
-import { RouterLink } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 import { ButtonComponent } from '../../core/components/button/button.component';
 import { RessourceService } from '../../core/service/ressource/ressource.service';
 import { CommonModule } from '@angular/common';
@@ -21,14 +21,16 @@ export class RessourcePageComponent {
     };
 
     constructor(private ressourceService:RessourceService,
-      private chapterService:CharapterPageService){}
+      private router: Router,
+      private chapterService:CharapterPageService){
+          this.ressourceService.ressource.subscribe(r => !r && this.router.navigate(['notFound']))
+      }
 
     get ressource(){
       return this.ressourceService.ressource
     }
 
     get chapterPreviousPath(){
-      const s = '/chapter/' + this.chapterService.getPageNumber.value
-      return s
+      return '/chapter/' + this.chapterService.getPageNumber.value
     }
 }

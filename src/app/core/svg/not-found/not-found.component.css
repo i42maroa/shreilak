@@ -1,0 +1,46 @@
+.container{
+  display: flex;
+}
+
+.floor{
+  fill: var(--brown);
+  }
+
+  .page_background{
+    fill: var(--page);
+  }
+  .page_line{
+    fill: var(--page-line);
+  }
+
+  .baston{
+    fill: var(--brown);
+  }
+
+  .mouth{
+    fill: var(--brown);
+  }
+
+  .sun_glasses{
+    fill: var(--brown);
+  }
+
+  .sun_glasses_shadow{
+    fill: #a0a0a0;
+  }
+
+  .sun_glasses_shine{
+    fill: #f0f0f0;
+  }
+
+  .hat{
+    fill: var(--brown);
+  }
+
+  .hat_line{
+    fill: #a0a0a0;
+  }
+
+  .number{
+  fill: var(--green);
+  }
