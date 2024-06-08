@@ -1,0 +1,98 @@
+.button_container{
+  background: transparent;
+  border: none;
+  display: flex;
+  cursor: pointer;
+  position: relative;
+  padding: 0;
+  margin: 0;
+}
+
+.button_container span{
+  color: var(--brown);
+  padding: 1px;
+}
+
+.icon{
+  width: 16px;
+  height: 16px;
+  fill: var(--green);
+}
+
+
+.button_container:hover{
+  transform: scale(1.1);
+}
+
+.text{
+  color: var(--green);
+  font-size: 16px;
+  font-family: var(--font-title);
+}
+
+
+.previous{
+  margin: auto 5px auto 0;
+  animation: move-left 1s ease-out infinite alternate;
+}
+
+.next{
+  margin: auto 0 auto 10px;
+  animation: move-right 1s ease-out  infinite alternate;
+}
+
+
+@media (max-width: 400px) {
+
+  .text{
+    font-size: 14px;
+  }
+
+  .icon{
+    width: 14px;
+    height: 14px;
+  }
+
+}
+
+@media (max-width: 300px) {
+  .container{
+    margin: 0 0.5rem;
+  }
+
+  .button_container{
+    margin: 10px 0;
+  }
+
+  .button_change_chapter{
+    margin: 5px auto;
+  }
+
+  .text{
+    font-size: 12px;
+  }
+  .icon{
+    width: 12px;
+    height: 12px;
+  }
+
+}
+
+
+@keyframes move-left {
+  0%{
+      transform: translate(0);
+  }
+  100%{
+      transform: translateX(-5px);
+  }
+}
+
+@keyframes move-right {
+  0%{
+      transform: translate(0);
+  }
+  100%{
+      transform: translateX(5px);
+  }
+}

@@ -9,7 +9,7 @@ import { THREE_R } from "../ressources/frozen/three-r.data";
 import { TRADITION_TREE } from "../ressources/frozen/tradition_tree.data";
 
 export const FROZEN_CHAPTER:ChapterInterface = {
-  title:"FROZEN",
+  title:"Frozen",
   history:"En un reino donde el cambio climático amenaza con derretir el castillo de hielo de Elsa. Shreilak necesitará trabajar junto a Elsa para poder revertir el problema y devolver la tranquilidad al reino.",
   objectives:[
     {
