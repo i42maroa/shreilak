@@ -6,6 +6,7 @@ import { CHAPTERS } from '../../../data/chapters.data';
 import { BehaviorSubject } from 'rxjs';
 import { CommonModule } from '@angular/common';
 import { LetterSComponentSvg } from '../../svg/letter-s/letter-s.component';
+import { RessourceService } from '../../service/ressource/ressource.service';
 
 @Component({
   selector: 'app-chapter',
@@ -18,8 +19,13 @@ export class ChapterComponent {
 
   chapter$ = new BehaviorSubject<ChapterInterface|undefined>(undefined);
 
-  constructor(private service: CharapterPageService){
-    this.service.pageNumber$.subscribe(p =>this.chapter$.next(CHAPTERS[p]));
+  constructor(private service: CharapterPageService,
+    private ressourceService_: RessourceService
+  ){
+    this.service.pageNumber$.subscribe(p => {
+      this.chapter$.next(CHAPTERS[p]);
+      this.ressourceService_.setChapterPrevious(p);
+    });
   }
 
 }

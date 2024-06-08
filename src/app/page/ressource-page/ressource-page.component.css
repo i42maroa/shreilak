@@ -13,8 +13,6 @@
   opacity: 0.1;
 }
 
-
-
 @media (max-width: 300px) {
   .container{
     margin:0.5rem ;

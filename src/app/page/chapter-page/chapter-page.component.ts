@@ -1,35 +1,45 @@
 import { Component, Input } from '@angular/core';
 import { ChapterComponent } from '../../core/components/chapter/chapter.component';
 import { RouterLink } from '@angular/router';
-import { ButtonComponent } from '../../core/components/button/button.component';
 import { CharapterPageService } from '../../core/service/charapter/charapter-page.service';
 import { CommonModule } from '@angular/common';
-import { BehaviorSubject } from 'rxjs';
 import { CHAPTERS } from '../../data/chapters.data';
+import { ButtonsComponent } from '../../core/components/buttons/buttons.component';
+import { ButtonInterface } from '../../data/interface/button.interface';
 
 @Component({
   selector: 'app-chapter-page',
   standalone: true,
-  imports: [RouterLink,ChapterComponent, ButtonComponent, CommonModule],
+  imports: [RouterLink,ChapterComponent, CommonModule, ButtonsComponent],
   templateUrl: './chapter-page.component.html',
   styleUrl: './chapter-page.component.css'
 })
 export class ChapterPageComponent {
 
-  titlePrevious$= new BehaviorSubject<string>("");
-  titleNext$= new BehaviorSubject<string>("");
+  buttonChapterListConfig:ButtonInterface = {
+    animation:true,
+    url:'/chapter',
+    text: 'Capítulos',
+    type: 'GO_BACK'
+  }
+
+  buttonNextChapterConfig:ButtonInterface = {
+    animation:true,
+    url:'/chapter',
+    text: '',
+    type: 'GO_AHEAD'
+  }
 
   constructor(private servicePage: CharapterPageService){
-
     this.servicePage.getPageNumber.subscribe(page =>{
-      if (this.servicePage.getIsPreviousPageAvailable.value){
-        const title = CHAPTERS[+page - 1].title;
-        this.titlePrevious$.next(title);
-      }
       if (this.servicePage.getIsNextPageAvailable.value){
-        const title = CHAPTERS[+page + 1].title;
-        this.titleNext$.next(title);
-      }})
+        const nextChapterNumber = +page + 1;
+        const title = CHAPTERS[nextChapterNumber].title;
+        this.buttonNextChapterConfig.text = title;
+        this.buttonNextChapterConfig.url = `/chapter/${nextChapterNumber}`;
+      }
+    }
+    )
   }
 
 
@@ -37,17 +47,8 @@ export class ChapterPageComponent {
     this.servicePage.setPage(chapterId);
   };
 
-
-  previousChapter(){
-    this.servicePage.decrementPage()
-  }
-
   nextChapter(){
     this.servicePage.incrementPage()
-  }
-
-  isPreviousAvailable(){
-    return this.servicePage.getIsPreviousPageAvailable
   }
 
   isNextAvailable(){
