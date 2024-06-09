@@ -7,7 +7,6 @@ export const CAPERUCITA_CHAPTER:ChapterInterface = {
         {
             title:"Salvar a olaf",
             process: "tenemos que patatin",
-            processTranslated: "¡Lo logramos! Salvamos al mundo del calentamiento global con ayuda de las reglas de las tres R: reciclar, reducir y reutilizar.",
             resources: [
                 {
                     id:"1",

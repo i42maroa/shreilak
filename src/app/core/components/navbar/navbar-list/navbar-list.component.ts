@@ -3,11 +3,12 @@ import { NavbarService } from '../../../service/navbar/navbar.service';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { NavbarWoodSVGComponent } from '../../../svg/navbar-wood/navbar-wood.component';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
     selector: 'app-navbar-list',
     standalone: true,
-    imports: [CommonModule, RouterLink, NavbarWoodSVGComponent],
+    imports: [CommonModule, RouterLink, NavbarWoodSVGComponent, TranslateModule],
     templateUrl: './navbar-list.component.html',
     styleUrl: './navbar-list.component.css'
 })

@@ -15,11 +15,11 @@ export class NavbarService {
             [
                 {
                     url:"/history",
-                    title:"Mi historia"
+                    title:"NAVBAR.OPTIONS.HISTORY"
                 },
                 {
                     url:"/chapter",
-                    title:"Capítulos"
+                    title:"NAVBAR.OPTIONS.CHAPTERS"
                 }
             ]
         )
