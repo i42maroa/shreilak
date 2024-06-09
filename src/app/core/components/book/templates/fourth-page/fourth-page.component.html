@@ -1,8 +1,5 @@
-<div class="page">
-  <div class="wrapper">
-    <div class="title_container">
-      <h2 class="title">{{"LANDING_PAGE.BOOK.PAGE.FIFTH" | translate}}</h2>
-    </div>
+<app-book-page>
+    <app-book-page-title [text]="'LANDING_PAGE.BOOK.PAGE.FOURTH'"/>
     <a class="button" [routerLink]="[toChapters]">
       <span>{{"LANDING_PAGE.BOOK.PAGE.BUTTON_FIFTH" | translate}}</span>
       <div class="icon_container">
@@ -10,6 +7,4 @@
       </div>
     </a>
     <img class="image"src="/assets/svg/shreilak.svg" alt="sheila" >
-
-  </div>
-</div>
+</app-book-page>

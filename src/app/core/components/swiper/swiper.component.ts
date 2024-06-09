@@ -1,6 +1,6 @@
 import { CUSTOM_ELEMENTS_SCHEMA, Component } from '@angular/core';
 import {register as registerSwipperElements} from 'swiper/element/bundle'
-import { PagesTemplateModule } from '../../../page/templates/pages-template.module';
+import { PagesTemplateModule } from '../book/pages-template.module';
 
 
 registerSwipperElements();

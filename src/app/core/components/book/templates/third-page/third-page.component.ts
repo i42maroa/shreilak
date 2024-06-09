@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
-import { TranslateModule } from '@ngx-translate/core';
+import { BookPageComponent } from '../../page/page.component';
+import { BookPageTitleComponent } from '../../title/title.component';
 
 @Component({
     selector: 'app-third-page',
     standalone: true,
-    imports: [TranslateModule],
+    imports: [BookPageTitleComponent, BookPageComponent],
     templateUrl: './third-page.component.html',
     styleUrl: './third-page.component.css'
 })

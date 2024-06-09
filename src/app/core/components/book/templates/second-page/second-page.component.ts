@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
-import { TranslateModule } from '@ngx-translate/core';
+import { BookPageComponent } from '../../page/page.component';
+import { BookPageTitleComponent } from '../../title/title.component';
 
 @Component({
     selector: 'app-second-page',
     standalone: true,
-    imports: [TranslateModule],
+    imports: [BookPageTitleComponent, BookPageComponent],
     templateUrl: './second-page.component.html',
     styleUrl: './second-page.component.css'
 })

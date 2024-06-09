@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { FifthPageComponent } from './fifth-page.component';
+import { SecondPageComponent } from './second-page.component';
 
-describe('FifthPageComponent', () => {
-    let component: FifthPageComponent;
-    let fixture: ComponentFixture<FifthPageComponent>;
+describe('ThirdPageComponent', () => {
+    let component: SecondPageComponent;
+    let fixture: ComponentFixture<SecondPageComponent>;
 
     beforeEach(async () => {
         await TestBed.configureTestingModule({
-            imports: [FifthPageComponent]
+            imports: [SecondPageComponent]
         })
             .compileComponents();
-    
-        fixture = TestBed.createComponent(FifthPageComponent);
+
+        fixture = TestBed.createComponent(SecondPageComponent);
         component = fixture.componentInstance;
         fixture.detectChanges();
     });

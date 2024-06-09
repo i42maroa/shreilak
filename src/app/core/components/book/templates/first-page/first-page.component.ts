@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
-import { LetterSSVGComponent } from '../../../core/svg/letter-s/letter-s.component';
+import { BookPageComponent } from '../../page/page.component';
+import { BookPageTitleComponent } from '../../title/title.component';
 
 @Component({
     selector: 'app-first-page',
     standalone: true,
-    imports: [LetterSSVGComponent],
+    imports: [BookPageTitleComponent, BookPageComponent],
     templateUrl: './first-page.component.html',
     styleUrl: './first-page.component.css'
 })
