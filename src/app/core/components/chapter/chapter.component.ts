@@ -6,11 +6,12 @@ import { CHAPTERS } from '../../../data/chapters.data';
 import { BehaviorSubject } from 'rxjs';
 import { CommonModule } from '@angular/common';
 import { RessourceService } from '../../service/ressource/ressource.service';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
     selector: 'app-chapter',
     standalone: true,
-    imports: [ObjetivePageComponent, CommonModule],
+    imports: [ObjetivePageComponent, CommonModule, TranslateModule],
     templateUrl: './chapter.component.html',
     styleUrl: './chapter.component.css'
 })

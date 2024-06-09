@@ -4,15 +4,16 @@ import { ChapterComponent } from '../../core/components/chapter/chapter.componen
 import { CommonModule } from '@angular/common';
 import { SwiperComponent } from '../../core/components/swiper/swiper.component';
 import { LetterSSVGComponent } from '../../core/svg/letter-s/letter-s.component';
+import { TranslateModule } from '@ngx-translate/core';
 
 
 @Component({
     selector: 'app-landing',
     standalone: true,
-    imports: [RouterLink, ChapterComponent, CommonModule, SwiperComponent, LetterSSVGComponent],
+    imports: [RouterLink, ChapterComponent, CommonModule, SwiperComponent, LetterSSVGComponent, TranslateModule],
     templateUrl: './landing.component.html',
     styleUrl: './landing.component.css'
 })
 export class LandingComponent {
-
+    text:string= ""
 }
