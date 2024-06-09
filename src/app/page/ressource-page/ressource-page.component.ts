@@ -34,7 +34,7 @@ export class RessourcePageComponent{
     constructor(private ressourceService:RessourceService,
         private router: Router,
         private ressourceService_:RessourceService){
-        this.ressourceService.ressource.subscribe(this.handleChapterLoad);
+        this.ressourceService.ressource.subscribe(r => this.handleChapterLoad(r));
 
         const pageNumber =  this.ressourceService_.previousChapter.value
         if(pageNumber != undefined){

@@ -6,7 +6,7 @@
 .button{
   display: flex;
   background-color: var(--brown);
-  margin: 0 auto auto auto;
+  margin: 20px auto auto auto;
   border: 2px solid var(--green);
   border-radius: 5px;
   border-top-right-radius: 30px;
