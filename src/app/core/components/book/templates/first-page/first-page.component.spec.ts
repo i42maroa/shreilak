@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SecondPageComponent } from './second-page.component';
+import { FirstPageComponent } from './first-page.component';
 
 describe('SecondPageComponent', () => {
-    let component: SecondPageComponent;
-    let fixture: ComponentFixture<SecondPageComponent>;
+    let component: FirstPageComponent;
+    let fixture: ComponentFixture<FirstPageComponent>;
 
     beforeEach(async () => {
         await TestBed.configureTestingModule({
-            imports: [SecondPageComponent]
+            imports: [FirstPageComponent]
         })
             .compileComponents();
-    
-        fixture = TestBed.createComponent(SecondPageComponent);
+
+        fixture = TestBed.createComponent(FirstPageComponent);
         component = fixture.componentInstance;
         fixture.detectChanges();
     });

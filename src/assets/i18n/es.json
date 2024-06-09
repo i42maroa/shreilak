@@ -8,15 +8,15 @@
   "LANDING_PAGE":{
     "TITLE":"Bienvenidos a mi página web",
     "DESCRIPTION":"Me llamo Shreilak y soy maestra de Francés. He hecho esta página para contaros mi historia y deciros como podéis ayudarme a recuperar mi forma real.",
-    "PHRASE":"Conocer otras culturas abre la puerta a la sabiduría",
+    "PHRASE":"Connaître d'autres cultures nous ouvre la porte de la sagesse",
     "BOOK":{
       "TITLE":"Mi historia",
       "SWIPE":"Desliza",
       "PAGE":{
-        "SECOND":"En un lugar lejano, había un hermoso castillo dentro de un hermoso reino.",
-        "THIRD":"Yo era una hermosa princesa, con una vida sencilla y tranquila. Hasta que un día, todo esto cambió.",
-        "FOURTH":"Una malvada bruja envidiosa apareció en mi reino y me lanzó una maldición.",
-        "FIFTH":"Convirtiendome en una horrible ogra. Y ahora ...",
+        "FIRST":"En un lugar lejano, había un hermoso castillo dentro de un hermoso reino.",
+        "SECOND":"Yo era una princesa, con una vida sencilla y tranquila. Hasta que un día, todo esto cambió.",
+        "THIRD":"Una malvada bruja envidiosa apareció en mi reino y me lanzó una maldición.",
+        "FOURTH":"Convirtiendome en una horrible ogra. Y ahora ...",
         "BUTTON_FIFTH":"NECESITO TU AYUDA"
       }
     }
