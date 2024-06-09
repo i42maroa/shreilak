@@ -6,8 +6,9 @@
 }
 
 .image_container{
-  min-height: 70svh;
-  margin: 1rem;
+  min-height: 60svh;
+  margin: 3rem auto;
+  width: 200px;
 }
 
 .svg{
@@ -17,7 +18,7 @@
 
 .text{
   display: block;
-  font-size: 40px;
+  font-size: 30px;
   text-align: center;
   font-weight: 800;
 }
@@ -34,24 +35,6 @@
   margin: 0.5rem;
 }
 
-.button span{
-  margin: 0;
-  margin-left: 10px;
-  font-weight: 800;
-  font-size: 16px;
-}
-
-.left{
-  position: left;
-}
-
-
-.icon{
-  width: 16px;
-  height: 16px;
-  fill: var(--green);
-}
-
 
 @media (max-width: 400px){
   .text{
@@ -60,7 +43,13 @@
 }
 
 @media (max-width: 300px){
+  .image_container{
+    width: 150px;
+  }
   .text{
     font-size:20px;
+  }
+  .button{
+    margin: 0 0.5rem;
   }
 }

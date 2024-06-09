@@ -8,6 +8,7 @@ import { ButtonsComponent } from '../../core/components/buttons/buttons.componen
 import { ResourceInterface } from '../../data/interface/resource.interface';
 import { ButtonInterface } from '../../data/interface/button.interface';
 import { CHAPTERS } from '../../data/chapters.data';
+import { CHAPTER_PATH } from '../../app.routes';
 
 @Component({
     selector: 'app-ressource-page',
@@ -21,8 +22,8 @@ export class RessourcePageComponent{
     buttonBackConfig: ButtonInterface ={
         animation:true,
         type: 'GO_BACK',
-        url: `/chapter`,
-        text: 'Capítulos'
+        url: `/${CHAPTER_PATH}`,
+        text: 'NAVBAR.OPTIONS.CHAPTERS'
     };
 
 
@@ -40,7 +41,7 @@ export class RessourcePageComponent{
             this.buttonBackConfig = {
                 animation:true,
                 type: 'GO_BACK',
-                url: `/chapter/${CHAPTERS[pageNumber]}`,
+                url: `/${CHAPTER_PATH}/${pageNumber}`,
                 text: CHAPTERS[pageNumber].title
             };
         }

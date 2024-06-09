@@ -7,6 +7,7 @@ import { CHAPTERS } from '../../data/chapters.data';
 import { ButtonsComponent } from '../../core/components/buttons/buttons.component';
 import { ButtonInterface } from '../../data/interface/button.interface';
 import { LetterSSVGComponent } from '../../core/svg/letter-s/letter-s.component';
+import { CHAPTER_PATH } from '../../app.routes';
 
 @Component({
     selector: 'app-chapter-page',
@@ -19,14 +20,14 @@ export class ChapterPageComponent {
 
     buttonChapterListConfig:ButtonInterface = {
         animation:true,
-        url:'/chapter',
-        text: 'Capítulos',
+        url: `/${CHAPTER_PATH}`,
+        text: 'NAVBAR.OPTIONS.CHAPTERS',
         type: 'GO_BACK'
     }
 
     buttonNextChapterConfig:ButtonInterface = {
         animation:true,
-        url:'/chapter',
+        url: `/${CHAPTER_PATH}`,
         text: '',
         type: 'GO_AHEAD'
     }
@@ -37,7 +38,7 @@ export class ChapterPageComponent {
                 const nextChapterNumber = +page + 1;
                 const title = CHAPTERS[nextChapterNumber].title;
                 this.buttonNextChapterConfig.text = title;
-                this.buttonNextChapterConfig.url = `/chapter/${nextChapterNumber}`;
+                this.buttonNextChapterConfig.url = `/${CHAPTER_PATH}/${nextChapterNumber}`;
             }
         }
         )

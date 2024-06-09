@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 import { NavbarListButtonInterface } from '../../../data/interface/navbar-list.interface';
+import { CHAPTER_PATH, HISTORY_PATH } from '../../../app.routes';
 
 @Injectable({
     providedIn: 'root'
@@ -14,11 +15,11 @@ export class NavbarService {
         this.setOptions(
             [
                 {
-                    url:"/history",
+                    url:  HISTORY_PATH,
                     title:"NAVBAR.OPTIONS.HISTORY"
                 },
                 {
-                    url:"/chapter",
+                    url:  CHAPTER_PATH,
                     title:"NAVBAR.OPTIONS.CHAPTERS"
                 }
             ]
