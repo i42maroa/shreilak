@@ -10,6 +10,8 @@ import { TRADITION_TREE } from "../ressources/frozen/tradition_tree.data";
 
 export const FROZEN_CHAPTER:ChapterInterface = {
     title:"FROZEN.TITLE",
+    classColor:"frozen",
+    image:"assets/images/ressources/frozen/frozen-chapter.png",
     history:"FROZEN.HISTORY",
     objectives:[
         {

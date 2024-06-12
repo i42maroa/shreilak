@@ -1,13 +1,13 @@
-@if(chapter$ | async; as chapter){
+@if(chapter | async; as chapter){
   <section id="history" class="container">
-    <div class="wrapper">
-      <h2 class="title">{{chapter.title | translate}}</h2>
+    <div class="wrapper" [ngClass]="chapter.classColor ">
+      <h2 class="title" [ngClass]="chapter.classColor + '_title'">{{chapter.title | translate}}</h2>
 
       <div class="text_container">
         <p>{{chapter.history | translate}}</p>
       </div>
 
-      <img class="chapter_image" src="assets/images/ressources/frozen/frozen-chapter.png" alt="">
+      <img class="chapter_image" src="{{chapter.image}}" alt="">
    </div>
   </section>
 

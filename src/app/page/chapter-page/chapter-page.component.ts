@@ -32,20 +32,20 @@ export class ChapterPageComponent {
         type: 'GO_AHEAD'
     }
 
+    @Input() set chapterId(chapterId: number) {
+        console.log(chapterId)
+        this.servicePage.setPage(chapterId);
+    }
+
     constructor(private servicePage: CharapterPageService){
-        this.servicePage.getPageNumber.subscribe(page =>{
+        this.servicePage.getPageNumber.subscribe(page => {
             if (this.servicePage.getIsNextPageAvailable.value){
                 const nextChapterNumber = +page + 1;
                 const title = CHAPTERS[nextChapterNumber].title;
                 this.buttonNextChapterConfig.text = title;
                 this.buttonNextChapterConfig.url = `/${CHAPTER_PATH}/${nextChapterNumber}`;
             }
-        }
-        )
-    }
-
-    @Input() set chapterId(chapterId: number) {
-        this.servicePage.setPage(chapterId);
+        })
     }
 
     nextChapter(){
