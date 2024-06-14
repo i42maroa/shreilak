@@ -1,10 +1,11 @@
 import { ChapterInterface } from "../interface/chapter.interface";
+import { CAPERUCITA_FINAL_TASK } from "../ressources/caperucita/caperucita_final_task.data";
 
 export const CAPERUCITA_CHAPTER:ChapterInterface = {
     title:"Caperucita",
     image:"/assets/images/ressources/caperucita/caperucita.png",
     classColor:"caperucita",
-    history:"Caperucita Roja había dejado atrás los frondosos bosques que tanto conocía. Ahora, con su característica capa roja ondeando al viento, se encontraba en las bulliciosas calles de París. Su abuela, una fotógrafa famosa, había mudado su residencia a la ciudad del amor, y Caperucita estaba ansiosa por visitarla",
+    history:"Caperucita Roja había dejado atrás los frondosos bosques que tanto conocía. Ahora, con su característica capa roja ondeando al viento, se encontraba en las bulliciosas calles de París. Su abuela, una fotógrafa famosa, había mudado su residencia a la ciudad del amor, y Caperucita estaba ansiosa por visitarla. Shreilak recibe una llamada de su amiga Caperucita Roja porque iba a casa de su abuela y se perdió en París. ¿Podemos ayudarla?",
     objectives:[
         {
             title:"La llegada a París",
@@ -27,6 +28,7 @@ export const CAPERUCITA_CHAPTER:ChapterInterface = {
             title:"Ayuda de la comunidad",
             process: "Al día siguiente, la policía logró rastrear al Lobo gracias a la información que Caperucita había compartido con ellos. Resultó ser un conocido delincuente cibernético buscado por varias estafas. Caperucita, agradecida por la ayuda recibida, decidió compartir su historia en las redes sociales, esta vez con un propósito diferente.",
             resources: [
+                CAPERUCITA_FINAL_TASK
             ]
         }
     ]
