@@ -11,14 +11,28 @@
   flex-direction: column;
   padding: 1rem;
   margin: 1rem;
+}
+
+.caperucita{
+  outline: 2px solid var(--caperucita);
+}
+
+.frozen{
   outline: 2px solid var(--frozen-color);
 }
 
-
 .title{
-  color: var(--frozen-color);
   margin: 1rem 0;
 }
+
+.caperucita_title{
+  color:  var(--caperucita);
+}
+
+.frozen_title{
+  color:  var(--frozen-color);
+}
+
 
 .chapter_image{
   width:  350px;

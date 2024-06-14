@@ -1,4 +1,6 @@
 import { ResourceInterface } from "./interface/resource.interface";
+import { CAPERUCITA_FINAL_TASK } from "./ressources/caperucita/caperucita_final_task.data";
+import { WOLF_INDICATIONS } from "./ressources/caperucita/wolf_indications.data";
 import { CLEAR_WOOD_CELEBRATION } from "./ressources/frozen/celebration.data";
 import { FROZEN_FINAL_TASK } from "./ressources/frozen/frozen_final_task.data";
 import { MEAL_CELEBRATION } from "./ressources/frozen/meal-celebration.data";
@@ -17,7 +19,11 @@ export const MAP_RESSOURCES:Map<string, ResourceInterface> = new Map(
         [MEAL_CELEBRATION.id, MEAL_CELEBRATION],
         [REUSED_ORNAMENTS.id, REUSED_ORNAMENTS],
         [FROZEN_FINAL_TASK.id, FROZEN_FINAL_TASK],
-        [TRADITION_TREE.id, TRADITION_TREE]
+        [TRADITION_TREE.id, TRADITION_TREE],
+
+        //CAPERUCITA
+        [CAPERUCITA_FINAL_TASK.id, CAPERUCITA_FINAL_TASK],
+        [WOLF_INDICATIONS.id, WOLF_INDICATIONS]
     ]
 );
 

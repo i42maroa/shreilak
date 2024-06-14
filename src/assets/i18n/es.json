@@ -119,6 +119,22 @@
       "RES":{
         "MAGIC_EXPRESSION":"Expresiones mágicas"
       }
+    },
+    "CAPERUCITA_FINAL_TASK":{
+      "TITLE":"Tarea final",
+      "DESCRIPTION":"",
+      "PROCESS":"Un video donde los estudiantes muestran su barrio y tiendas más cercanas individual o en grupo, en usando la imaginación: con la ayuda de la familia, el fondo verde, un pequeño teatro de títeres o con tecnologías para hacer un tour virtual con Google Tour Creator». Es indispensable la creatividad y motivación de los alumnos.",
+      "RES":{
+        "MAGIC_EXPRESSION":"Expresiones mágicas"
+      }
+    },
+    "WOLF_INDICATIONS":{
+      "TITLE":"Tarea final",
+      "DESCRIPTION":"El lobo vio la foto en «Instagram» y creó un perfil falso de la vecina de su abuela para darle las instrucciones para ir a casa de la abuela",
+      "PROCESS":"Los estudiantes leerán las instrucciones para ir a la casa de la abuela con la ayuda de una mapa. Ellos/ellas deberán señalar los edificios y redondear las indicaciones del texto (a la izquierda, aderecho, recto, girar... ) y seguir con el dedo la tarjeta.",
+      "RES":{
+        "MAP":"Mapa"
+      }
     }
   }
 }

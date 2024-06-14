@@ -1,11 +1,7 @@
 import { Component } from '@angular/core';
-import { ChapterInterface } from '../../../data/interface/chapter.interface';
 import { ObjetivePageComponent } from '../objetive-page/objetive-page.component';
 import { CharapterPageService } from '../../service/charapter/charapter-page.service';
-import { CHAPTERS } from '../../../data/chapters.data';
-import { BehaviorSubject } from 'rxjs';
 import { CommonModule } from '@angular/common';
-import { RessourceService } from '../../service/ressource/ressource.service';
 import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
@@ -17,15 +13,9 @@ import { TranslateModule } from '@ngx-translate/core';
 })
 export class ChapterComponent {
 
-    chapter$ = new BehaviorSubject<ChapterInterface|undefined>(undefined);
+    constructor(private service: CharapterPageService ){ }
 
-    constructor(private service: CharapterPageService,
-        private ressourceService_: RessourceService
-    ){
-        this.service.pageNumber$.subscribe(p => {
-            this.chapter$.next(CHAPTERS[p]);
-            this.ressourceService_.setChapterPrevious(p);
-        });
+    get chapter(){
+        return this.service.getChapter;
     }
-
 }

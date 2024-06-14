@@ -2,6 +2,8 @@ import { ChapterInterface } from "../interface/chapter.interface";
 
 export const RATATOUILLE_CHAPTER:ChapterInterface = {
     title:"RATATOUILLE",
+    classColor:"",
+    image:"",
     history:"historiasassf as fasd ",
     objectives:[
         {
