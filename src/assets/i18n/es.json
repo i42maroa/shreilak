@@ -16,7 +16,7 @@
         "FIRST":"En un lugar lejano, había un hermoso castillo dentro de un hermoso reino.",
         "SECOND":"Yo era una princesa, con una vida sencilla y tranquila. Hasta que un día, todo esto cambió.",
         "THIRD":"Una malvada bruja envidiosa apareció en mi reino y me lanzó una maldición.",
-        "FOURTH":"Convirtiendome en una horrible ogra. Y ahora ...",
+        "FOURTH":"Convirtiéndome en una horrible ogra. Y ahora ...",
         "BUTTON_FIFTH":"NECESITO TU AYUDA"
       }
     }
@@ -30,25 +30,44 @@
     "HISTORY":"En un reino donde el cambio climático amenaza con derretir el castillo de hielo de Elsa. Shreilak necesitará trabajar junto a Elsa para poder revertir el problema y devolver la tranquilidad al reino.",
     "OBJ":{
       "CLEAN":{
-        "TITLE":"La gran limpieza",
+        "TITLE":"Sauvons la forêt !",
         "PROCESS":"Al llegar al reino, Shreilak se da cuenta de que el reino se encuentra lleno de residuos. Necesitamos dejar limpio todo!!"
       },
       "OLAF":{
-        "TITLE":"Olaf en peligro",
+        "TITLE":"Olaf est en danger",
         "PROCESS":"Elsa ha venido corriendo a decirnos que Olaf se está derritiendo. Limpiar el bosque no ha sido suficiente para deterner el calentamiento global, tenemos que reducir la cantidad de basura."
       },
       "CHRISTMAS":{
-        "TITLE":"Navidad reutilizada",
+        "TITLE":"Noël réutilisé",
         "PROCESS":"Nos hemos encontrado a Elsa llorando en su habitación del castillo. Todos los adornos de navidad de su castillo se han derretido, y adornar el castillo en navidad era algo que le trae recuerdos de cuando era pequeña."
       },
       "GLOBAL_HEAT":{
-        "TITLE":"Adiós al calentamiento",
+        "TITLE":"Le réchauffement",
         "PROCESS":"¡Lo logramos! Salvamos al mundo del calentamiento global con ayuda de las reglas de las tres R: reciclar, reducir y reutilizar."
       }
     }
   },
   "CAPERUCITA":{
-    "TITLE":"Caperucita"
+    "TITLE":"Le pettit chaperon rouge",
+    "HISTORY":"Le pettit chaperon rouge había dejado atrás los frondosos bosques que tanto conocía. Ahora, con su característica capa roja ondeando al viento, se encontraba en las bulliciosas calles de París. Su abuela, una fotógrafa famosa, había mudado su residencia a la ciudad del amor, y Caperucita estaba ansiosa por visitarla. Shreilak recibe una llamada de su amiga Caperucita Roja porque iba a casa de su abuela y se perdió en París. ¿Podemos ayudarla?",
+    "OBJ":{
+      "PARIS_ARRIVED":{
+        "TITLE":"L’arrivée à Paris",
+        "PROCESS":"Nada más llegar, decidió explorar la ciudad antes de ir a casa de su abuela. Sin embargo, París era un laberinto de calles y avenidas, muy diferente al bosque que solía recorrer. Con su teléfono en mano, Caperucita se conectó a las redes sociales para pedir recomendaciones sobre lugares que visitar y también para usar una aplicación de mapas que la guiara."
+      },
+      "THE_WOLF_INTO_NET":{
+        "TITLE":"Le loup sur la toile",
+        "PROCESS":"El Lobo, un experto en tecnología y redes sociales, había estado siguiendo a Caperucita desde que anunció su viaje a París. Con su habilidad para hackear cuentas y rastrear ubicaciones, el Lobo sabía exactamente dónde encontrarla en cada momento. A través de un perfil falso en redes sociales, se hizo pasar por un amable parisino dispuesto a mostrarle la ciudad."
+      },
+      "DANGER_APPROACH":{
+        "TITLE":"Le péril menace",
+        "PROCESS":"Perdida en una ciudad desconocida y sin poder contactar a nadie, Caperucita se encontró en una situación precaria. El Lobo, ahora más agresivo, insistía en acompañarla a casa, pero Caperucita decidió confiar en su instinto y escapar."
+      },
+      "COMUNITY_HELP":{
+        "TITLE":"L’aide de la communauté",
+        "PROCESS":"Al día siguiente, la policía logró rastrear al Lobo gracias a la información que Caperucita había compartido con ellos. Resultó ser un conocido delincuente cibernético buscado por varias estafas. Caperucita, agradecida por la ayuda recibida, decidió compartir su historia en las redes sociales, esta vez con un propósito diferente."
+      }
+    }
   },
   "RATATOUILLE":{
     "TITLE":"Ratatouille"
