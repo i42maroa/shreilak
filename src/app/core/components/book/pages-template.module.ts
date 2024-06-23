@@ -5,6 +5,7 @@ import { SecondPageComponent } from './templates/second-page/second-page.compone
 import { ThirdPageComponent } from './templates/third-page/third-page.component';
 import { FourthPageComponent } from './templates/fourth-page/fourth-page.component';
 import { BookHeaderPageComponent } from './head/head.component';
+import { FifthPageComponent } from './templates/fifth-page/fifth-page.component';
 
 
 
@@ -14,14 +15,16 @@ import { BookHeaderPageComponent } from './head/head.component';
         FirstPageComponent,
         SecondPageComponent,
         ThirdPageComponent,
-        FourthPageComponent],
+        FourthPageComponent,
+        FifthPageComponent],
     imports: [
         CommonModule,
         BookHeaderPageComponent,
         FirstPageComponent,
         SecondPageComponent,
         ThirdPageComponent,
-        FourthPageComponent
+        FourthPageComponent,
+        FifthPageComponent
     ]
 })
 export class PagesTemplateModule { }

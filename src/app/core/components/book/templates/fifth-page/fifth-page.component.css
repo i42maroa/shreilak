@@ -1,0 +1,78 @@
+.container{
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  height: 100%;
+}
+
+.button{
+  display: flex;
+  background-color: var(--brown);
+  margin: auto;
+  border: 2px solid var(--green);
+  border-radius: 5px;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+
+.button span{
+  font-weight: 800;
+  color: var(--white);
+  margin: auto 1rem;
+}
+
+.icon_container{
+  display: flex;
+  padding: 10px;
+  background-color: var(--green);
+  border-radius: 50%;
+  overflow: hidden;
+  outline: 2px solid var(--brown);
+  animation: appear 1s ease-in 0s 1 both;
+}
+
+.icon{
+  fill: var(--brown);
+  width: 30px;
+  height: 30px;
+  margin: auto;
+  animation: move-hand 1s ease-out 1s infinite alternate;
+}
+
+
+@media (max-width: 400px) {
+   .icon_container{
+    padding: 8px;
+  }
+  .icon{
+    width: 18px;
+    height: 18px;
+  }
+  .button span{
+    margin: auto 0.5rem;
+  }
+}
+
+@media (max-width: 300px) {
+   .icon_container{
+    padding: 5px;
+  }
+
+  .icon{
+    width: 16px;
+    height: 16px;
+  }
+
+  .button span{
+    margin: auto 0.3rem;
+  }
+}
+
+@keyframes move-hand{
+  0%{
+    transform: translate(1px, 1px);
+  }
+  100%{
+    transform: translate(-2px, -2px);
+  }
+}
