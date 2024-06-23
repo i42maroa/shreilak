@@ -1,15 +1,11 @@
 @if(chapter | async; as chapter){
-  <section id="history" class="container">
+  <header id="history" class="container">
     <div class="wrapper" [ngClass]="chapter.classColor ">
       <h2 class="title" [ngClass]="chapter.classColor + '_title'">{{chapter.title | translate}}</h2>
-
-      <div class="text_container">
-        <p>{{chapter.history | translate}}</p>
-      </div>
-
+      <p>{{chapter.history | translate}}</p>
       <img class="chapter_image" src="{{chapter.image}}" alt="">
    </div>
-  </section>
+  </header>
 
   @for (objective of chapter.objectives; track objective.title; let idx = $index) {
   <section id="{{idx + 1}}" class="objective_container">

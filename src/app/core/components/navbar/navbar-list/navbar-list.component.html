@@ -1,10 +1,10 @@
 <div class="container">
-  <div class="options_container">
+  <nav class="options_container">
     @for(option of navbarOptionList | async; track option.title){
-      <button class="option" [routerLink]="option.url" (click)="closeNavbar()">
+      <a class="option" [routerLink]="option.url" (click)="closeNavbar()">
         <span class="text">{{option.title | translate}}</span>
         <app-navbar-wood-svg class="image" />
-      </button>
+      </a>
     }
-  </div>
+  </nav>
 </div>

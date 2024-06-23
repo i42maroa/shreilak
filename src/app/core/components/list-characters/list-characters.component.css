@@ -12,9 +12,7 @@
   flex-grow: 1;
   gap: .5rem;
   margin: 0;
-  margin-bottom: 0.75rem;
 }
-
 
 .title:after{
   content: "";
@@ -38,7 +36,6 @@
 .list_container li{
   margin: 0.5rem 0;
 }
-
 
 .chapter_title{
     display: flex;

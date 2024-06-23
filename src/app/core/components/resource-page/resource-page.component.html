@@ -1,43 +1,45 @@
 
 @if(resource){
 <div class="container">
-  <section id="description">
-    <h2 class="title">{{resource.name | translate}}</h2>
+  <header id="description">
+    <app-title [text]="resource.name"/>
     @if(resource.description){
       <p>{{resource.description | translate}}</p>
     }
+  </header>
+
+  <section>
+    <div class="objective_container">
+      @for (images of resource.images; track images.url) {
+        @defer  {
+          <app-image-shower class="image" [url]="images.url" [alt]="images.alt"/>
+        } @placeholder {
+          <span class="loading">
+            <app-letter-s-svg class="logo"/>
+          </span>
+        } @loading{
+          <span class="loading">
+            <app-letter-s-svg class="logo"/>
+          </span>
+        }
+      }
+    </div>
+
+    @if(resource.text){
+      <p>{{resource.text | translate}}</p>
+    }
   </section>
 
-  <div class="objective_container">
-    @for (images of resource.images; track images.url) {
-      @defer  {
-        <app-image-shower class="image" [url]="images.url" [alt]="images.alt"/>
-      } @placeholder {
-        <span class="loading">
-          <app-letter-s-svg class="logo"/>
-        </span>
-      } @loading{
-        <span class="loading">
-          <app-letter-s-svg class="logo"/>
-        </span>
-      }
+  <section class="ressource_buttons">
+    @if(resource.resources.length > 0){
+      <h3 class="title ressource_title">Recursos </h3>
     }
-  </div>
-
-  @if(resource.text){
-    <p>{{resource.text | translate}}</p>
-  }
-
-  @if(resource.resources.length > 0){
-    <h3 class="title ressource_title">Recursos </h3>
-  }
-  <div class="ressource_buttons">
     @for (res of resource.resources; track res.url) {
       <a class="ressource" href="{{res.url}}" target="_blank">
         <svg class="icon" viewBox="0 0 16 16" ><path fill-rule="evenodd" d="M1 8a.5.5 0 01.5-.5h11.793l-3.147-3.146a.5.5 0 01.708-.708l4 4a.5.5 0 010 .708l-4 4a.5.5 0 01-.708-.708L13.293 8.5H1.5A.5.5 0 011 8z" stroke="none"></path></svg>
          <span>{{res.name | translate}}</span>
         </a>
     }
-  </div>
+  </section>
 </div>
 }

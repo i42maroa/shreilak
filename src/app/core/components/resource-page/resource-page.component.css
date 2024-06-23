@@ -4,24 +4,6 @@
   padding: 1rem;
 }
 
-
-.title{
-  align-items: baseline;
-  display: flex;
-  flex-grow: 1;
-  gap: .5rem;
-  margin: 0;
-}
-
-.title:after{
-  content: "";
-  background-color: var(--page-line);
-  border: none;
-  display: block;
-  flex-grow: 1;
-  height: 2px;
-}
-
 .image{
   display: flex;
   width: 320px;

@@ -33,7 +33,6 @@ export class ChapterPageComponent {
     }
 
     @Input() set chapterId(chapterId: number) {
-        console.log(chapterId)
         this.servicePage.setPage(chapterId);
     }
 
