@@ -31,15 +31,15 @@
     "OBJ":{
       "CLEAN":{
         "TITLE":"Sauvons la forêt !",
-        "PROCESS":"Al llegar al reino, Shreilak se da cuenta de que el reino se encuentra lleno de residuos. Necesitamos dejar limpio todo!!"
+        "PROCESS":"Al llegar al reino, Shreilak se da cuenta de que el reino se encuentra lleno de residuos. ¡Necesitamos dejar todo limpio!"
       },
       "OLAF":{
         "TITLE":"Olaf est en danger",
-        "PROCESS":"Elsa ha venido corriendo a decirnos que Olaf se está derritiendo. Limpiar el bosque no ha sido suficiente para deterner el calentamiento global, tenemos que reducir la cantidad de basura."
+        "PROCESS":"Elsa ha venido corriendo a decirnos que Olaf se está derritiendo. Limpiar el bosque no ha sido suficiente para detener el calentamiento global, tenemos que reducir la cantidad de basura."
       },
       "CHRISTMAS":{
         "TITLE":"Noël réutilisé",
-        "PROCESS":"Nos hemos encontrado a Elsa llorando en su habitación del castillo. Todos los adornos de navidad de su castillo se han derretido, y adornar el castillo en navidad era algo que le trae recuerdos de cuando era pequeña."
+        "PROCESS":"Nos hemos encontrado a Elsa llorando en su habitación del castillo. Todos los adornos de navidad de su castillo se han derretido, y adornar el castillo era algo que le trae recuerdos de cuando era pequeña."
       },
       "GLOBAL_HEAT":{
         "TITLE":"Le réchauffement",
@@ -75,8 +75,8 @@
   "OBJ":{
     "RENOVATION_SONGS":{
       "TITLE":"On va chanter !",
-      "DESCRIPTION":"Tras un duro esfuerzo, hemos sido conseguido limpiar todo el bosque y queremos celebrarlo. Como Elsa no sabe francés, queremos ayudarle enseñandole un cuento y una canción francesa.",
-      "PROCESS":"Para comenzar, los alumnos leeran la carta de un cuento de Navidad de 'Sarah cover All I want for Christmas is you' siguiendo tres fases: una prelectorio, una lectura y una post-lectura. Para terminar, cantaremos la canción usando 'Lyrics training'.",
+      "DESCRIPTION":"Tras un duro esfuerzo, hemos conseguido limpiar todo el bosque y queremos celebrarlo. Como Elsa no sabe francés, queremos ayudarle enseñándole un cuento y una canción francesa.",
+      "PROCESS":"Para comenzar, los alumnos leerán la carta de un cuento de Navidad de 'Sarah cover All I want for Christmas is you' siguiendo tres fases: una pre-lectura, una lectura y una post-lectura. Para terminar, cantaremos la canción usando 'Lyrics training'.",
       "RES":{
         "LEARN_SONG":"Aprendamos la canción",
         "LETS_SING":"¡Vamos a cantar!"
@@ -85,14 +85,14 @@
     "MEAL_CELEBRATION":{
       "TITLE":"À table!",
       "DESCRIPTION":"¡Lo conseguimos! Olaf vuelve a estar igual que un tempano de hielo y hemos conseguido sensibilizar al mundo para reducir las cosas materiales. Esto hay que celebrarlo con un festín, por lo que Shreilak ha querido hacerle un 'tronco de navidad' a Elsa.",
-      "PROCESS":"Para comenzar, buscaremos de que se trata el 'tronco de navidad' y veremos como es y de que está hecho. Después, comparemos de forma oral la cultura grastronómica francesa con la española de esas fechas",
+      "PROCESS":"Para comenzar, conoceremos qué es el 'Tronco de Navidad' y de que está hecho. Después, comparemos de forma oral la cultura grastronómica francesa con la española de esas fechas.",
       "RES":{
         "GASTRONOMIA":"Gastronomía"
       }
     },
     "WILD_CLEAN":{
       "TITLE":"Nettoyage sauvage",
-      "DESCRIPTION":"El bosque está lleno de basura de la fiesta de navidad del año pasado. Tenemos que ayudar a shreilak a recogerlo.",
+      "DESCRIPTION":"El bosque está lleno de basura de la fiesta de navidad del año pasado. Tenemos que ayudar a Shreilak a recogerlo.",
       "PROCESS":"Usando la aplicación de Genially, los alumnos podrán eliminar el objeto de la presentación cuando escriban cada palabra en su cuaderno y la pronunciación correctamente.",
       "RES":{
         "WOOD":"Bosque a limpiar"
@@ -100,16 +100,16 @@
     },
     "ORNAMENTS":{
       "TITLE":"Décoration pour Noël",
-      "DESCRIPTION":"Hemos decidido crear nuestros propios adornos de navidad para darselos a Elsa y así hacer que deje de estar triste. Como queremos concienciarla también, vamos a hacerlos con material reutilizado.",
-      "PROCESS":"Los alumnos harán un árbol de navidad y sus adornos con material reciclado (puede ser de cartón, botellas de plástico, etc..). Detrás de cada adorno, le añadiremos mensajes positivos para así motivar aún más la reutilización.",
+      "DESCRIPTION":"Hemos decidido crear nuestros propios adornos de Navidad para dárselos a Elsa y así, hacer que deje de estar triste. Como queremos concienciarla también, vamos a hacerlos con material reutilizado.",
+      "PROCESS":"Los alumnos harán un árbol de Navidad y sus adornos con material reciclado (puede ser de cartón, botellas de plástico, etc..). Detrás de cada adorno, le añadiremos mensajes positivos para así motivar aún más la reutilización.",
       "RES":{
-        "MAKE_ORNAMENTS":"Como hacer un árbol de navidad"
+        "MAKE_ORNAMENTS":"Cómo hacer un árbol de Navidad"
       }
     },
     "OLAF":{
       "TITLE":"Sauvons Olaf !",
-      "DESCRIPTION":"Elsa nos ha comentado que hay un método para poder evitar que Olaf se acabe derritiendo, y es pidiéndoselo a Papa Noel. Este año tenemos que reducir la cantidad de regalos materiales que pedimos y enfocarnos en las que no lo son. Ya que las cosas más bellas de la vida, no son las materiales.",
-      "PROCESS":"Para poder hacer la carta, aprenderemos expresiones como 'quisiera' y 'no quisiera' que nos serán muy útiles. Algunos de los ejemplo que podríamos pedir serían: 'Me gustaría tener mas tiempo libre para jugar con mis padres' o 'No quisiera el abandono y el maltrato a los animales'",
+      "DESCRIPTION":"Elsa nos ha comentado que hay un método para poder evitar que Olaf se acabe derritiendo, y es pidiéndoselo a Papa Noel. Este año tenemos que reducir la cantidad de regalos materiales que pedimos, y enfocarnos en las que no lo son. Ya que las cosas más bellas de la vida, no son las materiales.",
+      "PROCESS":"Para poder hacer la carta, aprenderemos expresiones como 'Je voudrais' y 'Je ne voudrais pas' que nos serán muy útiles. Algunos de los ejemplos que podríamos pedir serían: 'Je voudrais plus de temps libre avec ma famille' (Yo querría más tiempo libre con mi familia).",
       "RES":{
         "MAGIC":"Expresiones mágicas"
       }
@@ -117,24 +117,24 @@
     "THREE_R":{
       "TITLE":"Trois R",
       "DESCRIPTION":"Hemos conseguido revertir la situación del castillo, pero no podemos quedarnos con los brazos cruzados para el mundo real.",
-      "PROCESS":"Para acabar vamos a leer un pequeño texto sobre el desperdicio y consumismo. Mostraremos a nuestros alumnos imagenes de la contaminación y sus consecuencias en el mundo real.",
+      "PROCESS":"Para acabar vamos a leer un pequeño texto sobre el desperdicio y consumismo. Mostraremos a nuestros alumnos imágenes de la contaminación y sus consecuencias en el planeta.",
       "RES":{
         "MANUAL":"Manual medio ambiente"
       }
     },
     "TRADITION_TREE":{
       "TITLE":"Arbre de la tradition",
-      "DESCRIPTION":"Shreilak se ha animado al ver todas las decoraciones recicladas que hemos hecho, y quiere hacerle un árbol de navidad más mágico a Elsa.",
-      "PROCESS":"Los alumnos deberán colorear y recortar las bolas del arbol de navidad. Una vez recortadas deberán de dibujar detras de cada bola algo relacionado con lo que trata la misma. Para terminar colorearan el árbol y colocarán todas las bolas en él. Es opcional y recomendable añadirle más detalles al árbol como purpurina o similar",
+      "DESCRIPTION":"Shreilak se ha animado al ver todas las decoraciones recicladas que hemos hecho, y quiere hacerle un árbol de Navidad más mágico a Elsa.",
+      "PROCESS":"Los alumnos deberán colorear y recortar las bolas del árbol de Navidad. Una vez recortadas, deberán de dibujar detrás de cada bola algo relacionado con lo que trata la misma. Para terminar, colorearán el árbol y colocarán todas las bolas en él. Es opcional y recomendable añadirle más detalles al árbol como purpurina o similar.",
       "RES":{
-        "TREE":"Arbol de la tradición",
+        "TREE":"Árbol de la tradición",
         "MAGIC_BALL":"Bolas mágicas"
       }
     },
     "FROZEN_FINAL_TASK":{
       "TITLE":"Tâche finale",
-      "DESCRIPTION":"Para dejar cerrado este capitulo, tenemos que enviar un mensaje de conciciación para todos nuestros seres queridos.",
-      "PROCESS":"Los alumnos podrán realizar un video de forma individual o en grupo en el que mostrarán todos los conocimientos adquiridos en estas sesiones, usando su imaginación y apoyandose en cualquier herramienta digital. Por ejemplo, pueden realizar un pequeño teatro de títeres en el que cuenten una historia de reciclaje, montar una pequeña escena navideña con ayuda de algún familiar o usar alguna herrmanienta como 'chatterpix' para crear su propia historia. Tiene que ser todo en francés",
+      "DESCRIPTION":"Para dejar cerrado este capítulo, tenemos que enviar un mensaje de concienciación para todos nuestros seres queridos.",
+      "PROCESS":"Los alumnos podrán realizar un video de forma individual o en grupo en el que mostrarán todos los conocimientos adquiridos en estas sesiones, usando su imaginación y apoyándose en cualquier herramienta digital. Por ejemplo, pueden realizar un pequeño teatro de títeres en el que cuenten una historia de reciclaje, montar una pequeña escena navideña con ayuda de algún familiar o usar alguna herramienta como 'chatterpix' para crear su propia historia. Tiene que ser todo en francés.",
       "RES":{
         "MAGIC_EXPRESSION":"Expresiones mágicas"
       }
