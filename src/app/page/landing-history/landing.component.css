@@ -4,6 +4,11 @@
   padding: 1.5rem 1rem;
 }
 
+.header{
+  display: flex;
+  flex-direction: column;
+}
+
 .title{
   align-items: baseline;
   display: flex;
