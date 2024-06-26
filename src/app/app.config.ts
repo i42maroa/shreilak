@@ -21,7 +21,7 @@ export const appConfig: ApplicationConfig = {
         provideRouter(routes, inMemoryScrollingFeature, withComponentInputBinding()),
         provideHttpClient(),
         TranslateModule.forRoot({
-            defaultLanguage: 'es',
+            defaultLanguage: 'fr',
             loader: {
                 provide: TranslateLoader,
                 useFactory: HttpLoaderFactory,

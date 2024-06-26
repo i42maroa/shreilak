@@ -1,5 +1,159 @@
 {
+  "NAVBAR":{
+    "OPTIONS":{
+      "HISTORY":"Mon histoire",
+      "CHAPTERS":"Chapitres"
+    }
+  },
   "LANDING_PAGE":{
-    "TITLE":"Bonjour"
+    "TITLE":"Bienvenue sur mon site web",
+    "DESCRIPTION":"Je m’appelle Sheila et je suis maîtresse de français. J’ai fait cette page pour vous raconter mon histoire et vous dire comment vous pouvez m’aider à retrouver ma forme réelle.",
+    "PHRASE":"Connaître d'autres cultures nous ouvre la porte de la sagesse",
+    "BOOK":{
+      "TITLE":"Mon histoire",
+      "SWIPE":"Glisse",
+      "PAGE":{
+        "FIRST":"En un lugar lejano, había un hermoso castillo dentro de un hermoso reino.",
+        "SECOND":"Yo era una princesa, con una vida sencilla y tranquila. Hasta que un día, todo esto cambió.",
+        "THIRD":"Una malvada bruja envidiosa apareció en mi reino y me lanzó una maldición.",
+        "FOURTH":"Convirtiéndome en una horrible ogra. Y ahora ...",
+        "BUTTON_FIFTH":"J'ai besoin de ton aide"
+      }
+    }
+  },
+  "LIST_CHAPTERS":{
+    "TITLE":"Capítulos",
+    "DESCRIPTION":"Pour briser la malédiction et retrouver ma forme, je dois aider un certain nombre de personnages en difficulté. J’ai besoin de votre aide pour accomplir les tâches de chacun d’eux."
+  },
+  "FROZEN":{
+    "TITLE":"Frozen",
+    "HISTORY":"Dans un royaume où le changement climatique menace de faire fondre le château de glace d’Elsa. Shreilak devra travailler avec Elsa pour inverser le problème et rétablir la tranquillité dans le royaume.",
+    "OBJ":{
+      "CLEAN":{
+        "TITLE":"Sauvons la forêt !",
+        "PROCESS":"En arrivant au royaume, Shreilak se rend compte que le royaume est plein de déchets. Nous devons tout nettoyer."
+      },
+      "OLAF":{
+        "TITLE":"Olaf est en danger",
+        "PROCESS":"Elsa est venue nous dire qu’Olaf fond. Nettoyer la forêt n’a pas été suffisant pour arrêter le réchauffement climatique, nous devons réduire la quantité de déchets."
+      },
+      "CHRISTMAS":{
+        "TITLE":"Noël réutilisé",
+        "PROCESS":"Nous avons rencontré Elsa pleurant dans sa chambre du château. Tous les ornements de Noël de son château ont fondu, et décorer le château était quelque chose qui lui rappelle des souvenirs de quand elle était petite."
+      },
+      "GLOBAL_HEAT":{
+        "TITLE":"Le réchauffement",
+        "PROCESS":"Nous avons réussi ! Nous avons sauvé le monde du réchauffement climatique grâce aux règles des trois R : recycler, réduire et réutiliser."
+      }
+    }
+  },
+  "CAPERUCITA":{
+    "TITLE":"Le petit chaperon rouge",
+    "HISTORY":"Le petit chaperon rouge había dejado atrás los frondosos bosques que tanto conocía. Ahora, con su característica capa roja ondeando al viento, se encontraba en las bulliciosas calles de París. Su abuela, una fotógrafa famosa, había mudado su residencia a la ciudad del amor, y Caperucita estaba ansiosa por visitarla. Shreilak recibe una llamada de su amiga Caperucita Roja porque iba a casa de su abuela y se perdió en París. ¿Podemos ayudarla?",
+    "OBJ":{
+      "PARIS_ARRIVED":{
+        "TITLE":"L’arrivée à Paris",
+        "PROCESS":"Nada más llegar, decidió explorar la ciudad antes de ir a casa de su abuela. Sin embargo, París era un laberinto de calles y avenidas, muy diferente al bosque que solía recorrer. Con su teléfono en mano, Caperucita se conectó a las redes sociales para pedir recomendaciones sobre lugares que visitar y también para usar una aplicación de mapas que la guiara."
+      },
+      "THE_WOLF_INTO_NET":{
+        "TITLE":"Le loup sur la toile",
+        "PROCESS":"El Lobo, un experto en tecnología y redes sociales, había estado siguiendo a Caperucita desde que anunció su viaje a París. Con su habilidad para hackear cuentas y rastrear ubicaciones, el Lobo sabía exactamente dónde encontrarla en cada momento. A través de un perfil falso en redes sociales, se hizo pasar por un amable parisino dispuesto a mostrarle la ciudad."
+      },
+      "DANGER_APPROACH":{
+        "TITLE":"Le péril menace",
+        "PROCESS":"Perdida en una ciudad desconocida y sin poder contactar a nadie, Caperucita se encontró en una situación precaria. El Lobo, ahora más agresivo, insistía en acompañarla a casa, pero Caperucita decidió confiar en su instinto y escapar."
+      },
+      "COMUNITY_HELP":{
+        "TITLE":"L’aide de la communauté",
+        "PROCESS":"Al día siguiente, la policía logró rastrear al Lobo gracias a la información que Caperucita había compartido con ellos. Resultó ser un conocido delincuente cibernético buscado por varias estafas. Caperucita, agradecida por la ayuda recibida, decidió compartir su historia en las redes sociales, esta vez con un propósito diferente."
+      }
+    }
+  },
+  "RATATOUILLE":{
+    "TITLE":"Ratatouille"
+  },
+  "OBJ":{
+    "RENOVATION_SONGS":{
+      "TITLE":"On va chanter !",
+      "DESCRIPTION":"Après beaucoup d’efforts, nous avons réussi à nettoyer toute la forêt et nous voulons célébrer. Comme Elsa ne parle pas français, nous voulons l’aider en lui apprenant une histoire et une chanson française.",
+      "PROCESS":"Pour commencer, les élèves liront la lettre d’un chant de Noël de 'Sarah cover All I want for Christmas is you' en suivant trois phases : une pré-lecture, une lecture et une post-lecture. Pour terminer, nous allons chanter la chanson en utilisant 'Lyrics training'.",
+      "RES":{
+        "LEARN_SONG":": Apprenons la chanson !",
+        "LETS_SING":": On va chanter !"
+      }
+    },
+    "MEAL_CELEBRATION":{
+      "TITLE":"À table!",
+      "DESCRIPTION":"Nous y sommes parvenus ! Olaf est redevenu tout aussi glacé et nous avons réussi à sensibiliser le monde pour réduire les choses matérielles. Cela doit être célébré avec un festin, Shreilak a donc voulu faire un « tronc de Noël' à Elsa.",
+      "PROCESS":"Pour commencer, nous saurons ce qu’est le 'Tronc de Noël' et de quoi il est fait. Ensuite, comparons oralement la culture gastronomique française avec la culture espagnole à ces dates.",
+      "RES":{
+        "GASTRONOMIA":"Gastronomie"
+      }
+    },
+    "WILD_CLEAN":{
+      "TITLE":"Nettoyage sauvage",
+      "DESCRIPTION":"La forêt est pleine de déchets de la fête de Noël de l’année dernière. Nous devons aider Shreilak à le nettoyer.",
+      "PROCESS":"En utilisant l’application Genially, les élèves peuvent supprimer l’objet de la présentation lorsqu’ils écrivent chaque mot dans leur cahier et la prononciation correctement.",
+      "RES":{
+        "WOOD":"Forêt sale"
+      }
+    },
+    "ORNAMENTS":{
+      "TITLE":"Décoration pour Noël",
+      "DESCRIPTION":"Nous avons décidé de créer nos propres décorations de Noël pour les donner à Elsa et ainsi, la faire cesser d’être triste. Comme nous voulons la sensibiliser aussi, nous allons les faire avec du matériel réutilisé",
+      "PROCESS":"Les élèves font un sapin de Noël et ses ornements avec du matériel recyclé (peut-être en carton, bouteilles en plastique, etc.). Derrière chaque ornement, nous ajouterons des messages positifs pour motiver à réutiliser.",
+      "RES":{
+        "MAKE_ORNAMENTS":"Comment faire un arbre de Noël?"
+      }
+    },
+    "OLAF":{
+      "TITLE":"Sauvons Olaf !",
+      "DESCRIPTION":"Elsa nous a dit qu’il y a une méthode pour empêcher Olaf de fondre, et c’est en demandant au Père Noël. Cette année, nous devons réduire la quantité de cadeaux matériels que nous demandons, et nous concentrer sur ceux qui ne le sont pas. Car les choses les plus belles de la vie ne sont pas les matériaux.",
+      "PROCESS":"Pour faire la lettre, nous apprendrons des expressions comme 'Je voudrais' et 'Je ne voudrais pas' qui nous seront très utiles. Certains des exemples que nous pourrions demander seraient : 'Je voudrais plus de temps libre avec ma famille'",
+      "RES":{
+        "MAGIC":"Les expressions magiques"
+      }
+    },
+    "THREE_R":{
+      "TITLE":"Trois R",
+      "DESCRIPTION":"Nous avons réussi à renverser la situation du château, mais nous ne pouvons pas rester les bras croisés pour le monde réel.",
+      "PROCESS":"Pour terminer, nous allons lire un petit texte sur le gaspillage et le consumérisme. Nous montrerons à nos élèves des images de la pollution et de ses conséquences sur la planète.",
+      "RES":{
+        "MANUAL":"L’environnement"
+      }
+    },
+    "TRADITION_TREE":{
+      "TITLE":"Arbre de la tradition",
+      "DESCRIPTION":"Shreilak a été encouragé de voir toutes les décorations recyclées que nous avons faites, et veut faire un arbre de Noël plus magique à Elsa.",
+      "PROCESS":"Les élèves doivent colorier et découper les boules de l’arbre de Noël. Une fois découpées, elles doivent dessiner derrière chaque boule quelque chose en rapport avec ce qu’elle traite. Pour finir, ils coloreront l’arbre et y placeront toutes les boules. Il est facultatif et recommandé d’ajouter plus de détails à l’arbre comme des paillettes ou similaire.",
+      "RES":{
+        "TREE":"Arbre de la tradition",
+        "MAGIC_BALL":"Les boules magiques"
+      }
+    },
+    "FROZEN_FINAL_TASK":{
+      "TITLE":"Tâche finale",
+      "DESCRIPTION":"Pour conclure ce chapitre, nous devons envoyer un message de sensibilisation à tous nos proches.",
+      "PROCESS":"Les élèves pourront réaliser une vidéo individuelle ou de groupe dans laquelle ils présenteront toutes les connaissances acquises lors de ces sessions, en utilisant leur imagination et en s’appuyant sur n’importe quel outil numérique. Par exemple, ils peuvent faire un petit théâtre de marionnettes où ils racontent une histoire de recyclage, monter une petite scène de Noël avec l’aide d’un membre de la famille ou utiliser un outil comme 'chatterpix' pour créer leur propre histoire. Tout doit être en français.",
+      "RES":{
+        "MAGIC_EXPRESSION":"Expressions magiques"
+      }
+    },
+    "CAPERUCITA_FINAL_TASK":{
+      "TITLE":"Tâche finale",
+      "DESCRIPTION":"",
+      "PROCESS":"Un video donde los estudiantes muestran su barrio y tiendas más cercanas individual o en grupo, en usando la imaginación: con la ayuda de la familia, el fondo verde, un pequeño teatro de títeres o con tecnologías para hacer un tour virtual con Google Tour Creator». Es indispensable la creatividad y motivación de los alumnos.",
+      "RES":{
+        "MAGIC_EXPRESSION":"Expresiones mágicas"
+      }
+    },
+    "WOLF_INDICATIONS":{
+      "TITLE":"Tâche finale",
+      "DESCRIPTION":"El lobo vio la foto en «Instagram» y creó un perfil falso de la vecina de su abuela para darle las instrucciones para ir a casa de la abuela",
+      "PROCESS":"Los estudiantes leerán las instrucciones para ir a la casa de la abuela con la ayuda de una mapa. Ellos/ellas deberán señalar los edificios y redondear las indicaciones del texto (a la izquierda, aderecho, recto, girar... ) y seguir con el dedo la tarjeta.",
+      "RES":{
+        "MAP":"Mapa"
+      }
+    }
   }
 }
