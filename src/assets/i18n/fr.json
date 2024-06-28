@@ -13,16 +13,16 @@
       "TITLE":"Mon histoire",
       "SWIPE":"Glisse",
       "PAGE":{
-        "FIRST":"En un lugar lejano, había un hermoso castillo dentro de un hermoso reino.",
-        "SECOND":"Yo era una princesa, con una vida sencilla y tranquila. Hasta que un día, todo esto cambió.",
-        "THIRD":"Una malvada bruja envidiosa apareció en mi reino y me lanzó una maldición.",
-        "FOURTH":"Convirtiéndome en una horrible ogra. Y ahora ...",
+        "FIRST":"Dans un endroit éloigné, il y avait un beau château dans un beau royaume.",
+        "SECOND":"J’étais une princesse, avec une vie simple et tranquille. Jusqu’au jour où tout a changé.",
+        "THIRD":"Une méchante sorcière jalouse est apparue dans mon royaume et m’a jeté un sortilège.",
+        "FOURTH":"Elle a fait de moi une horrible ogresse. Maintenant...",
         "BUTTON_FIFTH":"J'ai besoin de ton aide"
       }
     }
   },
   "LIST_CHAPTERS":{
-    "TITLE":"Capítulos",
+    "TITLE":"Chapitres",
     "DESCRIPTION":"Pour briser la malédiction et retrouver ma forme, je dois aider un certain nombre de personnages en difficulté. J’ai besoin de votre aide pour accomplir les tâches de chacun d’eux."
   },
   "FROZEN":{
