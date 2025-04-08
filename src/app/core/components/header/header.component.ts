@@ -4,7 +4,6 @@ import { ShreilakTitleSVGComponent } from '../../svg/shreilak-title/shreilak-tit
 
 @Component({
     selector: 'app-header',
-    standalone: true,
     imports: [RouterLink, ShreilakTitleSVGComponent],
     templateUrl: './header.component.html',
     styleUrl: './header.component.css'

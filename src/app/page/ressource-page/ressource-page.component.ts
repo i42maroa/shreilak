@@ -12,7 +12,6 @@ import { CHAPTER_PATH } from '../../app.routes';
 
 @Component({
     selector: 'app-ressource-page',
-    standalone: true,
     imports: [RouterLink, ResourcePageComponent, CommonModule, LetterSSVGComponent, ButtonsComponent, CommonModule],
     templateUrl: './ressource-page.component.html',
     styleUrl: './ressource-page.component.css'

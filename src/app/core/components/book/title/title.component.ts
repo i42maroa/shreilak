@@ -4,7 +4,6 @@ import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
     selector: 'app-book-page-title',
-    standalone: true,
     imports: [TranslateModule, CommonModule],
     templateUrl: './title.component.html',
     styleUrl: './title.component.css'

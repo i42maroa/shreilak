@@ -6,7 +6,6 @@ import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
     selector: 'app-chapter',
-    standalone: true,
     imports: [ObjetivePageComponent, CommonModule, TranslateModule],
     templateUrl: './chapter.component.html',
     styleUrl: './chapter.component.css'

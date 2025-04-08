@@ -11,8 +11,7 @@ import { CHAPTER_PATH } from '../../app.routes';
 
 @Component({
     selector: 'app-chapter-page',
-    standalone: true,
-    imports: [RouterLink,ChapterComponent, CommonModule, ButtonsComponent, LetterSSVGComponent],
+    imports: [RouterLink, ChapterComponent, CommonModule, ButtonsComponent, LetterSSVGComponent],
     templateUrl: './chapter-page.component.html',
     styleUrl: './chapter-page.component.css'
 })

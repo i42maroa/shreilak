@@ -5,7 +5,6 @@ import { ButtonsComponent } from '../../core/components/buttons/buttons.componen
 
 @Component({
     selector: 'app-landing-chapter',
-    standalone: true,
     imports: [ListCharactersComponent, ButtonsComponent],
     templateUrl: './landing-chapter.component.html',
     styleUrl: './landing-chapter.component.css'

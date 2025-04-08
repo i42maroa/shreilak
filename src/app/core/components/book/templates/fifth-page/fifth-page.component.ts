@@ -5,7 +5,6 @@ import { CHAPTER_PATH } from '../../../../../app.routes';
 
 @Component({
     selector: 'app-fifth-page',
-    standalone: true,
     imports: [RouterLink, TranslateModule],
     templateUrl: './fifth-page.component.html',
     styleUrl: './fifth-page.component.css'

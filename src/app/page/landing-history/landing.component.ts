@@ -10,8 +10,7 @@ import { TitleComponent } from '../../core/components/title/title.component';
 
 @Component({
     selector: 'app-landing',
-    standalone: true,
-    imports: [RouterLink, ChapterComponent, CommonModule, SwiperComponent, LetterSSVGComponent,TitleComponent, TranslateModule],
+    imports: [RouterLink, ChapterComponent, CommonModule, SwiperComponent, LetterSSVGComponent, TitleComponent, TranslateModule],
     templateUrl: './landing.component.html',
     styleUrl: './landing.component.css'
 })

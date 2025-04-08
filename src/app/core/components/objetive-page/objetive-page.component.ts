@@ -8,7 +8,6 @@ import { TitleComponent } from '../title/title.component';
 
 @Component({
     selector: 'app-objetive-page',
-    standalone: true,
     imports: [ResourcePageComponent, RouterLink, TranslateModule, TitleComponent],
     templateUrl: './objetive-page.component.html',
     styleUrl: './objetive-page.component.css'

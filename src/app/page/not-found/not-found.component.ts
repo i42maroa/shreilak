@@ -7,7 +7,6 @@ import { CHAPTER_PATH, HISTORY_PATH } from '../../app.routes';
 
 @Component({
     selector: 'app-not-found',
-    standalone: true,
     imports: [NotFoundSVGComponent, RouterLink, ButtonsComponent],
     templateUrl: './not-found.component.html',
     styleUrl: './not-found.component.css'

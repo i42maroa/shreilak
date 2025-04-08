@@ -7,7 +7,6 @@ import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
     selector: 'app-navbar-list',
-    standalone: true,
     imports: [CommonModule, RouterLink, NavbarWoodSVGComponent, TranslateModule],
     templateUrl: './navbar-list.component.html',
     styleUrl: './navbar-list.component.css'
