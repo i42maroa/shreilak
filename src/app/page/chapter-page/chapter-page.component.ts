@@ -1,6 +1,5 @@
 import { Component, Input } from '@angular/core';
 import { ChapterComponent } from '../../core/components/chapter/chapter.component';
-import { RouterLink } from '@angular/router';
 import { CharapterPageService } from '../../core/service/charapter/charapter-page.service';
 import { CommonModule } from '@angular/common';
 import { CHAPTERS } from '../../data/chapters.data';
@@ -11,7 +10,7 @@ import { CHAPTER_PATH } from '../../app.routes';
 
 @Component({
     selector: 'app-chapter-page',
-    imports: [RouterLink, ChapterComponent, CommonModule, ButtonsComponent, LetterSSVGComponent],
+    imports: [ ChapterComponent, CommonModule, ButtonsComponent, LetterSSVGComponent],
     templateUrl: './chapter-page.component.html',
     styleUrl: './chapter-page.component.css'
 })
