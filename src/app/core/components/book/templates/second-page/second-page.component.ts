@@ -4,7 +4,6 @@ import { BookPageTitleComponent } from '../../title/title.component';
 
 @Component({
     selector: 'app-second-page',
-    standalone: true,
     imports: [BookPageTitleComponent, BookPageComponent],
     templateUrl: './second-page.component.html',
     styleUrl: './second-page.component.css'

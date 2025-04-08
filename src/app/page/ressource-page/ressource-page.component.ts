@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { ResourcePageComponent } from '../../core/components/resource-page/resource-page.component';
-import { Router, RouterLink } from '@angular/router';
+import { Router } from '@angular/router';
 import { RessourceService } from '../../core/service/ressource/ressource.service';
 import { CommonModule } from '@angular/common';
 import { LetterSSVGComponent } from '../../core/svg/letter-s/letter-s.component';
@@ -12,8 +12,7 @@ import { CHAPTER_PATH } from '../../app.routes';
 
 @Component({
     selector: 'app-ressource-page',
-    standalone: true,
-    imports: [RouterLink, ResourcePageComponent, CommonModule, LetterSSVGComponent, ButtonsComponent, CommonModule],
+    imports: [ResourcePageComponent, CommonModule, LetterSSVGComponent, ButtonsComponent, CommonModule],
     templateUrl: './ressource-page.component.html',
     styleUrl: './ressource-page.component.css'
 })

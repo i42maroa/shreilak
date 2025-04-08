@@ -5,7 +5,6 @@ import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
     selector: 'app-buttons',
-    standalone: true,
     imports: [RouterLink, TranslateModule],
     templateUrl: './buttons.component.html',
     styleUrl: './buttons.component.css'

@@ -7,8 +7,7 @@ import { TitleComponent } from '../title/title.component';
 
 @Component({
     selector: 'app-resource-page',
-    standalone: true,
-    imports: [ImageShowerComponent, LetterSSVGComponent,TitleComponent, TranslateModule],
+    imports: [ImageShowerComponent, LetterSSVGComponent, TitleComponent, TranslateModule],
     templateUrl: './resource-page.component.html',
     styleUrl: './resource-page.component.css'
 })

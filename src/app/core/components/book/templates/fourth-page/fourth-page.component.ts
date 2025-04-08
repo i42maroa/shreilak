@@ -5,7 +5,6 @@ import { BookPageTitleComponent } from '../../title/title.component';
 
 @Component({
     selector: 'app-fourth-page',
-    standalone: true,
     imports: [TranslateModule, BookPageComponent, BookPageTitleComponent],
     templateUrl: './fourth-page.component.html',
     styleUrl: './fourth-page.component.css'

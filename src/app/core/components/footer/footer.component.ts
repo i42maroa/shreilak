@@ -4,7 +4,6 @@ import { AntonioLogoSVGComponent } from '../../svg/antonio-logo/antonio-logo.com
 
 @Component({
     selector: 'app-footer',
-    standalone: true,
     imports: [InstagramSVGComponent, AntonioLogoSVGComponent],
     templateUrl: './footer.component.html',
     styleUrl: './footer.component.css'

@@ -6,7 +6,6 @@ import { TitleComponent } from '../title/title.component';
 
 @Component({
     selector: 'app-list-characters',
-    standalone: true,
     imports: [RouterLink, TranslateModule, TitleComponent],
     templateUrl: './list-characters.component.html',
     styleUrl: './list-characters.component.css'
