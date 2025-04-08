@@ -78,6 +78,10 @@
   min-height: 50svh;
 }
 
+.aid_button{
+  display: flex;
+  margin: 2rem auto;
+}
 
 @media (max-width: 300px) {
   .container{

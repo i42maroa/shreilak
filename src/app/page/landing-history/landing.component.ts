@@ -4,11 +4,12 @@ import { SwiperComponent } from '../../core/components/swiper/swiper.component';
 import { LetterSSVGComponent } from '../../core/svg/letter-s/letter-s.component';
 import { TranslateModule } from '@ngx-translate/core';
 import { TitleComponent } from '../../core/components/title/title.component';
+import { AidButtonComponent } from '../../core/components/buttons/aid-button/fifth-page.component';
 
 
 @Component({
     selector: 'app-landing',
-    imports: [ CommonModule, SwiperComponent, LetterSSVGComponent, TitleComponent, TranslateModule],
+    imports: [AidButtonComponent, CommonModule, SwiperComponent, LetterSSVGComponent, TitleComponent, TranslateModule],
     templateUrl: './landing.component.html',
     styleUrl: './landing.component.css'
 })

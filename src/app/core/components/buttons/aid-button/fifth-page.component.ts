@@ -1,15 +1,15 @@
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
-import { CHAPTER_PATH } from '../../../../../app.routes';
+import { CHAPTER_PATH } from '../../../../app.routes';
 
 @Component({
-    selector: 'app-fifth-page',
+    selector: 'app-aid-button',
     imports: [RouterLink, TranslateModule],
-    templateUrl: './fifth-page.component.html',
-    styleUrl: './fifth-page.component.css'
+    templateUrl: './aid-button.component.html',
+    styleUrl: './aid-button.component.css'
 })
-export class FifthPageComponent {
+export class AidButtonComponent {
     get toChapters(){
         return `/${CHAPTER_PATH}`
     }
