@@ -3,7 +3,8 @@ import { CAPERUCITA_FINAL_TASK } from "../ressources/caperucita/caperucita_final
 
 export const CAPERUCITA_CHAPTER:ChapterInterface = {
     title:"CAPERUCITA.TITLE",
-    image:"/assets/images/ressources/caperucita/caperucita.png",
+    alt:"caperucita",
+    image:"/assets/images/ressources/caperucita/caperucita.webp",
     classColor:"caperucita",
     history:"CAPERUCITA.HISTORY",
     objectives:[

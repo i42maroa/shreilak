@@ -8,7 +8,7 @@ export const TRADITION_TREE:ResourceInterface = {
     images:[
         {
             alt:"tree",
-            url:"assets/images/ressources/frozen/tradition-tree.png"
+            url:"assets/images/ressources/frozen/tradition-tree.webp"
         }
     ],
     resources:[

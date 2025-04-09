@@ -8,7 +8,7 @@ export const SAVE_OLAF:ResourceInterface = {
     images:[
         {
             alt:"save",
-            url:"assets/images/ressources/frozen/olaf-melted.png"
+            url:"assets/images/ressources/frozen/olaf-melted.webp"
         }
     ],
     resources:[

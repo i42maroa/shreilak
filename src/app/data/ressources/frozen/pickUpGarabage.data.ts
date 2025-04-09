@@ -8,7 +8,7 @@ export const WILD_CLEAN:ResourceInterface = {
     images:[
         {
             alt:"pick",
-            url:"assets/images/ressources/frozen/dirty-wood.png"
+            url:"assets/images/ressources/frozen/dirty-wood.webp"
         }
     ],
     resources:[

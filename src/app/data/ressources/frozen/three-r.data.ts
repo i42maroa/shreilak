@@ -9,7 +9,7 @@ export const THREE_R:ResourceInterface = {
     images:[
         {
             alt:"three R",
-            url:"https://www.gob.mx/cms/uploads/image/file/623219/1_3R.jpg"
+            url:"https://www.gob.mx/cms/uploads/image/file/623219/1_3R.webp"
         }
     ],
     resources:[
