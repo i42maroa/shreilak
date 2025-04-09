@@ -4,6 +4,7 @@ export const RATATOUILLE_CHAPTER:ChapterInterface = {
     title:"RATATOUILLE",
     classColor:"",
     image:"",
+    alt:"ratatouille",
     history:"historiasassf as fasd ",
     objectives:[
         {

@@ -8,11 +8,11 @@ export const REUSED_ORNAMENTS:ResourceInterface = {
     images:[
         {
             alt:"paper trees",
-            url:"assets/images/ressources/frozen/paper-trees.jpg"
+            url:"assets/images/ressources/frozen/paper-trees.webp"
         },
         {
             alt:"pick",
-            url:"assets/images/ressources/frozen/make-tree.jpg"
+            url:"assets/images/ressources/frozen/make-tree.webp"
         }
     ],
     resources:[

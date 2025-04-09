@@ -8,7 +8,7 @@ export const CLEAR_WOOD_CELEBRATION:ResourceInterface = {
     images:[
         {
             alt:"Elsa siging",
-            url:"assets/images/ressources/frozen/elsa-singing.png"
+            url:"assets/images/ressources/frozen/elsa-singing.webp"
         }
     ],
     resources:[

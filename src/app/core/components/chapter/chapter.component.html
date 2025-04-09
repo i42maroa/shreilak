@@ -3,7 +3,7 @@
     <div class="wrapper" [ngClass]="chapter.classColor ">
       <h2 class="title" [ngClass]="chapter.classColor + '_title'">{{chapter.title | translate}}</h2>
       <p>{{chapter.history | translate}}</p>
-      <img class="chapter_image" src="{{chapter.image}}" alt="">
+      <img class="chapter_image" [src]="chapter.image" loading="lazy" [alt]="chapter.alt">
    </div>
   </header>
 

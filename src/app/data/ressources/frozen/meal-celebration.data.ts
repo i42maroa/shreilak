@@ -8,7 +8,7 @@ export const MEAL_CELEBRATION:ResourceInterface = {
     images:[
         {
             alt:"tronco",
-            url:"assets/images/ressources/frozen/tronco.png"
+            url:"assets/images/ressources/frozen/tronco.webp"
         }
     ],
     resources:[
