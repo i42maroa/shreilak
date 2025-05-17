@@ -1,8 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { ChapterComponent } from '../../core/components/chapter/chapter.component';
-import { CharapterPageService } from '../../core/service/charapter/charapter-page.service';
+import { CharapterPageService } from '../../core/service/chapter/chapter-page.service';
 import { CommonModule } from '@angular/common';
-import { CHAPTERS } from '../../data/chapters.data';
 import { ButtonsComponent } from '../../core/components/buttons/buttons.component';
 import { ButtonInterface } from '../../data/interface/button.interface';
 import { LetterSSVGComponent } from '../../core/svg/letter-s/letter-s.component';
@@ -31,19 +30,10 @@ export class ChapterPageComponent {
     }
 
     @Input() set chapterId(chapterId: number) {
-        this.servicePage.setPage(chapterId);
+        this.servicePage.setChapter(chapterId);
     }
 
-    constructor(private servicePage: CharapterPageService){
-        this.servicePage.getPageNumber.subscribe(page => {
-            if (this.servicePage.getIsNextPageAvailable.value){
-                const nextChapterNumber = +page + 1;
-                const title = CHAPTERS[nextChapterNumber].title;
-                this.buttonNextChapterConfig.text = title;
-                this.buttonNextChapterConfig.url = `/${CHAPTER_PATH}/${nextChapterNumber}`;
-            }
-        })
-    }
+    constructor(private servicePage: CharapterPageService){}
 
     nextChapter(){
         this.servicePage.incrementPage()

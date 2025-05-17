@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ObjetivePageComponent } from './objetive-page.component';
+import { ObjetiveComponent } from './objetive.component';
 
 describe('ObjetivePageComponent', () => {
-    let component: ObjetivePageComponent;
-    let fixture: ComponentFixture<ObjetivePageComponent>;
+    let component: ObjetiveComponent;
+    let fixture: ComponentFixture<ObjetiveComponent>;
 
     beforeEach(async () => {
         await TestBed.configureTestingModule({
-            imports: [ObjetivePageComponent]
+            imports: [ObjetiveComponent]
         })
             .compileComponents();
-    
-        fixture = TestBed.createComponent(ObjetivePageComponent);
+
+        fixture = TestBed.createComponent(ObjetiveComponent);
         component = fixture.componentInstance;
         fixture.detectChanges();
     });

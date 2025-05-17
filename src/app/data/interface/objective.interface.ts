@@ -1,7 +1,9 @@
-import { ResourceInterface } from "./resource.interface";
+import { ActivityInterface } from "./activity.interface";
 
 export interface ObjectiveInteface{
+    id:number;
     title:string;
-    process:string;
-    resources:ResourceInterface[];
+    description:string;
+    activities:ActivityInterface[];
+    id_chapter:number;
 }

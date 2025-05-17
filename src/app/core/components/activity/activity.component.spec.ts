@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ResourcePageComponent } from './resource-page.component';
+import { ActivityComponent } from './activity.component';
 
 describe('ResourcePageComponent', () => {
-    let component: ResourcePageComponent;
-    let fixture: ComponentFixture<ResourcePageComponent>;
+    let component: ActivityComponent;
+    let fixture: ComponentFixture<ActivityComponent>;
 
     beforeEach(async () => {
         await TestBed.configureTestingModule({
-            imports: [ResourcePageComponent]
+            imports: [ActivityComponent]
         })
             .compileComponents();
-    
-        fixture = TestBed.createComponent(ResourcePageComponent);
+
+        fixture = TestBed.createComponent(ActivityComponent);
         component = fixture.componentInstance;
         fixture.detectChanges();
     });

@@ -44,21 +44,7 @@
     cursor: pointer;
     font-weight: 800;
     justify-content: space-between;
-}
-
-.frozen{
-  background-color:var(--frozen-color);
-  color: var(--white);
-}
-
-.caperucita{
-  background-color:var(--caperucita);
-  color: var(--white);
-}
-
-.ratatouille{
-  background-color:var(--brown);
-  color: var(--white);
+    color: var(--white);
 }
 
 .icon{

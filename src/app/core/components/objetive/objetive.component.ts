@@ -1,17 +1,18 @@
 import { Component, Input } from '@angular/core';
 import { ObjectiveInteface } from '../../../data/interface/objective.interface';
 import { RouterLink } from '@angular/router';
-import { ResourceInterface } from '../../../data/interface/resource.interface';
+import { ActivityInterface } from '../../../data/interface/activity.interface';
 import { TranslateModule } from '@ngx-translate/core';
 import { TitleComponent } from '../title/title.component';
+import { ACTIVITY_PATH, CHAPTER_PATH } from '../../../app.routes';
 
 @Component({
-    selector: 'app-objetive-page',
+    selector: 'app-objetive',
     imports: [ RouterLink, TranslateModule, TitleComponent],
-    templateUrl: './objetive-page.component.html',
-    styleUrl: './objetive-page.component.css'
+    templateUrl: './objetive.component.html',
+    styleUrl: './objetive.component.css'
 })
-export class ObjetivePageComponent {
+export class ObjetiveComponent {
     @Input() objective!: ObjectiveInteface;
     @Input() index!:number;
 
@@ -21,9 +22,7 @@ export class ObjetivePageComponent {
         this.show = true;
     }
 
-    getRouter(resource:ResourceInterface){
-        return `/ressource/${resource.id}`;
+    getRouter(activity:ActivityInterface){
+        return `/${CHAPTER_PATH}/${this.objective.id_chapter}/${ACTIVITY_PATH}/${activity.id}`;
     }
-
-
 }
