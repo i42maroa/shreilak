@@ -1,7 +1,9 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, tap } from 'rxjs';
+import { BehaviorSubject } from 'rxjs';
 import { ACTIVITY_EMPTY, ActivityInterface } from '../../../data/interface/activity.interface';
 import { SupabaseService } from '../supabase/supabase.service';
+import { DataCacheService, TTL_10_MIN } from '../cache/data-cache.service';
+import { CACHE_KEY_ACTIVITY } from '../../../data/cache';
 
 
 @Injectable({
@@ -9,26 +11,24 @@ import { SupabaseService } from '../supabase/supabase.service';
 })
 export class ActivityPageService {
 
-    private activity$ = new BehaviorSubject<ActivityInterface | undefined>(ACTIVITY_EMPTY);
-
-    private previousChapter$ = new BehaviorSubject<number | undefined>(undefined);
+    dataCache = new Map<string, DataCacheService<ActivityInterface>>;
+    activity$ = new BehaviorSubject<ActivityInterface | undefined>(ACTIVITY_EMPTY);
 
     constructor( private supabaseService: SupabaseService) { }
 
-    loadRessource(id:number){
-        this.supabaseService.getActivity(id)
-            .pipe(
-                tap(e => console.log(e))
-            )
-            .subscribe(e => this.activity$.next(e));
-    }
+    loadActivity(idActivity:number){
+        const cacheKey =CACHE_KEY_ACTIVITY + idActivity;
+        if(!this.dataCache.has(cacheKey)){
+            const cache = new DataCacheService<ActivityInterface>(
+                cacheKey,
+                () =>this.supabaseService.getActivity(idActivity),
+                TTL_10_MIN
+            );
+            this.dataCache.set(cacheKey, cache);
+        }
 
-    setChapterPrevious(page:number){
-        this.previousChapter$.next(page);
-    }
-
-    get previousChapter(){
-        return this.previousChapter$
+        this.dataCache.get(cacheKey)!.get()
+            .subscribe(chapter => this.activity$.next(chapter))
     }
 
     get activity(){

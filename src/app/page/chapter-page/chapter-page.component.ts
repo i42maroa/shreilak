@@ -35,11 +35,4 @@ export class ChapterPageComponent {
 
     constructor(private servicePage: CharapterPageService){}
 
-    nextChapter(){
-        this.servicePage.incrementPage()
-    }
-
-    isNextAvailable(){
-        return this.servicePage.getIsNextPageAvailable
-    }
 }

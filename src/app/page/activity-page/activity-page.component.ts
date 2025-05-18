@@ -23,7 +23,7 @@ export class ActivityPageComponent{
     };
 
     @Input() set activityId(activityId: number) {
-        this.activityService.loadRessource(activityId);
+        this.activityService.loadActivity(activityId);
     }
 
     @Input() set chapterId(chapterId: number) {

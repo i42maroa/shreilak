@@ -2,6 +2,8 @@ import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 import { SupabaseService } from '../supabase/supabase.service';
 import { CHAPTER_EMPTY, ChapterInterface } from '../../../data/interface/chapter.interface';
+import { DataCacheService, TTL_10_MIN } from '../cache/data-cache.service';
+import { CACHE_KEY_CHAPTER } from '../../../data/cache';
 
 export interface buttonInterface{
     title:string,
@@ -13,25 +15,25 @@ export interface buttonInterface{
 })
 export class CharapterPageService {
 
-    nextPageAvailable$ = new BehaviorSubject<boolean>(false);
-    previousPageAvailable$ = new BehaviorSubject<boolean>(false);
-
+    dataCache = new Map<string, DataCacheService<ChapterInterface>>;
     pageNumber$ = new BehaviorSubject<number>(0);
     chapter$ = new BehaviorSubject<ChapterInterface>(CHAPTER_EMPTY);
 
-    constructor(private supabase: SupabaseService) {}
+    constructor(private supabaseService: SupabaseService) {}
 
     setChapter(chapterId:number){
-        this.pageNumber$.next(chapterId);
-        this.supabase.getCharapter(chapterId).subscribe((e)=> this.chapter$.next(e));
-    }
+        const cacheKey =CACHE_KEY_CHAPTER + chapterId;
+        if(!this.dataCache.has(cacheKey)){
+            const cache = new DataCacheService<ChapterInterface>(
+                cacheKey,
+                () =>this.supabaseService.getCharapter(chapterId),
+                TTL_10_MIN
+            );
+            this.dataCache.set(cacheKey, cache);
+        }
 
-    incrementPage(){
-        this.setChapter(this.pageNumber$.value + 1);
-    }
-
-    decrementPage(){
-        this.setChapter(this.pageNumber$.value - 1);
+        this.dataCache.get(cacheKey)!.get()
+            .subscribe(chapter => this.chapter$.next(chapter))
     }
 
     get getChapter(){
@@ -40,13 +42,5 @@ export class CharapterPageService {
 
     get getPageNumber(){
         return this.pageNumber$;
-    }
-
-    get getIsNextPageAvailable(){
-        return this.nextPageAvailable$;
-    }
-
-    get getIsPreviousPageAvailable(){
-        return this.previousPageAvailable$;
     }
 }

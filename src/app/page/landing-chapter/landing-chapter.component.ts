@@ -1,9 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { ListCharactersComponent } from '../../core/components/list-characters/list-characters.component';
 import { SupabaseService } from '../../core/service/supabase/supabase.service';
-import { BehaviorSubject } from 'rxjs';
+import { Observable } from 'rxjs';
 import { ChapterInterface } from '../../data/interface/chapter.interface';
 import { CommonModule } from '@angular/common';
+import { DataCacheService, TTL_10_MIN } from '../../core/service/cache/data-cache.service';
+import { CACHE_KEY_CHAPTERS } from '../../data/cache';
 
 
 @Component({
@@ -12,14 +14,19 @@ import { CommonModule } from '@angular/common';
     templateUrl: './landing-chapter.component.html',
     styleUrl: './landing-chapter.component.css'
 })
-export class LandingChapterComponent implements OnInit {
+export class LandingChapterComponent  {
 
-    chapters$ =  new BehaviorSubject<ChapterInterface[]>([]);
+    dataCache:DataCacheService<ChapterInterface[]>;
 
-    constructor(private supabaseService: SupabaseService){}
+    constructor(private supabaseService: SupabaseService){
+        this.dataCache = new DataCacheService(
+            CACHE_KEY_CHAPTERS,
+            () => this.supabaseService.getChapters(),
+            TTL_10_MIN
+        );
+    }
 
-    ngOnInit(): void {
-        this.supabaseService.getChapters()
-            .subscribe(chapters => this.chapters$.next(chapters))
+    get chapters(): Observable<ChapterInterface[]>{
+        return this.dataCache.get();
     }
 }
