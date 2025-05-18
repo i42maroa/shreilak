@@ -11,7 +11,7 @@ import { environment } from '../../../../environments/environment';
 })
 export class SupabaseService {
 
-    private supabase: SupabaseClient;
+    supabase: SupabaseClient;
 
     constructor() {
         this.supabase = createClient(environment.supabaseUrl, environment.supabaseKey);

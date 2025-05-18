@@ -13,26 +13,9 @@
   margin: 1rem;
 }
 
-.caperucita{
-  outline: 2px solid var(--caperucita);
-}
-
-.frozen{
-  outline: 2px solid var(--frozen-color);
-}
-
 .title{
   margin: 1rem 0;
 }
-
-.caperucita_title{
-  color:  var(--caperucita);
-}
-
-.frozen_title{
-  color:  var(--frozen-color);
-}
-
 
 .chapter_image{
   width:  350px;
@@ -54,8 +37,5 @@
 @media (max-width: 300px) {
   .chapter_image{
     max-width:  150px;
-  }
-  .wrapper{
-    outline: 1px solid var(--frozen-color);
   }
 }

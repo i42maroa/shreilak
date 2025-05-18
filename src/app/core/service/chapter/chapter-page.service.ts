@@ -26,7 +26,7 @@ export class CharapterPageService {
         if(!this.dataCache.has(cacheKey)){
             const cache = new DataCacheService<ChapterInterface>(
                 cacheKey,
-                () =>this.supabaseService.getCharapter(chapterId),
+                () => this.supabaseService.getCharapter(chapterId),
                 TTL_10_MIN
             );
             this.dataCache.set(cacheKey, cache);
