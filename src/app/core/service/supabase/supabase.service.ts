@@ -1,10 +1,12 @@
 import { Injectable } from '@angular/core';
-import { createClient, SupabaseClient } from '@supabase/supabase-js';
-import { from, Observable } from 'rxjs';
+import { createClient, PostgrestError, SupabaseClient } from '@supabase/supabase-js';
+import { from, Observable, TimeoutError } from 'rxjs';
 import { ChapterInterface } from '../../../data/interface/chapter.interface';
 import { ResourceInterface } from '../../../data/interface/resource.interface';
 import { ActivityInterface } from '../../../data/interface/activity.interface';
 import { environment } from '../../../../environments/environment';
+import { NotificationService } from '../notification/notification.service';
+import { PostgrestBuilder } from '@supabase/postgrest-js';
 
 @Injectable({
     providedIn: 'root'
@@ -13,7 +15,7 @@ export class SupabaseService {
 
     supabase: SupabaseClient;
 
-    constructor() {
+    constructor(private notificationService:NotificationService) {
         this.supabase = createClient(environment.supabaseUrl, environment.supabaseKey);
     }
 
@@ -22,10 +24,7 @@ export class SupabaseService {
             .select(`*,
               objectives(*)`);
 
-        return from(query.then(({ data, error }) => {
-            if (error) throw error;
-            return data;
-        }));
+        return this.sendQueryToSupaBase<ChapterInterface[]>(query);
     }
 
     getActivity(idActivity: number):Observable<ActivityInterface> {
@@ -37,11 +36,7 @@ export class SupabaseService {
                   )`)
             .eq('id', idActivity)
             .single();
-
-        return from(query.then(({ data, error }) => {
-            if (error) throw error;
-            return data;
-        }));
+        return this.sendQueryToSupaBase<ActivityInterface>(query);
     }
 
     getResource(idResource: number):Observable<ResourceInterface> {
@@ -50,10 +45,7 @@ export class SupabaseService {
             .eq('id', idResource)
             .single();
 
-        return from(query.then(({ data, error }) => {
-            if (error) throw error;
-            return data;
-        }));
+        return this.sendQueryToSupaBase<ResourceInterface>(query);
     }
 
     getCharapter(idChapter:number):Observable<ChapterInterface> {
@@ -71,9 +63,39 @@ export class SupabaseService {
             .eq('id', idChapter)
             .single();
 
-        return from(query.then(({ data, error }) => {
-            if (error) throw error;
-            return data;
-        }));
+        return this.sendQueryToSupaBase<ChapterInterface>(query);
+    }
+
+    private sendQueryToSupaBase <T>(query: PostgrestBuilder<T>):Observable<T>{
+        return from(
+            query.then(({ data, error }) => {
+                if (error){
+                    this.handleError(error);
+                    throw error;
+                }
+                if (data === null) {
+                    const message = "No hay datos";
+                    this.notificationService.showErrorModal(message);
+                    throw new Error('No data returned from Supabase');
+                }
+                return data;
+            }));
+    }
+
+    private handleError(error: PostgrestError){
+        let message = 'Error en la base de datos';
+
+        if (error instanceof TimeoutError) {
+            message = 'La solicitud está tardando demasiado. Verifica tu conexión.';
+        } else if (error.message === 'Failed to fetch') {
+            message = 'No se pudo conectar con el servidor. ¿Estás sin conexión?';
+        } else if (error.message === 'Elemento no encontrado') {
+            message = 'No se encontró el elemento solicitado.';
+        } else if (error.message) {
+            message = `Error: ${error.message}`;
+        }
+
+        this.notificationService.showErrorModal(message);
+        console.error('[SUPABASE ERROR]', error);
     }
 }
