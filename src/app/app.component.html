@@ -1,8 +1,15 @@
 <div class="main_container">
   <app-navbar/>
   <router-outlet/>
+
   @if(showModal | async){
     <app-notification-snackbar />
+  }
+
+  @if(showLoader| async){
+    <div class="loaderContainer">
+      <app-loader class="loader"/>
+    </div>
   }
   <app-footer/>
 </div>

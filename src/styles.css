@@ -28,6 +28,8 @@
   --notification-success: var(--green);
   --notification-fail: #DC3128;
 
+  --shadow: #eee;
+
   --font-title: Domine-regular;
   --font-base: Domine-regular;
   --font-size: 1rem;

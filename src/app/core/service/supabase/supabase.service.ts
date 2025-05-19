@@ -7,6 +7,7 @@ import { ActivityInterface } from '../../../data/interface/activity.interface';
 import { environment } from '../../../../environments/environment';
 import { NotificationService } from '../notification/notification.service';
 import { PostgrestBuilder } from '@supabase/postgrest-js';
+import { LoaderService } from '../loader/loader.service';
 
 @Injectable({
     providedIn: 'root'
@@ -15,7 +16,7 @@ export class SupabaseService {
 
     supabase: SupabaseClient;
 
-    constructor(private notificationService:NotificationService) {
+    constructor(private notificationService:NotificationService, private loaderService:LoaderService) {
         this.supabase = createClient(environment.supabaseUrl, environment.supabaseKey);
     }
 
@@ -67,6 +68,7 @@ export class SupabaseService {
     }
 
     private sendQueryToSupaBase <T>(query: PostgrestBuilder<T>):Observable<T>{
+        this.loaderService.loading();
         return from(
             query.then(({ data, error }) => {
                 if (error){
@@ -78,6 +80,7 @@ export class SupabaseService {
                     this.notificationService.showErrorModal(message);
                     throw new Error('No data returned from Supabase');
                 }
+                this.loaderService.fininsh();
                 return data;
             }));
     }
@@ -96,6 +99,7 @@ export class SupabaseService {
         }
 
         this.notificationService.showErrorModal(message);
+        this.loaderService.fininsh();
         console.error('[SUPABASE ERROR]', error);
     }
 }
