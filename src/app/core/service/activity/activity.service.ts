@@ -11,17 +11,18 @@ import { CACHE_KEY_ACTIVITY } from '../../../data/cache';
 })
 export class ActivityPageService {
 
-    dataCache = new Map<string, DataCacheService<ActivityInterface | null>>;
-    activity$ = new BehaviorSubject<ActivityInterface | undefined | null>(undefined);
+    private dataCache = new Map<string, DataCacheService<ActivityInterface | null>>;
+    private activity$ = new BehaviorSubject<ActivityInterface | undefined | null>(undefined);
 
     constructor( private supabaseService: SupabaseService) { }
 
     loadActivity(idActivity:number){
+        this.cleanActivity();
         const cacheKey =CACHE_KEY_ACTIVITY + idActivity;
         if(!this.dataCache.has(cacheKey)){
             const cache = new DataCacheService<ActivityInterface | null>(
                 cacheKey,
-                () =>this.supabaseService.getActivity(idActivity),
+                () => this.supabaseService.getActivity(idActivity),
                 TTL_10_MIN
             );
             this.dataCache.set(cacheKey, cache);
@@ -29,6 +30,10 @@ export class ActivityPageService {
 
         this.dataCache.get(cacheKey)!.get()
             .subscribe(chapter => this.activity$.next(chapter))
+    }
+
+    cleanActivity(){
+        this.activity$.next(undefined);
     }
 
     get activity(){

@@ -13,13 +13,3 @@ export interface ActivityInterface{
     activitiesResources:ActivityResourceInterface[];
     id_objective:number;
 }
-
-export const ACTIVITY_EMPTY:ActivityInterface = {
-    id:0,
-    title:'',
-    image:'',
-    imageAlt:'',
-    activitiesResources:[],
-    id_objective:0
-}
-

@@ -7,6 +7,7 @@ import { LetterSSVGComponent } from '../../core/svg/letter-s/letter-s.component'
 import { CHAPTER_PATH } from '../../app.routes';
 import { NotFoundPageComponent } from '../not-found/not-found.component';
 import { ChapterComponent } from '../../shared/chapter/chapter.component';
+import { NAVBAR_OPTION_CHAPTERS } from '../../data/navbar';
 
 @Component({
     selector: 'app-chapter-page',
@@ -19,7 +20,7 @@ export class ChapterPageComponent {
     buttonChapterListConfig:ButtonInterface = {
         animation:true,
         url: `/${CHAPTER_PATH}`,
-        text: 'NAVBAR_OPTION_CHAPTERS',
+        text: NAVBAR_OPTION_CHAPTERS,
         type: 'GO_BACK'
     }
 
@@ -39,9 +40,4 @@ export class ChapterPageComponent {
     get chapter(){
         return this.servicePage.getChapter;
     }
-
-    s(){
-        this.chapter.subscribe(d => console.log(d))
-    }
-
 }

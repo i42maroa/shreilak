@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { createClient, PostgrestError, SupabaseClient } from '@supabase/supabase-js';
-import { from, Observable, TimeoutError } from 'rxjs';
+import { from, Observable,  TimeoutError } from 'rxjs';
 import { ChapterInterface } from '../../../data/interface/chapter.interface';
 import { ResourceInterface } from '../../../data/interface/resource.interface';
 import { ActivityInterface } from '../../../data/interface/activity.interface';
@@ -90,10 +90,8 @@ export class SupabaseService {
 
         if (error instanceof TimeoutError) {
             message = 'La solicitud está tardando demasiado. Verifica tu conexión.';
-        } else if (error.message === 'Failed to fetch') {
-            message = 'No se pudo conectar con el servidor. ¿Estás sin conexión?';
-        } else if (error.message === 'Elemento no encontrado') {
-            message = 'No se encontró el elemento solicitado.';
+        } else if (error.code === 'PGRST116') {
+            message = 'Elemento no encontrado';
         } else if (error.message) {
             message = `Error: ${error.message}`;
         }

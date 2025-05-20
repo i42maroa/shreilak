@@ -15,12 +15,6 @@ export class ObjetiveComponent {
     @Input() objective!: ObjectiveInteface;
     @Input() index!:number;
 
-    show = false;
-
-    showDetail(){
-        this.show = true;
-    }
-
     getRouter(activity:ActivityInterface){
         return `/${CHAPTER_PATH}/${this.objective.id_chapter}/${ACTIVITY_PATH}/${activity.id}`;
     }

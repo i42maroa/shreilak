@@ -26,6 +26,6 @@ export class AppComponent{
     }
 
     get showLoader():Observable<boolean>{
-        return this.loaderService.showLoader;
+        return this.loaderService.isLoading;
     }
 }

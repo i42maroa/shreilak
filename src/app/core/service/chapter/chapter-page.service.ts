@@ -15,12 +15,13 @@ export interface buttonInterface{
 })
 export class CharapterPageService {
 
-    dataCache = new Map<string, DataCacheService<ChapterInterface | null>>;
-    chapter$ = new BehaviorSubject<ChapterInterface| undefined | null>(undefined);
+    private dataCache = new Map<string, DataCacheService<ChapterInterface | null>>;
+    private chapter$ = new BehaviorSubject<ChapterInterface| undefined | null>(undefined);
 
     constructor(private supabaseService: SupabaseService) {}
 
     setChapter(chapterId:number): void{
+        this.cleanChapter();
         const cacheKey = CACHE_KEY_CHAPTER + chapterId;
         if(!this.dataCache.has(cacheKey)){
             const cache = new DataCacheService<ChapterInterface | null>(
@@ -34,6 +35,10 @@ export class CharapterPageService {
 
         this.dataCache.get(cacheKey)!.get()
             .subscribe(chapter => this.chapter$.next(chapter))
+    }
+
+    cleanChapter(){
+        this.chapter$.next(undefined);
     }
 
     get getChapter(): Observable<ChapterInterface| undefined | null>{

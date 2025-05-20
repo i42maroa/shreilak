@@ -7,6 +7,8 @@ import { ButtonsComponent } from '../../core/components/buttons/buttons.componen
 import { ButtonInterface } from '../../data/interface/button.interface';
 import { CHAPTER_PATH } from '../../app.routes';
 import { NotFoundPageComponent } from '../not-found/not-found.component';
+import { NAVBAR_OPTION_CHAPTERS } from '../../data/navbar';
+import { LoaderService } from '../../core/service/loader/loader.service';
 
 @Component({
     selector: 'app-activity-page',
@@ -20,7 +22,7 @@ export class ActivityPageComponent{
         animation:true,
         type: 'GO_BACK',
         url: `/${CHAPTER_PATH}`,
-        text: 'NAVBAR_OPTION_CHAPTERS'
+        text: NAVBAR_OPTION_CHAPTERS
     };
 
     @Input() set activityId(activityId: number) {
@@ -31,9 +33,13 @@ export class ActivityPageComponent{
         this.buttonBackConfig.url = `/${CHAPTER_PATH}/${chapterId}`
     }
 
-    constructor(private activityService:ActivityPageService){}
+    constructor(private activityService:ActivityPageService, private loadingService:LoaderService){}
 
     get activity(){
         return this.activityService.activity
+    }
+
+    get isLoading(){
+        return this.loadingService.isLoading;
     }
 }
