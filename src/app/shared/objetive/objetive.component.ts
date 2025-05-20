@@ -1,9 +1,9 @@
 import { Component, Input } from '@angular/core';
-import { ObjectiveInteface } from '../../../data/interface/objective.interface';
 import { RouterLink } from '@angular/router';
-import { ActivityInterface } from '../../../data/interface/activity.interface';
-import { TitleComponent } from '../title/title.component';
-import { ACTIVITY_PATH, CHAPTER_PATH } from '../../../app.routes';
+import { TitleComponent } from '../../core/components/title/title.component';
+import { ObjectiveInteface } from '../../data/interface/objective.interface';
+import { ActivityInterface } from '../../data/interface/activity.interface';
+import { ACTIVITY_PATH, CHAPTER_PATH } from '../../app.routes';
 
 @Component({
     selector: 'app-objetive',

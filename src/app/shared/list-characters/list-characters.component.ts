@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { RouterLink } from '@angular/router';
-import { ChapterInterface } from '../../../data/interface/chapter.interface';
 import { CommonModule } from '@angular/common';
+import { ChapterInterface } from '../../data/interface/chapter.interface';
 
 @Component({
     selector: 'app-list-characters',

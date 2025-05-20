@@ -7,11 +7,10 @@ import { AidButtonComponent } from '../../core/components/buttons/aid-button/fif
 
 
 @Component({
-    selector: 'app-landing',
+    selector: 'app-history-page',
     imports: [AidButtonComponent, CommonModule, SwiperComponent, LetterSSVGComponent, TitleComponent],
-    templateUrl: './landing.component.html',
-    styleUrl: './landing.component.css'
+    templateUrl: './history-page.component.html',
+    styleUrl: './history-page.component.css'
 })
-export class LandingComponent {
-    text:string= ""
+export class HistoryPageComponent {
 }

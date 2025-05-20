@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { ActivityComponent } from '../../core/components/activity/activity.component';
+import { ActivityComponent } from '../../shared/activity/activity.component';
 import { ActivityPageService } from '../../core/service/activity/activity.service';
 import { CommonModule } from '@angular/common';
 import { LetterSSVGComponent } from '../../core/svg/letter-s/letter-s.component';

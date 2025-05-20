@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { LandingChapterComponent } from './landing-chapter.component';
+import { HistoryPageComponent } from './history-page.component';
 
-describe('LandingChapterComponent', () => {
-    let component: LandingChapterComponent;
-    let fixture: ComponentFixture<LandingChapterComponent>;
+describe('LandingComponent', () => {
+    let component: HistoryPageComponent;
+    let fixture: ComponentFixture<HistoryPageComponent>;
 
     beforeEach(async () => {
         await TestBed.configureTestingModule({
-            imports: [LandingChapterComponent]
+            imports: [HistoryPageComponent]
         })
             .compileComponents();
-    
-        fixture = TestBed.createComponent(LandingChapterComponent);
+
+        fixture = TestBed.createComponent(HistoryPageComponent);
         component = fixture.componentInstance;
         fixture.detectChanges();
     });

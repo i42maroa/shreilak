@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { LetterSSVGComponent } from '../../../svg/letter-s/letter-s.component';
+import { LetterSSVGComponent } from '../../../core/svg/letter-s/letter-s.component';
 
 @Component({
     selector: 'app-book-header-page',
