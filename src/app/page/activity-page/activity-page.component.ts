@@ -20,7 +20,7 @@ export class ActivityPageComponent{
         animation:true,
         type: 'GO_BACK',
         url: `/${CHAPTER_PATH}`,
-        text: 'NAVBAR.OPTIONS.CHAPTERS'
+        text: 'NAVBAR_OPTION_CHAPTERS'
     };
 
     @Input() set activityId(activityId: number) {

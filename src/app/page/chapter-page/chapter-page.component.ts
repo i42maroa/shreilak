@@ -19,7 +19,7 @@ export class ChapterPageComponent {
     buttonChapterListConfig:ButtonInterface = {
         animation:true,
         url: `/${CHAPTER_PATH}`,
-        text: 'NAVBAR.OPTIONS.CHAPTERS',
+        text: 'NAVBAR_OPTION_CHAPTERS',
         type: 'GO_BACK'
     }
 

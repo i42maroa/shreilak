@@ -16,11 +16,11 @@ export class NavbarService {
             [
                 {
                     url:  HISTORY_PATH,
-                    title:"NAVBAR.OPTIONS.HISTORY"
+                    title:"NAVBAR_OPTION_HISTORY"
                 },
                 {
                     url:  CHAPTER_PATH,
-                    title:"NAVBAR.OPTIONS.CHAPTERS"
+                    title:"NAVBAR_OPTION_CHAPTERS"
                 }
             ]
         )
