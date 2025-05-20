@@ -6,17 +6,18 @@ import { ChapterInterface } from '../../data/interface/chapter.interface';
 import { CommonModule } from '@angular/common';
 import { DataCacheService, TTL_10_MIN } from '../../core/service/cache/data-cache.service';
 import { CACHE_KEY_CHAPTERS } from '../../data/cache';
+import { TitleComponent } from '../../core/components/title/title.component';
 
 
 @Component({
     selector: 'app-landing-chapter',
-    imports: [ListCharactersComponent, CommonModule],
+    imports: [ListCharactersComponent, CommonModule, TitleComponent],
     templateUrl: './landing-chapter.component.html',
     styleUrl: './landing-chapter.component.css'
 })
 export class LandingChapterComponent  {
 
-    dataCache:DataCacheService<ChapterInterface[]>;
+    dataCache:DataCacheService<ChapterInterface[]| null>;
 
     constructor(private supabaseService: SupabaseService){
         this.dataCache = new DataCacheService(
@@ -26,7 +27,7 @@ export class LandingChapterComponent  {
         );
     }
 
-    get chapters(): Observable<ChapterInterface[]>{
+    get chapters(): Observable<ChapterInterface[]| null>{
         return this.dataCache.get();
     }
 }

@@ -20,7 +20,7 @@ export class SupabaseService {
         this.supabase = createClient(environment.supabaseUrl, environment.supabaseKey);
     }
 
-    getChapters():Observable<ChapterInterface[]> {
+    getChapters():Observable<ChapterInterface[]| null> {
         const query =  this.supabase.from('chapters')
             .select(`*,
               objectives(*)`);
@@ -28,7 +28,7 @@ export class SupabaseService {
         return this.sendQueryToSupaBase<ChapterInterface[]>(query);
     }
 
-    getActivity(idActivity: number):Observable<ActivityInterface> {
+    getActivity(idActivity: number):Observable<ActivityInterface| null> {
         const query =  this.supabase.from('activities')
             .select(`*,
                   activitiesResources (
@@ -40,7 +40,7 @@ export class SupabaseService {
         return this.sendQueryToSupaBase<ActivityInterface>(query);
     }
 
-    getResource(idResource: number):Observable<ResourceInterface> {
+    getResource(idResource: number):Observable<ResourceInterface| null> {
         const query =  this.supabase.from('resource')
             .select('*')
             .eq('id', idResource)
@@ -49,7 +49,7 @@ export class SupabaseService {
         return this.sendQueryToSupaBase<ResourceInterface>(query);
     }
 
-    getCharapter(idChapter:number):Observable<ChapterInterface> {
+    getCharapter(idChapter:number):Observable<ChapterInterface| null> {
         const query =  this.supabase.from('chapters')
             .select(`*,
               objectives (*,
@@ -67,18 +67,18 @@ export class SupabaseService {
         return this.sendQueryToSupaBase<ChapterInterface>(query);
     }
 
-    private sendQueryToSupaBase <T>(query: PostgrestBuilder<T>):Observable<T>{
+    private sendQueryToSupaBase <T>(query: PostgrestBuilder<T>):Observable<T | null>{
         this.loaderService.loading();
         return from(
             query.then(({ data, error }) => {
                 if (error){
                     this.handleError(error);
-                    throw error;
+                    return null;
                 }
                 if (data === null) {
                     const message = "No hay datos";
                     this.notificationService.showErrorModal(message);
-                    throw new Error('No data returned from Supabase');
+                    return null;
                 }
                 this.loaderService.fininsh();
                 return data;

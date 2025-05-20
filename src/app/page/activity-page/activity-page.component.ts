@@ -6,10 +6,11 @@ import { LetterSSVGComponent } from '../../core/svg/letter-s/letter-s.component'
 import { ButtonsComponent } from '../../core/components/buttons/buttons.component';
 import { ButtonInterface } from '../../data/interface/button.interface';
 import { CHAPTER_PATH } from '../../app.routes';
+import { NotFoundPageComponent } from '../not-found/not-found.component';
 
 @Component({
     selector: 'app-activity-page',
-    imports: [ActivityComponent, CommonModule, LetterSSVGComponent, ButtonsComponent, CommonModule],
+    imports: [ActivityComponent, CommonModule, LetterSSVGComponent, ButtonsComponent, CommonModule, NotFoundPageComponent],
     templateUrl: './activity-page.component.html',
     styleUrl: './activity-page.component.css'
 })

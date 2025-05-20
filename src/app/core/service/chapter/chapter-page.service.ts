@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject } from 'rxjs';
+import { BehaviorSubject, Observable } from 'rxjs';
 import { SupabaseService } from '../supabase/supabase.service';
-import { CHAPTER_EMPTY, ChapterInterface } from '../../../data/interface/chapter.interface';
+import { ChapterInterface } from '../../../data/interface/chapter.interface';
 import { DataCacheService, TTL_10_MIN } from '../cache/data-cache.service';
 import { CACHE_KEY_CHAPTER } from '../../../data/cache';
 
@@ -15,20 +15,20 @@ export interface buttonInterface{
 })
 export class CharapterPageService {
 
-    dataCache = new Map<string, DataCacheService<ChapterInterface>>;
-    pageNumber$ = new BehaviorSubject<number>(0);
-    chapter$ = new BehaviorSubject<ChapterInterface>(CHAPTER_EMPTY);
+    dataCache = new Map<string, DataCacheService<ChapterInterface | null>>;
+    chapter$ = new BehaviorSubject<ChapterInterface| undefined | null>(undefined);
 
     constructor(private supabaseService: SupabaseService) {}
 
-    setChapter(chapterId:number){
-        const cacheKey =CACHE_KEY_CHAPTER + chapterId;
+    setChapter(chapterId:number): void{
+        const cacheKey = CACHE_KEY_CHAPTER + chapterId;
         if(!this.dataCache.has(cacheKey)){
-            const cache = new DataCacheService<ChapterInterface>(
+            const cache = new DataCacheService<ChapterInterface | null>(
                 cacheKey,
                 () => this.supabaseService.getCharapter(chapterId),
                 TTL_10_MIN
             );
+
             this.dataCache.set(cacheKey, cache);
         }
 
@@ -36,11 +36,7 @@ export class CharapterPageService {
             .subscribe(chapter => this.chapter$.next(chapter))
     }
 
-    get getChapter(){
+    get getChapter(): Observable<ChapterInterface| undefined | null>{
         return this.chapter$;
-    }
-
-    get getPageNumber(){
-        return this.pageNumber$;
     }
 }

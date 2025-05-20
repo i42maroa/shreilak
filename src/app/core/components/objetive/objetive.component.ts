@@ -2,13 +2,12 @@ import { Component, Input } from '@angular/core';
 import { ObjectiveInteface } from '../../../data/interface/objective.interface';
 import { RouterLink } from '@angular/router';
 import { ActivityInterface } from '../../../data/interface/activity.interface';
-import { TranslateModule } from '@ngx-translate/core';
 import { TitleComponent } from '../title/title.component';
 import { ACTIVITY_PATH, CHAPTER_PATH } from '../../../app.routes';
 
 @Component({
     selector: 'app-objetive',
-    imports: [ RouterLink, TranslateModule, TitleComponent],
+    imports: [ RouterLink, TitleComponent],
     templateUrl: './objetive.component.html',
     styleUrl: './objetive.component.css'
 })

@@ -1,11 +1,13 @@
 <article class="container">
   @if(activity | async; as act){
     <app-activity [activity]="act"></app-activity>
+    <app-letter-s-svg  class="logo"></app-letter-s-svg>
+    <div class="button_container">
+      <app-buttons [buttonConfig]="buttonBackConfig"/>
+    </div>
+  }@else if((activity | async) === null){
+    <app-not-found/>
   }
-  <app-letter-s-svg  class="logo"></app-letter-s-svg>
-  <div class="button_container">
-    <app-buttons [buttonConfig]="buttonBackConfig"/>
-  </div>
 </article>
 
 

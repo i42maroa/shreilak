@@ -1,20 +1,15 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { ObjetiveComponent } from '../objetive/objetive.component';
-import { CharapterPageService } from '../../service/chapter/chapter-page.service';
 import { CommonModule } from '@angular/common';
-import { TranslateModule } from '@ngx-translate/core';
+import { ChapterInterface } from '../../../data/interface/chapter.interface';
 
 @Component({
     selector: 'app-chapter',
-    imports: [ObjetiveComponent, CommonModule, TranslateModule],
+    imports: [ObjetiveComponent, CommonModule],
     templateUrl: './chapter.component.html',
     styleUrl: './chapter.component.css'
 })
 export class ChapterComponent {
 
-    constructor(private service: CharapterPageService ){ }
-
-    get chapter(){
-        return this.service.getChapter;
-    }
+    @Input() chapter: ChapterInterface | undefined;
 }
