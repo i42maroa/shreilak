@@ -1,7 +1,8 @@
-@if(chapters | async; as listChapters){
-  <article class="container">
-      <app-title [text]="'Chapitres'"/>
-      <p class="text">Pour briser la malédiction et retrouver ma forme, je dois aider un certain nombre de personnages en difficulté. J’ai besoin de votre aide pour accomplir les tâches de chacun d’eux.</p>
-      <app-list-characters [chapters]="listChapters"/>
-  </article>
-}
+<article class="container">
+    <app-title [text]="'Chapitres'"/>
+    <p class="text">Pour briser la malédiction et retrouver ma forme, je dois aider un certain nombre de personnages en difficulté. J’ai besoin de votre aide pour accomplir les tâches de chacun d’eux.</p>
+    @if((chapters | async) || (chapters | async) === undefined){
+      <app-list-chapters [chapters]="(chapters | async)"/>
+    }
+</article>
+
