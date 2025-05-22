@@ -1,7 +1,7 @@
-@if(chapter | async; as chapter){
+@if((chapter | async) || (chapter | async) === undefined){
   <article class="container">
     <app-buttons [buttonConfig]="buttonChapterListConfig"/>
-    <app-chapter [chapter]="chapter"/>
+    <app-chapter [chapter]="chapter | async"/>
     <app-letter-s-svg class="logo"/>
   </article>
 }

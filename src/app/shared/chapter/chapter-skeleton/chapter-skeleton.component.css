@@ -1,8 +1,7 @@
 .container{
   display: flex;
   flex-direction: column;
-  padding: 1rem;
-  margin: 0;
+  margin-top: 1rem;
 }
 
 .skeleton {
@@ -13,13 +12,13 @@
 
 .skeleton.title {
   height: 35px;
-  margin: 1rem 0;
+  margin-top: 1.5rem;
 }
 
 .textGroup{
   display: flex;
   flex-direction: column;
-  margin: 20px 0;
+  margin: 10px 30px;
 }
 
 .skeleton.text {
@@ -27,10 +26,9 @@
   margin: 5px 0;
 }
 
-.skeleton.image {
-  width: 70%;
-  height: 200px;
-  margin: 10px auto;
+.skeleton.image{
+  margin: 5px;
+  height: 500px;
 }
 
 @keyframes pulse {
