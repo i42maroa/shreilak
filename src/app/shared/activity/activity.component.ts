@@ -6,10 +6,11 @@ import { TitleComponent } from '../../core/components/title/title.component';
 import { LoaderService } from '../../core/service/loader/loader.service';
 import { Observable } from 'rxjs';
 import { ActivitySkeletonComponent } from './activity-skeleton/activity-skeleton.component';
+import { ResourceComponent } from '../resource/resource.component';
 
 @Component({
     selector: 'app-activity',
-    imports: [ImageShowerComponent, LetterSSVGComponent, TitleComponent, ActivitySkeletonComponent],
+    imports: [ImageShowerComponent, LetterSSVGComponent, TitleComponent, ActivitySkeletonComponent, ResourceComponent],
     templateUrl: './activity.component.html',
     styleUrl: './activity.component.css'
 })

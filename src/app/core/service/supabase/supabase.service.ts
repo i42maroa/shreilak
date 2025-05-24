@@ -28,6 +28,13 @@ export class SupabaseService {
         return this.sendQueryToSupaBase<ChapterInterface[]>(query);
     }
 
+    getResources():Observable<ResourceInterface[]| null> {
+        const query =  this.supabase.from('resources')
+            .select(`*`);
+
+        return this.sendQueryToSupaBase<ResourceInterface[]>(query);
+    }
+
     getActivity(idActivity: number):Observable<ActivityInterface| null> {
         const query =  this.supabase.from('activities')
             .select(`*,

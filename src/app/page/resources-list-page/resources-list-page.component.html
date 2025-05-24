@@ -1,0 +1,7 @@
+<article class="container">
+    <app-title [text]="'Resources'"/>
+
+    @if((resources | async) || (resources | async) === undefined){
+      <app-list-resources [resources]="(resources | async)"/>
+    }
+</article>

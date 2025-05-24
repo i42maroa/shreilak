@@ -1,7 +1,10 @@
+export type ResourceType = 'YOUTUBE' | 'LIRYC' | 'GENIALLY' | 'YOUTUBE' | 'PDF';
+
 export interface ResourceInterface{
     id:string;
     url:string;
     name:string;
-    type:string; //make a enum
+    type:ResourceType;
     description:string;
+    time:number;
 }

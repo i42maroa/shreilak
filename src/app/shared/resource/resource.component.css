@@ -1,0 +1,138 @@
+.container {
+  flex-basis: calc(33.33333% - 30px);
+  overflow: hidden;
+  border-radius: 28px;
+}
+
+.link {
+  display: block;
+  padding: 30px 20px;
+  background-color: var(--page);
+  position: relative;
+}
+
+.link:hover, .link:hover .type,
+.link:hover .title,
+.link:hover .time  {
+  text-decoration: none;
+  color: var(--white);
+}
+
+.link:hover .clockSvg{
+   fill: var(--white);
+}
+
+
+.link:hover .background {
+  transform: scale(10);
+}
+
+.title {
+  min-height: 60px;
+  margin: 0 20px 20px 0;
+  overflow: hidden;
+  font-weight: bold;
+  font-size: 30px;
+  color: var(--brown);
+  z-index: 2;
+  position: relative;
+  transition: all .5s ease-in-out;
+}
+
+.containerType {
+  font-size: 18px;
+  color: var(--brown);
+  z-index: 2;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+
+.type {
+  font-weight: bold;
+  transition: color .5s ease
+}
+
+.clockSvg{
+  height: 15px;
+  width: 15px;
+  margin: auto 5px;
+  fill: var(--brown);
+  transition: all .5s ease-in-out;
+}
+
+.time{
+  display: flex;
+  margin: auto 10px;
+  transition: all .5s ease-in-out;
+}
+
+.background {
+  height: 128px;
+  width: 128px;
+  z-index: 1;
+  position: absolute;
+  top: -75px;
+  right: -75px;
+  border-radius: 50%;
+  transition: all .5s ease;
+}
+
+.pdfBk{
+ background-color: var(--blue);
+}
+
+.youtubeBk{
+  background-color: var(--red);
+}
+
+.geniallyBk{
+  background-color: var(--purple);
+}
+
+.lyricBk{
+  background-color: var(--green);
+}
+
+.pdf{
+ color: var(--blue);
+}
+
+.youtube{
+  color: var(--red);
+}
+
+.genially{
+  color: var(--purple);
+}
+
+.lyric{
+ color: var(--green);
+}
+
+@media only screen and (max-width: 979px) {
+  .container {
+    flex-basis: calc(50% - 30px);
+  }
+  .title {
+    font-size: 24px;
+  }
+}
+
+@media only screen and (max-width: 639px) {
+  .container {
+    flex-basis: 100%;
+  }
+  .title {
+    min-height: 72px;
+    line-height: 1;
+
+    font-size: 24px;
+  }
+  .link {
+    padding: 22px 40px;
+  }
+  .containerType {
+    font-size: 16px;
+  }
+}

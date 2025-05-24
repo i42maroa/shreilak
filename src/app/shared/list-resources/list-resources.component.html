@@ -1,0 +1,10 @@
+@if(resources){
+  <ul class="list_container">
+      @for(resource of resources; track resource.id){
+          <app-resource [resource]="resource"/>
+      }
+  </ul>
+}
+@else{
+ <app-list-resources-skeleton/>
+}

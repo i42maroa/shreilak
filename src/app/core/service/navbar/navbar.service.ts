@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 import { NavbarListButtonInterface } from '../../../data/interface/navbar-list.interface';
-import { CHAPTER_PATH, HISTORY_PATH } from '../../../app.routes';
-import { NAVBAR_OPTION_CHAPTERS, NAVBAR_OPTION_HISTORY } from '../../../data/navbar';
+import { CHAPTER_PATH, HISTORY_PATH, RESOURCE_PATH } from '../../../app.routes';
+import { NAVBAR_OPTION_CHAPTERS, NAVBAR_OPTION_HISTORY, NAVBAR_OPTION_RESOURCES } from '../../../data/navbar';
 
 @Injectable({
     providedIn: 'root'
@@ -22,6 +22,10 @@ export class NavbarService {
                 {
                     url:  CHAPTER_PATH,
                     title:NAVBAR_OPTION_CHAPTERS
+                },
+                {
+                    url:  RESOURCE_PATH,
+                    title:NAVBAR_OPTION_RESOURCES
                 }
             ]
         )
