@@ -18,15 +18,19 @@
   --smoth-brown-layout: #dfd8c4;
   --white-page:#fafafa;
   --white-page-gradient:#f8f8f8;
+  --red: #DC3128;
+  --orange: #f9b234;
+  --purple: #3C17C1;
+  --blue: #06A0DC;
 
   --page:#e8dba6;
   --page-line:#c95;
 
   --frozen-color:#06A0DC;
-  --caperucita-color: #DC3128;
+  --caperucita-color: var(--red);
 
   --notification-success: var(--green);
-  --notification-fail: #DC3128;
+  --notification-fail: var(--red);
 
   --shadow: #eee;
 
