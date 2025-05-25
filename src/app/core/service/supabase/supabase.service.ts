@@ -8,6 +8,7 @@ import { environment } from '../../../../environments/environment';
 import { NotificationService } from '../notification/notification.service';
 import { PostgrestBuilder } from '@supabase/postgrest-js';
 import { LoaderService } from '../loader/loader.service';
+import { FilterResourceInterface } from '../../../data/interface/filters.interface';
 
 @Injectable({
     providedIn: 'root'
@@ -72,6 +73,15 @@ export class SupabaseService {
             .single();
 
         return this.sendQueryToSupaBase<ChapterInterface>(query);
+    }
+
+    getFilterResource(filter: FilterResourceInterface):Observable<ResourceInterface[]| null>{
+        const query = this.supabase.from('resources')
+            .select('*')
+            .ilike('name', `%${filter.name}%`)
+            .in('type', filter.types);
+
+        return this.sendQueryToSupaBase<ResourceInterface[]>(query);
     }
 
     private sendQueryToSupaBase <T>(query: PostgrestBuilder<T>):Observable<T | null>{

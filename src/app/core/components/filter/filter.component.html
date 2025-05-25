@@ -1,0 +1,18 @@
+<form [formGroup]="form" class="flex gap-4 mb-4 items-center">
+  <input
+    type="text"
+    class="border p-2 rounded w-full"
+    placeholder="Buscar por nombre..."
+    formControlName="name"
+  />
+
+  <select multiple class="border p-2 rounded"
+    formControlName="types"
+  >
+    @for (type of formTypes; track type.name) {
+      <option  [value]="type.value">
+        {{ type.name }}
+      </option>
+      }
+  </select>
+</form>

@@ -1,31 +1,20 @@
 import { Injectable } from '@angular/core';
-import { DataCacheService, TTL_5_MIN } from '../cache/data-cache.service';
 import { ResourceInterface } from '../../../data/interface/resource.interface';
 import { BehaviorSubject, Observable } from 'rxjs';
-import { SupabaseService } from '../supabase/supabase.service';
-import {CACHE_KEY_RESOURCES } from '../../../data/cache';
 
 @Injectable({
     providedIn: 'root'
 })
 export class ListResourcesService {
 
-    private dataCache: DataCacheService<ResourceInterface[] | null>;
     private listChapters = new BehaviorSubject<ResourceInterface []| undefined | null>(undefined);
 
-    constructor(private supabaseService: SupabaseService) {
+    setResourceList(resourceList: ResourceInterface[] | null):void{
         this.cleanList()
-        this.dataCache = new DataCacheService(
-            CACHE_KEY_RESOURCES,
-            () => this.supabaseService.getResources(),
-            TTL_5_MIN
-        );
-
-        this.dataCache.get()
-            .subscribe(chapter => this.listChapters.next(chapter))
+        this.listChapters.next(resourceList);
     }
 
-    cleanList(){
+    cleanList(): void{
         this.listChapters.next(undefined);
     }
 

@@ -5,10 +5,11 @@ import { ListResourcesService } from '../../core/service/list-resources/list-res
 import { ListResourcesComponent } from '../../shared/list-resources/list-resources.component';
 import { CommonModule } from '@angular/common';
 import { TitleComponent } from '../../core/components/title/title.component';
+import { FilterComponent } from '../../core/components/filter/filter.component';
 
 @Component({
     selector: 'app-resources-list-page',
-    imports: [ListResourcesComponent, CommonModule, TitleComponent],
+    imports: [ListResourcesComponent, CommonModule, TitleComponent, FilterComponent],
     templateUrl: './resources-list-page.component.html',
     styleUrl: './resources-list-page.component.css'
 })
