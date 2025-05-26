@@ -1,9 +1,14 @@
 <article class="container">
     <app-filter/>
-    <app-title [text]="'Resources'"/>
-    @if((resources | async) || (resources | async) === undefined){
-      <app-list-resources [resources]="(resources | async)"/>
+    @if((resources | async) || (resources | async) === undefined ){
+      @if((resources | async)!.length > 0){
+        <app-title [text]="'Resources'"/>
+        <app-list-resources [resources]="(resources | async)"/>
+      }
+      @else{
+        <app-title [text]="''"/>
+      <span class="text">No hay recuros con esos filtros</span>
+       }
     }
-
     <app-pagination/>
 </article>
