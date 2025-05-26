@@ -9,7 +9,7 @@ import { NotificationService } from '../notification/notification.service';
 import { PostgrestBuilder } from '@supabase/postgrest-js';
 import { LoaderService } from '../loader/loader.service';
 import { PaginationService } from '../pagination/pagination.service';
-import { FilterResourceInterface } from '../../../data/interface/filters.interface';
+import { DEFAULT_RESOURCES_TYPE, FilterResourceInterface } from '../../../data/interface/filters.interface';
 
 @Injectable({
     providedIn: 'root'
@@ -87,6 +87,10 @@ export class SupabaseService {
         const from = (page - 1) * resourcesByPage;
         const to = from + resourcesByPage - 1;
 
+        if(filter.types.length === 0){
+            filter.types = DEFAULT_RESOURCES_TYPE;
+        }
+
         const query = this.supabase.from('resources')
             .select('*', { count: 'exact' })
             .ilike('name', `%${filter.name}%`)
@@ -101,7 +105,6 @@ export class SupabaseService {
         this.loaderService.loading();
         return from(
             query.then(({ data, error, count }) => {
-                console.log(count, "value count")
                 if (error){
                     this.handleError(error);
                     return null;

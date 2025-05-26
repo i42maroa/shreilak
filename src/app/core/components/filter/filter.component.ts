@@ -24,7 +24,7 @@ export class FilterComponent implements OnInit {
     constructor(private fb:FormBuilder, private filterService: FilterService, private paginationService: PaginationService) {
         this.form = this.fb.group({
             name: [''],
-            types: [DEFAULT_RESOURCES_TYPE],
+            types: [[]],
         });
 
         this.form.valueChanges
@@ -40,7 +40,7 @@ export class FilterComponent implements OnInit {
             }))
             .subscribe((val:FilterResourceInterface) => {
                 const name = val.name?.trim() || '';
-                const types = val.types || DEFAULT_RESOURCES_TYPE;
+                const types = val.types || [];
 
                 const nameOkOfSearch = name.length >= UMBRAL_TO_SEARCH;
 

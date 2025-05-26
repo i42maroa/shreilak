@@ -3,11 +3,11 @@
     @if (selectedOptions.length > 0) {
       @for (option of selectedOptions; track option) {
         <button type="button" class="tag" (click)="toggleOption(option, $event)">
-          {{ option }} ×
+          <span class="tagOption">{{ option }}</span>
         </button>
       }
     } @else {
-      <span class="placeholder">Select options</span>
+      <span class="placeholder">Tipos</span>
     }
   </div>
 </button>

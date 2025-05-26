@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { AfterViewInit, Component, Input } from '@angular/core';
 import { CharapterPageService } from '../../core/service/chapter/chapter-page.service';
 import { CommonModule } from '@angular/common';
 import { ButtonsComponent } from '../../core/components/buttons/buttons.component';
@@ -9,13 +9,15 @@ import { NotFoundPageComponent } from '../not-found/not-found.component';
 import { ChapterComponent } from '../../shared/chapter/chapter.component';
 import { NAVBAR_OPTION_CHAPTERS } from '../../data/navbar';
 
+export const SCROLL_POSITION_CHAPTER = "SPC"
+
 @Component({
     selector: 'app-chapter-page',
     imports: [ ChapterComponent, CommonModule, ButtonsComponent, LetterSSVGComponent, NotFoundPageComponent],
     templateUrl: './chapter-page.component.html',
     styleUrl: './chapter-page.component.css'
 })
-export class ChapterPageComponent {
+export class ChapterPageComponent implements AfterViewInit{
 
     buttonChapterListConfig:ButtonInterface = {
         animation:true,
@@ -36,6 +38,18 @@ export class ChapterPageComponent {
     }
 
     constructor(private servicePage: CharapterPageService){}
+
+    ngAfterViewInit(): void {
+        this.servicePage.getChapter.subscribe(() => {
+            const scrollY = sessionStorage.getItem(SCROLL_POSITION_CHAPTER);
+            if (scrollY) {
+                setTimeout(() => {
+                    window.scrollTo({ top: parseInt(scrollY, 10), behavior: 'auto' });
+                    sessionStorage.removeItem(SCROLL_POSITION_CHAPTER);
+                },50)
+            }
+        })
+    }
 
     get chapter(){
         return this.servicePage.getChapter;

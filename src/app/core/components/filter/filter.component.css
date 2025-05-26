@@ -1,12 +1,33 @@
 .container {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   margin-bottom: 20px;
+  background-color: var(--page);
+  margin: 1rem;
+  border-radius: 12px;
+  flex-wrap: wrap;
+  padding: 0.5rem 0;
+}
+
+.input{
+  margin: 0.5rem ;
 }
 
 .inputText {
   padding: 8px;
   border-radius: 4px;
-  border: 1px solid #ccc;
   font-size: 14px;
+  background-color: #fefefe;
+  display: flex;
+  border: none;
+  color: var(--brown);
+}
+
+.inputText::placeholder{
+  color: var(--smoth-brown);
+}
+
+.inputText:focus{
+  outline: 2px solid var(--brown);
+
 }
