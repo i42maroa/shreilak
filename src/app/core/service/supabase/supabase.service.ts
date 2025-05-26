@@ -8,6 +8,7 @@ import { environment } from '../../../../environments/environment';
 import { NotificationService } from '../notification/notification.service';
 import { PostgrestBuilder } from '@supabase/postgrest-js';
 import { LoaderService } from '../loader/loader.service';
+import { PaginationService } from '../pagination/pagination.service';
 import { FilterResourceInterface } from '../../../data/interface/filters.interface';
 
 @Injectable({
@@ -17,7 +18,9 @@ export class SupabaseService {
 
     supabase: SupabaseClient;
 
-    constructor(private notificationService:NotificationService, private loaderService:LoaderService) {
+    constructor(private notificationService:NotificationService,
+        private loaderService:LoaderService,
+        private paginationService: PaginationService,) {
         this.supabase = createClient(environment.supabaseUrl, environment.supabaseKey);
     }
 
@@ -75,19 +78,26 @@ export class SupabaseService {
         return this.sendQueryToSupaBase<ChapterInterface>(query);
     }
 
-    getFilterResource(filter: FilterResourceInterface):Observable<ResourceInterface[]| null>{
-        const query = this.supabase.from('resources')
-            .select('*')
-            .ilike('name', `%${filter.name}%`)
-            .in('type', filter.types);
+    getFilterResource(filter: FilterResourceInterface, page: number):Observable<ResourceInterface[]| null>{
+        const resourcesByPage = this.paginationService.resourcePerPage;
+        const from = (page - 1) * resourcesByPage;
+        const to = from + resourcesByPage - 1;
 
-        return this.sendQueryToSupaBase<ResourceInterface[]>(query);
+        const query = this.supabase.from('resources')
+            .select('*', { count: 'exact' })
+            .ilike('name', `%${filter.name}%`)
+            .in('type', filter.types)
+            .range(from, to)
+            .order('name');
+
+        return this.sendQueryToSupaBase<ResourceInterface[]>(query, true);
     }
 
-    private sendQueryToSupaBase <T>(query: PostgrestBuilder<T>):Observable<T | null>{
+    private sendQueryToSupaBase <T>(query: PostgrestBuilder<T>, countTotal:boolean = false):Observable<T | null>{
         this.loaderService.loading();
         return from(
-            query.then(({ data, error }) => {
+            query.then(({ data, error, count }) => {
+                console.log(count, "value count")
                 if (error){
                     this.handleError(error);
                     return null;
@@ -97,7 +107,9 @@ export class SupabaseService {
                     this.notificationService.showErrorModal(message);
                     return null;
                 }
-                this.loaderService.fininsh();
+                this.loaderService.finish();
+
+                countTotal && this.paginationService.setTotalResource(count ?? 0)
                 return data;
             }));
     }
@@ -114,7 +126,7 @@ export class SupabaseService {
         }
 
         this.notificationService.showErrorModal(message);
-        this.loaderService.fininsh();
+        this.loaderService.finish();
         console.error('[SUPABASE ERROR]', error);
     }
 }

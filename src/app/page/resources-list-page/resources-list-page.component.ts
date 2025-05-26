@@ -6,10 +6,11 @@ import { ListResourcesComponent } from '../../shared/list-resources/list-resourc
 import { CommonModule } from '@angular/common';
 import { TitleComponent } from '../../core/components/title/title.component';
 import { FilterComponent } from '../../core/components/filter/filter.component';
+import { PaginationComponent } from '../../core/components/pagination/pagination.component';
 
 @Component({
     selector: 'app-resources-list-page',
-    imports: [ListResourcesComponent, CommonModule, TitleComponent, FilterComponent],
+    imports: [ListResourcesComponent, CommonModule, TitleComponent, FilterComponent, PaginationComponent],
     templateUrl: './resources-list-page.component.html',
     styleUrl: './resources-list-page.component.css'
 })

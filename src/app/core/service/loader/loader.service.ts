@@ -14,7 +14,7 @@ export class LoaderService {
         this.loader$.next(true);
     }
 
-    fininsh(){
+    finish(){
         this.loader$.next(false);
     }
 

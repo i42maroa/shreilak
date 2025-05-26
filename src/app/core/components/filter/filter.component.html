@@ -1,18 +1,12 @@
-<form [formGroup]="form" class="flex gap-4 mb-4 items-center">
-  <input
-    type="text"
-    class="border p-2 rounded w-full"
+<form [formGroup]="form" class="container">
+  <input type="text"
     placeholder="Buscar por nombre..."
     formControlName="name"
+     class="inputText"
   />
 
-  <select multiple class="border p-2 rounded"
+  <app-multiselect
     formControlName="types"
-  >
-    @for (type of formTypes; track type.name) {
-      <option  [value]="type.value">
-        {{ type.name }}
-      </option>
-      }
-  </select>
+    [options]="options"
+  ></app-multiselect>
 </form>

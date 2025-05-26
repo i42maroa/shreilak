@@ -2,25 +2,29 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { FilterService } from '../../service/filter/filter.service';
 import { debounceTime, distinctUntilChanged } from 'rxjs';
-import { FilterResourceInterface, RESOURCE_TYPES_FILTER } from '../../../data/interface/filters.interface';
+import { DEFAULT_RESOURCES_TYPE, FilterResourceInterface, RESOURCE_TYPES_FILTER } from '../../../data/interface/filters.interface';
+import { PaginationService } from '../../service/pagination/pagination.service';
+import { MultiselectComponent } from '../input/multiselect/multiselect.component';
 
 const UMBRAL_TO_SEARCH = 2;
 
 @Component({
     selector: 'app-filter',
-    imports: [ReactiveFormsModule],
+    imports: [ReactiveFormsModule, MultiselectComponent],
     templateUrl: './filter.component.html',
     styleUrl: './filter.component.css'
 })
 export class FilterComponent implements OnInit {
 
+    options = DEFAULT_RESOURCES_TYPE;
+
     form!: FormGroup;
     formTypes = RESOURCE_TYPES_FILTER;
 
-    constructor(private fb:FormBuilder, private filterService: FilterService) {
+    constructor(private fb:FormBuilder, private filterService: FilterService, private paginationService: PaginationService) {
         this.form = this.fb.group({
             name: [''],
-            types: [[]],
+            types: [DEFAULT_RESOURCES_TYPE],
         });
 
         this.form.valueChanges
@@ -29,7 +33,6 @@ export class FilterComponent implements OnInit {
                 if(nameWithtChanges && ( prev.name.length >= UMBRAL_TO_SEARCH || curr.name.length >= UMBRAL_TO_SEARCH)){
                     return false;
                 }
-
                 const typesWithoutChanges = prev.types.length === curr.types.length &&
                   prev.types.every((t, i) => t === curr.types[i]);
 
@@ -37,7 +40,7 @@ export class FilterComponent implements OnInit {
             }))
             .subscribe((val:FilterResourceInterface) => {
                 const name = val.name?.trim() || '';
-                const types = val.types || [];
+                const types = val.types || DEFAULT_RESOURCES_TYPE;
 
                 const nameOkOfSearch = name.length >= UMBRAL_TO_SEARCH;
 
@@ -47,6 +50,8 @@ export class FilterComponent implements OnInit {
                 else{
                     this.filterService.setFilter({ name:'', types });
                 }
+
+                this.paginationService.reset();
             });
     }
 

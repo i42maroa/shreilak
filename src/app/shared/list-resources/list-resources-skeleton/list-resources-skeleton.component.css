@@ -27,8 +27,9 @@
 }
 
 .skeleton.image{
-  margin: 5px;
-  height: 250px;
+  margin: 20px;
+  height: 200px;
+  border-radius: 25px;
 }
 
 @keyframes pulse {
