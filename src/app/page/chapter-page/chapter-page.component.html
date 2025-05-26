@@ -1,11 +1,11 @@
-<article class="container">
-  <app-buttons [buttonConfig]="buttonChapterListConfig"/>
-  <app-chapter />
-  <app-letter-s-svg class="logo"/>
-  <div class="button_container">
+@if((chapter | async) || (chapter | async) === undefined){
+  <article class="container">
     <app-buttons [buttonConfig]="buttonChapterListConfig"/>
-    @if(isNextAvailable() | async){
-      <app-buttons (click)="nextChapter()" [buttonConfig]="buttonNextChapterConfig"/>
-    }
-  </div>
-</article>
+    <app-chapter [chapter]="chapter | async"/>
+    <app-letter-s-svg class="logo"/>
+    <app-buttons [buttonConfig]="buttonChapterListConfig"/>
+  </article>
+}
+@else if((chapter | async) === null){
+  <app-not-found/>
+}

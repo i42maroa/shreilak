@@ -1,0 +1,16 @@
+@if(resource){
+<div class="container">
+    <a href="{{resource.url}}" target="_blank" class="link">
+      <div class="background" [ngClass]="getBackgroundClass()"></div>
+      <h3 class="title">{{resource.name}}</h3>
+      <div class="containerType">
+        <span class="type" [ngClass]="getColorClass()">{{resource.type}}</span>
+        @if(resource.time; as time){
+          <span class="time">
+            <app-clock-svg class="clockSvg"/>
+             {{time}} min</span>
+        }
+      </div>
+    </a>
+</div>
+}

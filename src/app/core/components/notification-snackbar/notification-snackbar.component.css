@@ -1,0 +1,22 @@
+.notification {
+  background-color: #323232;
+  color: white;
+  padding: 10px 15px;
+  margin:auto;
+  width: 400px;
+  border-radius: 10px;
+
+  position: fixed;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.success{
+  background-color: var(--notification-success);
+}
+
+.error{
+  background-color: var(--notification-fail);
+}

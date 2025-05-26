@@ -1,0 +1,15 @@
+@if(paginationInfo | async; as info){
+  @if(info.total > 0 ){
+  <div class="pagination-container">
+      @for(p of info.pages;track $index){
+        <button
+          class="pagination-button"
+          [class.active]="p === info.actual"
+          (click)="goPage(p)"
+        >
+          {{ p }}
+        </button>
+      }
+  </div>
+  }
+ }

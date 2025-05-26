@@ -2,7 +2,7 @@
   <nav class="options_container">
     @for(option of navbarOptionList | async; track option.title){
       <a class="option" [routerLink]="option.url" (click)="closeNavbar()">
-        <span class="text">{{option.title | translate}}</span>
+        <span class="text">{{option.title}}</span>
         <app-navbar-wood-svg class="image" />
       </a>
     }

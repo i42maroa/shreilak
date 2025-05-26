@@ -1,11 +1,10 @@
 import { Component, Input } from '@angular/core';
 import { ButtonInterface } from '../../../data/interface/button.interface';
 import { RouterLink } from '@angular/router';
-import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
     selector: 'app-buttons',
-    imports: [RouterLink, TranslateModule],
+    imports: [RouterLink],
     templateUrl: './buttons.component.html',
     styleUrl: './buttons.component.css'
 })

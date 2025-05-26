@@ -1,0 +1,25 @@
+.container{
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.button_container{
+  display: flex;
+}
+
+.logo{
+  margin: 1rem 5rem;
+  opacity: 0.1;
+}
+
+@media (max-width: 300px) {
+  .container{
+    margin:0.5rem ;
+  }
+
+  .button_container{
+    margin: 0.5rem 0;
+  }
+}

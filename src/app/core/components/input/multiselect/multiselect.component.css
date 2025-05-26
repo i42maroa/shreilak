@@ -1,0 +1,64 @@
+.multiselect {
+  width: 150px;
+  border: none;
+  border-radius: 6px;
+  padding: 8px;
+  cursor: pointer;
+  display: flex;
+  background-color: #fefefe;
+}
+
+.selected {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.tag {
+  background: var(--green);
+  color: var(--brown);
+  border: none;
+  border-radius: 4px;
+  padding: 4px 8px;
+  font-size: 13px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+}
+.placeholder {
+  color: var(--smoth-brown);
+}
+
+.options {
+  margin-top: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  max-height: 150px;
+  overflow-y: auto;
+  background: #fefefe;
+  position: absolute;
+  width: 150px;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+
+  gap: 2px;
+}
+
+.option {
+  padding: 8px;
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  text-align: left;
+  color: var(--brown);
+}
+
+.option:hover {
+  background: #eee;
+}
+
+.option.selected {
+  background: var(--green);
+  color: var(--brown);
+}

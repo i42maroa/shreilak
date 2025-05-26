@@ -1,0 +1,14 @@
+
+.container{
+  margin: 1rem;
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  border-radius: 2px;
+  min-height: calc(100svh - 50px);
+}
+
+.text{
+  text-align: center;
+  margin: 1rem 0;
+}

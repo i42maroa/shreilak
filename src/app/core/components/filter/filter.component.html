@@ -1,0 +1,13 @@
+<form [formGroup]="form" class="container">
+  <input type="text"
+    placeholder="Buscar por nombre..."
+    formControlName="name"
+     class=" input inputText"
+  />
+
+  <app-multiselect
+    class="input"
+    formControlName="types"
+    [options]="options"
+  ></app-multiselect>
+</form>

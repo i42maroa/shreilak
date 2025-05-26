@@ -1,0 +1,17 @@
+@if(chapter){
+  <header id="history" class="container">
+    <div class="wrapper" [ngStyle]="{'outline': '2px solid var(' + chapter.color + ')'}">
+      <h2 class="title" [ngStyle]="{'color': 'var(' + chapter.color + ')'}">{{chapter.title}}</h2>
+      <p>{{chapter.history}}</p>
+      <img class="chapter_image" [src]="chapter.image" loading="lazy" [alt]="chapter.imageAlt">
+   </div>
+  </header>
+
+  @for (objective of chapter.objectives; track objective.title; let idx = $index) {
+  <section id="{{idx + 1}}" class="objective_container">
+    <app-objetive [objective]="objective" [index]="idx"/>
+  </section>
+  }
+}@else{
+  <app-chapter-skeleton/>
+}

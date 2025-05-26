@@ -1,0 +1,5 @@
+
+<div class="notification" [ngClass]="{'success': (type |async) ==='success',
+'error': (type| async) ==='error'}">
+    {{message | async}}
+</div>

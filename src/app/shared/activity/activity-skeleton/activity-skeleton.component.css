@@ -1,0 +1,40 @@
+.container{
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  margin: 0;
+}
+
+.skeleton {
+  background-color: var(--smoth-brown-layout);
+  border-radius: 4px;
+  animation: pulse 1.5s infinite ease-in-out;
+}
+
+.skeleton.title {
+  height: 35px;
+  margin: 1rem 0;
+}
+
+.textGroup{
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0;
+}
+
+.skeleton.text {
+  height: 20px;
+  margin: 5px 0;
+}
+
+.skeleton.image {
+  width: 70%;
+  height: 200px;
+  margin: 10px auto;
+}
+
+@keyframes pulse {
+  0% { background-color: var(--shadow); }
+  50% { background-color: var(--smoth-brown-layout); }
+  100% { background-color: var(--shadow); }
+}

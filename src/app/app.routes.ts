@@ -1,21 +1,25 @@
 import { Routes } from '@angular/router';
-import { LandingComponent } from './page/landing-history/landing.component';
+import { HistoryPageComponent } from './page/history-page/history-page.component';
 import { ChapterPageComponent } from './page/chapter-page/chapter-page.component';
-import { RessourcePageComponent } from './page/ressource-page/ressource-page.component';
-import { LandingChapterComponent } from './page/landing-chapter/landing-chapter.component';
+import { ActivityPageComponent } from './page/activity-page/activity-page.component';
+import { ChapterListComponent } from './page/chapter-list-page/chapter-list-page.component';
 import { NotFoundPageComponent } from './page/not-found/not-found.component';
+import { ResourcesListPageComponent } from './page/resources-list-page/resources-list-page.component';
 
 export const HISTORY_PATH = "history";
 export const CHAPTER_PATH = "chapter";
-export const RESSORUCE_PATH = "ressource";
+export const ACTIVITY_PATH = "activity";
+export const RESOURCE_PATH = "resource";
 
 export const routes: Routes = [
 
     { path: '', redirectTo: HISTORY_PATH, pathMatch: 'full' },
-    { path: HISTORY_PATH, component: LandingComponent },
-    { path: CHAPTER_PATH, component: LandingChapterComponent },
+    { path: HISTORY_PATH, component: HistoryPageComponent },
+    { path: CHAPTER_PATH, component: ChapterListComponent },
+    { path: RESOURCE_PATH, component: ResourcesListPageComponent },
     { path: `${CHAPTER_PATH}/:chapterId`, component: ChapterPageComponent },
-    { path: `${RESSORUCE_PATH}/:resourceId`, component: RessourcePageComponent },
+    { path: `${CHAPTER_PATH}/:chapterId/${ACTIVITY_PATH}/:activityId`, component: ActivityPageComponent },
+    { path: `${ACTIVITY_PATH}/:activityId`, component: ActivityPageComponent },
     { path: '**', component: NotFoundPageComponent },
 ];
 

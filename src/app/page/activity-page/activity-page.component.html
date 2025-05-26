@@ -1,0 +1,14 @@
+<article class="container">
+   <app-buttons [buttonConfig]="buttonBackConfig"/>
+  @if((activity | async) || (activity | async) === undefined){
+      <app-activity [activity]="activity | async"/>
+        <app-letter-s-svg  class="logo"/>
+        <div class="button_container">
+          <app-buttons [buttonConfig]="buttonBackConfig"/>
+        </div>
+  }
+  @else{ <app-not-found/>}
+</article>
+
+
+

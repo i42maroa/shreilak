@@ -1,25 +1,28 @@
-import { Component, Input } from '@angular/core';
-import { ChapterComponent } from '../../core/components/chapter/chapter.component';
-import { CharapterPageService } from '../../core/service/charapter/charapter-page.service';
+import { AfterViewInit, Component, Input } from '@angular/core';
+import { CharapterPageService } from '../../core/service/chapter/chapter-page.service';
 import { CommonModule } from '@angular/common';
-import { CHAPTERS } from '../../data/chapters.data';
 import { ButtonsComponent } from '../../core/components/buttons/buttons.component';
 import { ButtonInterface } from '../../data/interface/button.interface';
 import { LetterSSVGComponent } from '../../core/svg/letter-s/letter-s.component';
 import { CHAPTER_PATH } from '../../app.routes';
+import { NotFoundPageComponent } from '../not-found/not-found.component';
+import { ChapterComponent } from '../../shared/chapter/chapter.component';
+import { NAVBAR_OPTION_CHAPTERS } from '../../data/navbar';
+
+export const SCROLL_POSITION_CHAPTER = "SPC"
 
 @Component({
     selector: 'app-chapter-page',
-    imports: [ ChapterComponent, CommonModule, ButtonsComponent, LetterSSVGComponent],
+    imports: [ ChapterComponent, CommonModule, ButtonsComponent, LetterSSVGComponent, NotFoundPageComponent],
     templateUrl: './chapter-page.component.html',
     styleUrl: './chapter-page.component.css'
 })
-export class ChapterPageComponent {
+export class ChapterPageComponent implements AfterViewInit{
 
     buttonChapterListConfig:ButtonInterface = {
         animation:true,
         url: `/${CHAPTER_PATH}`,
-        text: 'NAVBAR.OPTIONS.CHAPTERS',
+        text: NAVBAR_OPTION_CHAPTERS,
         type: 'GO_BACK'
     }
 
@@ -31,25 +34,24 @@ export class ChapterPageComponent {
     }
 
     @Input() set chapterId(chapterId: number) {
-        this.servicePage.setPage(chapterId);
+        this.servicePage.setChapter(chapterId);
     }
 
-    constructor(private servicePage: CharapterPageService){
-        this.servicePage.getPageNumber.subscribe(page => {
-            if (this.servicePage.getIsNextPageAvailable.value){
-                const nextChapterNumber = +page + 1;
-                const title = CHAPTERS[nextChapterNumber].title;
-                this.buttonNextChapterConfig.text = title;
-                this.buttonNextChapterConfig.url = `/${CHAPTER_PATH}/${nextChapterNumber}`;
+    constructor(private servicePage: CharapterPageService){}
+
+    ngAfterViewInit(): void {
+        this.servicePage.getChapter.subscribe(() => {
+            const scrollY = sessionStorage.getItem(SCROLL_POSITION_CHAPTER);
+            if (scrollY) {
+                setTimeout(() => {
+                    window.scrollTo({ top: parseInt(scrollY, 10), behavior: 'auto' });
+                    sessionStorage.removeItem(SCROLL_POSITION_CHAPTER);
+                },50)
             }
         })
     }
 
-    nextChapter(){
-        this.servicePage.incrementPage()
-    }
-
-    isNextAvailable(){
-        return this.servicePage.getIsNextPageAvailable
+    get chapter(){
+        return this.servicePage.getChapter;
     }
 }

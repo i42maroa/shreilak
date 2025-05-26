@@ -1,0 +1,12 @@
+import { Component } from '@angular/core';
+import { LetterSSVGComponent } from '../../../core/svg/letter-s/letter-s.component';
+
+@Component({
+    selector: 'app-book-header-page',
+    imports: [LetterSSVGComponent],
+    templateUrl: './head.component.html',
+    styleUrl: './head.component.css'
+})
+export class BookHeaderPageComponent {
+
+}
