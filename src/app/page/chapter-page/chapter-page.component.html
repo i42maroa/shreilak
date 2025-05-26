@@ -3,6 +3,7 @@
     <app-buttons [buttonConfig]="buttonChapterListConfig"/>
     <app-chapter [chapter]="chapter | async"/>
     <app-letter-s-svg class="logo"/>
+    <app-buttons [buttonConfig]="buttonChapterListConfig"/>
   </article>
 }
 @else if((chapter | async) === null){

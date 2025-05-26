@@ -10,14 +10,3 @@ export interface ChapterInterface{
     color:string;
     objectives:ObjectiveInteface[];
 }
-
-export const CHAPTER_EMPTY: ChapterInterface = {
-    id:0,
-    title:"",
-    image:'',
-    imageAlt:'',
-    classColor:"",
-    history:'',
-    color:'',
-    objectives:[]
-}

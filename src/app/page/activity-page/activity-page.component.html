@@ -1,4 +1,5 @@
 <article class="container">
+   <app-buttons [buttonConfig]="buttonBackConfig"/>
   @if((activity | async) || (activity | async) === undefined){
       <app-activity [activity]="activity | async"/>
         <app-letter-s-svg  class="logo"/>

@@ -13,3 +13,13 @@ export interface ActivityInterface{
     activitiesResources:ActivityResourceInterface[];
     id_objective:number;
 }
+
+export interface ActivityWithChapterInterface extends ActivityInterface{
+    objectives:{
+        id:number;
+        chapters:{
+            id:number;
+            title:string;
+        }
+    }
+}

@@ -3,7 +3,7 @@ import { createClient, PostgrestError, SupabaseClient } from '@supabase/supabase
 import { from, Observable,  TimeoutError } from 'rxjs';
 import { ChapterInterface } from '../../../data/interface/chapter.interface';
 import { ResourceInterface } from '../../../data/interface/resource.interface';
-import { ActivityInterface } from '../../../data/interface/activity.interface';
+import { ActivityInterface, ActivityWithChapterInterface } from '../../../data/interface/activity.interface';
 import { environment } from '../../../../environments/environment';
 import { NotificationService } from '../notification/notification.service';
 import { PostgrestBuilder } from '@supabase/postgrest-js';
@@ -39,16 +39,20 @@ export class SupabaseService {
         return this.sendQueryToSupaBase<ResourceInterface[]>(query);
     }
 
-    getActivity(idActivity: number):Observable<ActivityInterface| null> {
+    getActivity(idActivity: number):Observable<ActivityWithChapterInterface| null> {
         const query =  this.supabase.from('activities')
             .select(`*,
+                  objectives:id_objective (
+                    id,
+                    chapters:id_chapter (id,title)
+                  ),
                   activitiesResources (
                     id_resource,
                     resources:id_resource (*)
                   )`)
             .eq('id', idActivity)
             .single();
-        return this.sendQueryToSupaBase<ActivityInterface>(query);
+        return this.sendQueryToSupaBase<ActivityWithChapterInterface>(query);
     }
 
     getResource(idResource: number):Observable<ResourceInterface| null> {

@@ -33,7 +33,16 @@ export class ActivityPageComponent{
         this.buttonBackConfig.url = `/${CHAPTER_PATH}/${chapterId}`
     }
 
-    constructor(private activityService:ActivityPageService, private loadingService:LoaderService){}
+    constructor(private activityService:ActivityPageService, private loadingService:LoaderService){
+        this.activityService.activity.asObservable()
+            .subscribe(activity => {
+                if(activity && activity.objectives && activity.objectives.chapters && activity.objectives.chapters.id){
+                    this.buttonBackConfig.url = `/${CHAPTER_PATH}/${activity.objectives.chapters.id}`;
+                    const nameButton = activity.objectives.chapters.title?? "Back";
+                    this.buttonBackConfig.text = nameButton;
+                }
+            });
+    }
 
     get activity(){
         return this.activityService.activity

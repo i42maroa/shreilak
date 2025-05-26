@@ -4,20 +4,21 @@
     @if(activity.description){
       <p>{{activity.description}}</p>
     }
-    <div class="objective_container">
-        @defer  {
-          <app-image-shower class="image" [url]="activity.image" [alt]="activity.imageAlt"/>
-        } @placeholder {
-          <span class="loading">
-            <app-letter-s-svg class="logo"/>
-          </span>
-        } @loading{
-          <span class="loading">
-            <app-letter-s-svg class="logo"/>
-          </span>
-        }
-    </div>
-
+    @if(activity.image){
+      <div class="objective_container">
+          @defer  {
+            <app-image-shower class="image" [url]="activity.image" [alt]="activity.imageAlt"/>
+          } @placeholder {
+            <span class="loading">
+              <app-letter-s-svg class="logo"/>
+            </span>
+          } @loading{
+            <span class="loading">
+              <app-letter-s-svg class="logo"/>
+            </span>
+          }
+      </div>
+    }
     @if(activity.text){
       <p>{{activity.text}}</p>
     }
