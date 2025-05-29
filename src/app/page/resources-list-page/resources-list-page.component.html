@@ -1,7 +1,7 @@
 <article class="container">
     <app-filter/>
     @if((resources | async) || (resources | async) === undefined ){
-      @if((resources | async)!.length > 0){
+      @if(hasResources | async){
         <app-title [text]="'Resources'"/>
         <app-list-resources [resources]="(resources | async)"/>
       }

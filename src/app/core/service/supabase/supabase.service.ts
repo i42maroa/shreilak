@@ -1,9 +1,9 @@
 import { Injectable } from '@angular/core';
 import { createClient, PostgrestError, SupabaseClient } from '@supabase/supabase-js';
-import { from, Observable,  TimeoutError } from 'rxjs';
+import { from, map, Observable,  TimeoutError } from 'rxjs';
 import { ChapterInterface } from '../../../data/interface/chapter.interface';
-import { ResourceInterface } from '../../../data/interface/resource.interface';
-import { ActivityInterface, ActivityWithChapterInterface } from '../../../data/interface/activity.interface';
+import { ResourceInterface, ResourceSupabaseInterface } from '../../../data/interface/resource.interface';
+import { ActivityWithChapterInterface } from '../../../data/interface/activity.interface';
 import { environment } from '../../../../environments/environment';
 import { NotificationService } from '../notification/notification.service';
 import { PostgrestBuilder } from '@supabase/postgrest-js';
@@ -92,13 +92,24 @@ export class SupabaseService {
         }
 
         const query = this.supabase.from('resources')
-            .select('*', { count: 'exact' })
+            .select(`*,
+              resourcesFlags (
+                    id_resource,
+                    flags:id_flag (*)
+                  )
+              `, { count: 'exact' })
             .ilike('name', `%${filter.name}%`)
             .in('type', filter.types)
             .range(from, to)
             .order('name');
 
-        return this.sendQueryToSupaBase<ResourceInterface[]>(query, true);
+        return this.sendQueryToSupaBase<ResourceSupabaseInterface[]>(query, true)
+            .pipe(
+                map((resourceList:ResourceSupabaseInterface[] | null) => {
+                    return resourceList && resourceList.map(res => {
+                        return {...res, flags: res.resourcesFlags?.map(rf => rf.flags) || [] }}) ;
+                })
+            );
     }
 
     private sendQueryToSupaBase <T>(query: PostgrestBuilder<T>, countTotal:boolean = false):Observable<T | null>{

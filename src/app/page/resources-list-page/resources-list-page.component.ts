@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Observable } from 'rxjs';
+import { map, Observable } from 'rxjs';
 import { ResourceInterface } from '../../data/interface/resource.interface';
 import { ListResourcesService } from '../../core/service/list-resources/list-resources.service';
 import { ListResourcesComponent } from '../../shared/list-resources/list-resources.component';
@@ -19,5 +19,11 @@ export class ResourcesListPageComponent {
 
     get resources(): Observable<ResourceInterface[]| undefined| null>{
         return this.resourcesListService.getListChapters;
+    }
+
+    get hasResources():Observable<boolean>{
+        return this.resources.pipe(
+            map(res => !!(res && res.length))
+        )
     }
 }
