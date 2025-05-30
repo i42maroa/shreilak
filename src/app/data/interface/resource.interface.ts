@@ -1,5 +1,3 @@
-import { FlagInterface } from "./flag.interface";
-
 export type ResourceType = 'YOUTUBE' | 'LIRYC' | 'GENIALLY' | 'YOUTUBE' | 'PDF';
 
 export interface ResourceInterface{
@@ -9,13 +7,5 @@ export interface ResourceInterface{
     type:ResourceType;
     description:string;
     time:number;
-    flags:FlagInterface[];
-}
-
-export interface ResourceSupabaseInterface extends ResourceInterface{
-    resourcesFlags:ResourcesFlagsInterface[];
-}
-
-interface ResourcesFlagsInterface{
-    flags:FlagInterface;
+    flags:string[];
 }

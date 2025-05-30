@@ -1,5 +1,6 @@
 .container {
   display: flex;
+  flex-direction: column;
   justify-content: space-around;
   margin-bottom: 20px;
   background-color: var(--page);
@@ -9,9 +10,49 @@
   padding: 0.5rem 0;
 }
 
-.input{
-  margin: 0.5rem ;
+.buttonHide{
+  border: none;
+  background-color: var(--brown);
+  fill: #f0f0f0;
+  color: #f0f0f0;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  margin: auto 0 auto 1rem;
+  cursor: pointer;
+  transition: all .5s ease-in-out;
 }
+
+.buttonHide:hover{
+  scale: 1.1;
+}
+
+.rowContainer{
+  display: flex;
+  justify-content: right;
+  margin: 1rem;
+}
+
+.additionalInfoContainer{
+  position: relative;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: space-evenly;
+}
+
+.additionalInfoContainer::before{
+  content: '';
+  height: 1px;
+  width: 80%;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: -1rem;
+  background: var(--brown);
+  position: absolute;
+}
+
 
 .inputText {
   padding: 8px;
@@ -21,7 +62,9 @@
   display: flex;
   border: none;
   color: var(--brown);
+  width: 80%;
 }
+
 
 .inputText::placeholder{
   color: var(--smoth-brown);
@@ -29,5 +72,4 @@
 
 .inputText:focus{
   outline: 2px solid var(--brown);
-
 }

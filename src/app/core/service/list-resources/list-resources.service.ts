@@ -22,7 +22,8 @@ export class ListResourcesService {
         ]).pipe(
             distinctUntilChanged(([prevFilter, prevPage], [currFilter, currPage]) =>
                 prevPage === currPage && prevFilter.name === currFilter.name &&
-                      JSON.stringify(prevFilter.types) === JSON.stringify(currFilter.types)
+                      JSON.stringify(prevFilter.types) === JSON.stringify(currFilter.types) &&
+                      JSON.stringify(prevFilter.flags) === JSON.stringify(currFilter.flags)
             ),
             mergeMap(([filters, page]) => {
                 this.cleanList();

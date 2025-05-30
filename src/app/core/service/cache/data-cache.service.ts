@@ -2,6 +2,7 @@ import { Observable, of, shareReplay, tap } from 'rxjs';
 
 export const TTL_5_MIN = 5 * 60 * 1000;
 export const TTL_10_MIN = 10 * 60 * 1000;
+export const TTL_30_MIN = 30 * 60 * 1000;
 
 
 export class DataCacheService<T> {

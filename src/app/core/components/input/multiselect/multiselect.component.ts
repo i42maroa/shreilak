@@ -1,4 +1,4 @@
-import { Component, forwardRef, Input } from '@angular/core';
+import { Component, ElementRef, forwardRef, HostListener, Input } from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 
 @Component({
@@ -13,7 +13,10 @@ import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
     }]
 })
 export class MultiselectComponent implements ControlValueAccessor{
-    @Input() options: string[] = [];
+    @Input() options: string[] | null = [];
+    @Input() placeHolder:string = "";
+
+    constructor(private elementRef: ElementRef){}
 
     selectedOptions: string[] = [];
     dropdownOpen = false;
@@ -51,6 +54,7 @@ export class MultiselectComponent implements ControlValueAccessor{
             this.selectedOptions = this.selectedOptions.filter(o => o !== option);
         }
         this.onChange(this.selectedOptions);
+        this.closeDropdown()
     }
 
     isSelected(option: string): boolean {
@@ -59,5 +63,13 @@ export class MultiselectComponent implements ControlValueAccessor{
 
     closeDropdown() {
         this.dropdownOpen = false;
+    }
+
+    //Allow to close the list when click outside
+    @HostListener('document:click', ['$event'])
+    onClickOutside(event: MouseEvent): void {
+        if (!this.elementRef.nativeElement.contains(event.target)) {
+            this.closeDropdown()
+        }
     }
 }

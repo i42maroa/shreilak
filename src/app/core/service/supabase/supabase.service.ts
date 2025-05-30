@@ -1,15 +1,16 @@
 import { Injectable } from '@angular/core';
 import { createClient, PostgrestError, SupabaseClient } from '@supabase/supabase-js';
-import { from, map, Observable,  TimeoutError } from 'rxjs';
+import { from,  Observable,  TimeoutError } from 'rxjs';
 import { ChapterInterface } from '../../../data/interface/chapter.interface';
-import { ResourceInterface, ResourceSupabaseInterface } from '../../../data/interface/resource.interface';
+import { ResourceInterface } from '../../../data/interface/resource.interface';
 import { ActivityWithChapterInterface } from '../../../data/interface/activity.interface';
 import { environment } from '../../../../environments/environment';
 import { NotificationService } from '../notification/notification.service';
 import { PostgrestBuilder } from '@supabase/postgrest-js';
 import { LoaderService } from '../loader/loader.service';
 import { PaginationService } from '../pagination/pagination.service';
-import { DEFAULT_RESOURCES_TYPE, FilterResourceInterface } from '../../../data/interface/filters.interface';
+import { DEFAULT_RESOURCES_TYPE, FilterResourceInterface, FilterResourceSupabaseInterface } from '../../../data/interface/filters.interface';
+import { FlagInterface } from '../../../data/interface/flag.interface';
 
 @Injectable({
     providedIn: 'root'
@@ -37,6 +38,13 @@ export class SupabaseService {
             .select(`*`);
 
         return this.sendQueryToSupaBase<ResourceInterface[]>(query);
+    }
+
+    getFlags():Observable<FlagInterface[]| null> {
+        const query =  this.supabase.from('flags')
+            .select(`*`);
+
+        return this.sendQueryToSupaBase<FlagInterface[]>(query);
     }
 
     getActivity(idActivity: number):Observable<ActivityWithChapterInterface| null> {
@@ -84,52 +92,66 @@ export class SupabaseService {
 
     getFilterResource(filter: FilterResourceInterface, page: number):Observable<ResourceInterface[]| null>{
         const resourcesByPage = this.paginationService.resourcePerPage;
-        const from = (page - 1) * resourcesByPage;
-        const to = from + resourcesByPage - 1;
+        const fromP = (page - 1) * resourcesByPage;
+        const to = fromP + resourcesByPage - 1;
 
         if(filter.types.length === 0){
             filter.types = DEFAULT_RESOURCES_TYPE;
         }
 
-        const query = this.supabase.from('resources')
-            .select(`*,
-              resourcesFlags (
-                    id_resource,
-                    flags:id_flag (*)
-                  )
-              `, { count: 'exact' })
-            .ilike('name', `%${filter.name}%`)
-            .in('type', filter.types)
-            .range(from, to)
+        const filterSupabase:FilterResourceSupabaseInterface ={
+            flagsnames:[...filter.flags],
+            namesearch:filter.name,
+            types:filter.types.length === 0? DEFAULT_RESOURCES_TYPE : [...filter.types]
+        }
+
+        const query = this.supabase
+            .rpc('resources_filter', filterSupabase)
+            .range(fromP, to)
             .order('name');
 
-        return this.sendQueryToSupaBase<ResourceSupabaseInterface[]>(query, true)
-            .pipe(
-                map((resourceList:ResourceSupabaseInterface[] | null) => {
-                    return resourceList && resourceList.map(res => {
-                        return {...res, flags: res.resourcesFlags?.map(rf => rf.flags) || [] }}) ;
-                })
-            );
+        this.loaderService.loading();
+        return from(
+            query.then(({ data, error }) => {
+                this.loaderService.finish();
+                if (error) {
+                    this.handleError(error);   // tu función de manejo de errores
+                    return null;
+                }
+                if (!data) {
+                    this.notificationService.showErrorModal('No hay datos');
+                    return null;
+                }
+                return data;
+            })
+        );
     }
 
-    private sendQueryToSupaBase <T>(query: PostgrestBuilder<T>, countTotal:boolean = false):Observable<T | null>{
+    private sendQueryToSupaBase<T>( query: PostgrestBuilder<T>,countTotal: boolean = false): Observable<T | null> {
         this.loaderService.loading();
         return from(
             query.then(({ data, error, count }) => {
-                if (error){
+                this.loaderService.finish();
+
+                if (error) {
                     this.handleError(error);
                     return null;
                 }
-                if (data === null) {
-                    const message = "No hay datos";
-                    this.notificationService.showErrorModal(message);
+
+                if (!data) {
+                    this.notificationService.showErrorModal('No hay datos');
                     return null;
                 }
-                this.loaderService.finish();
+
+                if (countTotal) {
+                    this.paginationService.setTotalResource(count ?? 0);
+                }
 
                 countTotal && this.paginationService.setTotalResource(count ?? 0)
+
                 return data;
-            }));
+            })
+        );
     }
 
     private handleError(error: PostgrestError){

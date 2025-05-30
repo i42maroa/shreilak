@@ -11,8 +11,10 @@
              {{time}} min</span>
         }
       </div>
-      @for(flag of resource.flags; track $index){
-        <span>{{flag.name}}</span>
+      @if(resource.flags && resource.flags.length > 0){
+        @for(flag of resource.flags; track $index){
+            <span>{{flag}}</span>
+        }
       }
     </a>
 </div>

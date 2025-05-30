@@ -1,13 +1,34 @@
 <form [formGroup]="form" class="container">
-  <input type="text"
-    placeholder="Buscar por nombre..."
-    formControlName="name"
-     class=" input inputText"
-  />
+  <div class="rowContainer">
+    <input type="text"
+      placeholder="Buscar por nombre..."
+      formControlName="name"
+      class=" input inputText"
+    />
 
-  <app-multiselect
-    class="input"
-    formControlName="types"
-    [options]="options"
-  ></app-multiselect>
+    @if(showAdditionalFilters){
+      <button class="buttonHide" (click)="toggleShowMoreFilters()" >X</button>
+    }
+    @else{
+      <button class="buttonHide" (click)="toggleShowMoreFilters()">
+        <app-arrow-down-svg/>
+      </button>
+    }
+  </div>
+
+  @if(showAdditionalFilters){
+    <div class="rowContainer additionalInfoContainer">
+      <app-multiselect
+          class="input"
+          formControlName="types"
+          [options]="options"
+          [placeHolder]="'Tipos'"/>
+
+      <app-multiselect
+        class="input"
+        formControlName="flags"
+        [options]="flags | async"
+        [placeHolder]="'Etiquetas'"/>
+    </div>
+  }
 </form>
